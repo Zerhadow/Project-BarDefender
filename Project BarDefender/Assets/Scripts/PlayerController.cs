@@ -6,10 +6,18 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rb;
+
+    #region Stats & Cooldowns
+    public int maxHP = 100;
+    public float currHP {get; private set;}
+    public int ATK;
     public float moveSpd = 5f;
     public float jumpPwr = 10f;
     public float fireCooldown = 0.3f;
     public float jumpCooldown = 0.3f;
+    #endregion
+
+
     bool canFire = true, canJump = true;
     public PlayerInputActions playerControls;
 
@@ -44,7 +52,8 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        currHP = maxHP;
+
     }
 
     // Update is called once per frame
