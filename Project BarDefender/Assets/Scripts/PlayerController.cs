@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public float jumpPwr = 10f;
     public float fireCooldown = 0.3f;
     public float jumpCooldown = 0.3f;
-    bool canFire = true;
+    bool canFire = true, canJump = true;
     public PlayerInputActions playerControls;
 
     Vector2 moveDirection = Vector2.zero;
@@ -60,7 +60,15 @@ public class PlayerController : MonoBehaviour
     }
 
     private void FixedUpdate() {
-        rb.velocity = new Vector2(moveDirection.x * moveSpd, moveDirection.y * jumpPwr);
+        if(moveDirection.y * jumpPwr > 0) {
+            if(canJump) {
+                StartCoroutine(jumpTimer(jumpCooldown));         
+                rb.velocity = new Vector2(moveDirection.x * moveSpd, moveDirection.y * jumpPwr);
+            }
+        } else {
+            rb.velocity = new Vector2(moveDirection.x * moveSpd, 0);
+        }
+        //rb.velocity = new Vector2(moveDirection.x * moveSpd, moveDirection.y * jumpPwr);
     }
 
     private void Fire(InputAction.CallbackContext context) {
@@ -83,5 +91,14 @@ public class PlayerController : MonoBehaviour
             timer -= Time.deltaTime;
         }
         canFire = true;
+    }
+
+    IEnumerator jumpTimer(float timer){
+        canJump = false;
+        while(timer > 0){
+            yield return null;
+            timer -= Time.deltaTime;
+        }
+        canJump = true;
     }
 }
