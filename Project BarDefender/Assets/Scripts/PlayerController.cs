@@ -8,13 +8,20 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     public float moveSpd = 5f;
     public float jumpPwr = 10f;
+    public float fireCooldown = 0.3f;
+    public float jumpCooldown = 0.3f;
+    bool canFire = true;
     public PlayerInputActions playerControls;
 
     Vector2 moveDirection = Vector2.zero;
+    Vector2 lookDirection = new Vector2(1,0);
 
     private InputAction move;
     private InputAction fire;
     private InputAction jump;
+
+    public GameObject projectilePrefab;
+
 
     void Awake() {
         playerControls = new PlayerInputActions();
@@ -44,6 +51,12 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         moveDirection = move.ReadValue<Vector2>();
+
+        if(!Mathf.Approximately(moveDirection.x, 0.0f) || !Mathf.Approximately(moveDirection.y, 0.0f))
+        {
+            lookDirection.Set(moveDirection.x, moveDirection.y);
+            lookDirection.Normalize();
+        }
     }
 
     private void FixedUpdate() {
@@ -52,5 +65,23 @@ public class PlayerController : MonoBehaviour
 
     private void Fire(InputAction.CallbackContext context) {
         Debug.Log("We Fired");
+
+        if(canFire) {
+            StartCoroutine(fireTimer(fireCooldown));
+            GameObject projectileObject = Instantiate(projectilePrefab, rb.position + Vector2.up * 0.5f, Quaternion.identity);
+            Projectile projectile = projectileObject.GetComponent<Projectile>();
+            projectile.Launch(lookDirection, 300);
+            // animator.SetTrigger("Launch");
+            // PlaySound(throwSound);
+        }
+    }
+
+    IEnumerator fireTimer(float timer){
+        canFire = false;
+        while(timer > 0){
+            yield return null;
+            timer -= Time.deltaTime;
+        }
+        canFire = true;
     }
 }
