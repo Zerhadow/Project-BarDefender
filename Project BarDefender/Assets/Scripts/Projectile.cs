@@ -5,6 +5,8 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     Rigidbody2D rigidbody2d;
+    [Min(0f)]
+    public float despawnDistance;
     
     void Awake()
     {
@@ -13,7 +15,7 @@ public class Projectile : MonoBehaviour
 
     void Update()
     {
-        if(transform.position.magnitude > 1000.0f)
+        if(transform.position.magnitude > despawnDistance)
         {
             Destroy(gameObject);
         }

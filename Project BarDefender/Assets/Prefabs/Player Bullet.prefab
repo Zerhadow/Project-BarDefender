@@ -119,3 +119,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7534896c618d5d04a976ace7639785f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  despawnDistance: 18
