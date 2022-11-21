@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : Units
 {
     public Rigidbody2D rb;
 
     #region Stats & Cooldowns
-    public int maxHP = 100;
-    public float currHP {get; private set;}
     public int ATK;
     public float moveSpd = 5f;
     public float jumpPwr = 10f;
@@ -33,6 +31,7 @@ public class PlayerController : MonoBehaviour
 
     void Awake() {
         playerControls = new PlayerInputActions();
+        ATK = dmg;
     }
 
     private void OnEnable() {
@@ -52,7 +51,6 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currHP = maxHP;
 
     }
 
