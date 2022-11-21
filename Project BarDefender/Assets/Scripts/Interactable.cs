@@ -4,6 +4,7 @@ public class Interactable : MonoBehaviour
 {
     public float radius = 3f;
     public Transform interactionTransform;
+    public Item item;
 
     void OnDrawGizmosSelected() {
         Gizmos.color = Color.yellow;
@@ -18,8 +19,10 @@ public class Interactable : MonoBehaviour
     }
 
     void PickUp() {
-        Debug.Log("Picking up item");
-        // Add to inventory
-        Destroy(gameObject);
+        Debug.Log("Picking up " + item.name);
+        bool wasPickedUp = Inventory.instance.Add(item);
+
+        if(wasPickedUp) {Destroy(gameObject);}
+
     }
 }
