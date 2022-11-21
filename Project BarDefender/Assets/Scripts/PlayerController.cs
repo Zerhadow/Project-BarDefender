@@ -13,6 +13,7 @@ public class PlayerController : Units
     public float _jumpPower = 10f;
     public float fireCooldown = 0.3f;
     public float _jumpCooldown = 0.3f;
+    public float atkRange;
     #endregion
 
 

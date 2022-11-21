@@ -14,27 +14,35 @@ public class Inventory : MonoBehaviour
             return;
         }
         instance = this;
+
+        count = 0;
     }
 
     #endregion
 
     public int space = 20;
+    private int count;
     
     public List<Item> items = new List<Item>();
 
     public bool Add(Item item) {
         if(!item.isDefaultItem) {
-            // if(item.Count >= space) {
-            //     Debug.Log("Not enough room.");
-            //     return false;
-            // }
-            items.Add(item);
+            if(count >= space) {
+                Debug.Log("Not enough room.");
+                return false;
+            } else {
+                count++;
+                // Debug.Log("Count: " + count);
+                items.Add(item);
+            }
+
         }
 
         return true;
     }
 
     public void Remove(Item item) {
-        items.Add(item);
+        items.Remove(item);
+        count--;
     }
 }
