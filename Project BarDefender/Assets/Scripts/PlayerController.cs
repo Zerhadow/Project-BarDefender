@@ -21,6 +21,7 @@ public class PlayerController : Units
     bool canFire = true, canJump = true;
     public PlayerInputActions playerControls;
     [SerializeField] private int _currentJumps = 0;
+    [SerializeField] Animator _playerAnimator;
 
     Vector2 moveDirection = Vector2.zero;
     Vector2 lookDirection = new Vector2(1,0);
@@ -34,6 +35,7 @@ public class PlayerController : Units
     public Transform atkPt;
     public float atkRange = 0.5f;
     public LayerMask enemyLayers;
+    private bool isGrounded = false;
 
 
     void Awake() {
@@ -82,6 +84,11 @@ public class PlayerController : Units
             lookDirection.Set(moveDirection.x, moveDirection.y);
             lookDirection.Normalize();
         }
+        _playerAnimator.SetFloat("yVelocity", rb.velocity.y, 0.1f, 0.1f);
+        if (!isGrounded)
+        {
+            _playerAnimator.SetBool("Jump", true);
+        }
     }
 
     private void FixedUpdate() {
@@ -90,7 +97,9 @@ public class PlayerController : Units
         //    rb.velocity = new Vector2(moveDirection.x * moveSpd, 0);
         //}
         Move();
-        atkPt.position = this.transform.position + new Vector3(lookDirection.x * (atkRange+0.5f), lookDirection.y * (atkRange + 1), 0);    
+        atkPt.position = this.transform.position + new Vector3(lookDirection.x * (atkRange+0.5f), lookDirection.y * (atkRange + 1), 0);
+
+
     }
 
     private void Fire(InputAction.CallbackContext context) {
@@ -109,14 +118,12 @@ public class PlayerController : Units
     private void Jump(InputAction.CallbackContext context)
     {
     
-        if (canJump)
-       
         if (canJump && _currentJumps < _maxJumps)
         {
             _currentJumps++;
-            //Debug.Log("Jumped!");
             StartCoroutine(_jumpTimer(_jumpCooldown));
             rb.AddForce(new Vector2(0f, _jumpPower), ForceMode2D.Impulse);
+            isGrounded = false;
             //rb.AddForce(new Vector2(_jumpPower * moveDirection.x, 0), ForceMode2D.Impulse); //long jump?
         }
     }
@@ -172,7 +179,9 @@ public class PlayerController : Units
     {
         if (collision.gameObject.layer == 6)
         {
+            isGrounded = true;
             _currentJumps = 0;
+            _playerAnimator.SetBool("Jump", !isGrounded);
         }
     }
 }
