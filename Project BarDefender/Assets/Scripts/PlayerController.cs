@@ -13,11 +13,13 @@ public class PlayerController : Units
     public float _jumpPower = 10f;
     public float fireCooldown = 0.3f;
     public float _jumpCooldown = 0.3f;
+    public int _maxJumps = 2;
     #endregion
 
 
     bool canFire = true, canJump = true;
     public PlayerInputActions playerControls;
+    [SerializeField] private int _currentJumps = 0;
 
     Vector2 moveDirection = Vector2.zero;
     Vector2 lookDirection = new Vector2(1,0);
@@ -96,9 +98,10 @@ public class PlayerController : Units
     private void Jump(InputAction.CallbackContext context)
     {
        
-        if (canJump)
+        if (canJump && _currentJumps < _maxJumps)
         {
-            Debug.Log("Jumped!");
+            _currentJumps++;
+            //Debug.Log("Jumped!");
             StartCoroutine(_jumpTimer(_jumpCooldown));
             rb.AddForce(new Vector2(0f, _jumpPower), ForceMode2D.Impulse);
             //rb.AddForce(new Vector2(_jumpPower * moveDirection.x, 0), ForceMode2D.Impulse); //long jump?
@@ -126,5 +129,13 @@ public class PlayerController : Units
             timer -= Time.deltaTime;
         }
         canJump = true;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == 6)
+        {
+            _currentJumps = 0;
+        }
     }
 }
