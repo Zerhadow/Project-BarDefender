@@ -7,32 +7,21 @@ public class Item : ScriptableObject
 {
     new public string name = "New Item";
     public Sprite icon = null;
-    public bool isDefaultItem = false;
-    
-    switch (name)
-    {
-        case value1: Attack Mushroom
-            break;
-        default:
-            break;
-    }
-
-    switch
-    
+    public bool isDefaultItem = false;    
 }
 
-public class Abilities : Item {
-    public int inventorySlot;
-    PlayerController player;
+// public class Abilities : Item {
+//     public int inventorySlot;
+//     PlayerController player;
 
-    public int atkMod;
-    public int moveSpdMod;
-    public int jumpPwrMod;
-    public int fireCooldownMod;
-    public int jumpCooldownMod;
-    public int atkRange;
+//     public int atkMod;
+//     public int moveSpdMod;
+//     public int jumpPwrMod;
+//     public int fireCooldownMod;
+//     public int jumpCooldownMod;
+//     public int atkRange;
 
-    Awake() {
+//     Awake() {
 
-    }
-}
+//     }
+// }

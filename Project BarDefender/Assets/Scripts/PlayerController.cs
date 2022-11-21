@@ -13,7 +13,7 @@ public class PlayerController : Units
     public float _jumpPower = 10f;
     public float fireCooldown = 0.3f;
     public float _jumpCooldown = 0.3f;
-    public float atkRange;
+    public float atkRange = 0.5f;
     #endregion
 
 
@@ -30,7 +30,6 @@ public class PlayerController : Units
 
     public GameObject projectilePrefab;
     public Transform atkPt;
-    public float atkRange = 0.5f;
     public LayerMask enemyLayers;
 
     // Interactable interactable = hit.collider.GetComponent<Interactable>();
