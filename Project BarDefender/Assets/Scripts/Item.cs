@@ -8,6 +8,17 @@ public class Item : ScriptableObject
     new public string name = "New Item";
     public Sprite icon = null;
     public bool isDefaultItem = false;
+    
+    switch (name)
+    {
+        case value1: Attack Mushroom
+            break;
+        default:
+            break;
+    }
+
+    switch
+    
 }
 
 public class Abilities : Item {

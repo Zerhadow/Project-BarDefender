@@ -162,4 +162,9 @@ public class PlayerController : Units
 
         Gizmos.DrawWireSphere(atkPt.position, atkRange);
     }
+
+    public void IncreaseATK() {
+        ATK += 1;
+        Debug.Log("New ATK: " + ATK);
+    }
 }
