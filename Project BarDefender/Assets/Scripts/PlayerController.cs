@@ -14,6 +14,7 @@ public class PlayerController : Units
     public float fireCooldown = 0.3f;
     public float _jumpCooldown = 0.3f;
     public int _maxJumps = 2;
+    public float _rebound = 2;
     #endregion
 
 
@@ -89,6 +90,7 @@ public class PlayerController : Units
         //    rb.velocity = new Vector2(moveDirection.x * moveSpd, 0);
         //}
         Move();
+        atkPt.position = this.transform.position + new Vector3(lookDirection.x * (atkRange+0.5f), lookDirection.y * (atkRange + 1), 0);    
     }
 
     private void Fire(InputAction.CallbackContext context) {
@@ -131,6 +133,7 @@ public class PlayerController : Units
             // Debug.Log("We hit " + enemy.name);
             Units enemyStat = enemy.gameObject.GetComponent<Units>();
             enemyStat.TakeDmg(ATK);
+            rb.AddForce(new Vector2(-lookDirection.x - (moveDirection.x/2) * _rebound, -lookDirection.x - moveDirection.y * _rebound), ForceMode2D.Impulse); //long jump?
             Debug.Log("Enemy HP: " + enemyStat.currHP);        
         }
 
