@@ -32,7 +32,7 @@ public class Projectile : MonoBehaviour
         rigidbody2d.AddForce(direction * force);
     }
 
-    void OnTriggerEnter(Collider other) {
+    void OnTriggerEnter2D(Collider2D other) {
         Debug.Log("Bullet hit " + other.name);
         if(this.tag == "PlayerBullet") {
             if(other.tag == "Enemy") {
