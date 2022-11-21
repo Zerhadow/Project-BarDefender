@@ -33,12 +33,12 @@ public class Projectile : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-        Debug.Log("Bullet hit " + other.name);
+        // Debug.Log("Bullet hit " + other.name);
         if(this.tag == "PlayerBullet") {
             if(other.tag == "Enemy") {
                 Units enemyStat = other.gameObject.GetComponent<Units>();
                 enemyStat.TakeDmg(shooterStat.dmg);
-                Debug.Log("Enemy HP: " + enemyStat.currHP);        
+                // Debug.Log("Enemy HP: " + enemyStat.currHP);        
                 //Instantiate(particles,transform.position,Quaternion.identity);
                 //AudioManager.PlaySound("BulletCollide");
                 Destroy(gameObject);

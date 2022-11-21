@@ -331,7 +331,7 @@ GameObject:
   - component: {fileID: 1480764103}
   - component: {fileID: 1480764102}
   - component: {fileID: 1480764101}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BasicEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -578,14 +578,6 @@ PrefabInstance:
     - target: {fileID: 2659721188117305405, guid: a6f8ac154077a5845aeadb82f9d941c8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2659721188117305406, guid: a6f8ac154077a5845aeadb82f9d941c8, type: 3}
-      propertyPath: jumpPwr
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 2659721188117305407, guid: a6f8ac154077a5845aeadb82f9d941c8, type: 3}
-      propertyPath: m_Mass
-      value: 1.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6f8ac154077a5845aeadb82f9d941c8, type: 3}
