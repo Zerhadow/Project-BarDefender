@@ -467,6 +467,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1849821588 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 357289285632000936, guid: a6f8ac154077a5845aeadb82f9d941c8, type: 3}
+  m_PrefabInstance: {fileID: 2659721188209951001}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1893407955 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 357289284771618051, guid: a6f8ac154077a5845aeadb82f9d941c8, type: 3}
@@ -596,6 +601,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.59
       objectReference: {fileID: 0}
+    - target: {fileID: 357289285632000937, guid: a6f8ac154077a5845aeadb82f9d941c8, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 357289285632000937, guid: a6f8ac154077a5845aeadb82f9d941c8, type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 357289285633907969, guid: a6f8ac154077a5845aeadb82f9d941c8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -616,6 +629,10 @@ PrefabInstance:
       propertyPath: _rebound
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 357289285633908093, guid: a6f8ac154077a5845aeadb82f9d941c8, type: 3}
+      propertyPath: _playerAnimator
+      value: 
+      objectReference: {fileID: 1849821588}
     - target: {fileID: 2659721188117305403, guid: a6f8ac154077a5845aeadb82f9d941c8, type: 3}
       propertyPath: m_Name
       value: Player
