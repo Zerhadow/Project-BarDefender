@@ -9,10 +9,10 @@ public class PlayerController : Units
 
     #region Stats & Cooldowns
     public int ATK;
-    public float moveSpd = 5f;
-    public float jumpPwr = 10f;
+    public float _moveSpeed = 5f;
+    public float _jumpPower = 10f;
     public float fireCooldown = 0.3f;
-    public float jumpCooldown = 0.3f;
+    public float _jumpCooldown = 0.3f;
     #endregion
 
 
@@ -41,11 +41,17 @@ public class PlayerController : Units
         fire = playerControls.Player.Fire;
         fire.Enable();
         fire.performed += Fire;
+
+        jump = playerControls.Player.Jump;
+        jump.Enable();
+        jump.performed += Jump;
+
     }
 
     private void OnDisable() {
         move.Disable();
         fire.Disable();
+        jump.Disable();
     }
     
     // Start is called before the first frame update
@@ -67,15 +73,11 @@ public class PlayerController : Units
     }
 
     private void FixedUpdate() {
-        if(moveDirection.y * jumpPwr > 0) {
-            if(canJump) {
-                StartCoroutine(jumpTimer(jumpCooldown));         
-                rb.velocity = new Vector2(moveDirection.x * moveSpd, moveDirection.y * jumpPwr);
-            }
-        } else {
-            rb.velocity = new Vector2(moveDirection.x * moveSpd, 0);
-        }
-        //rb.velocity = new Vector2(moveDirection.x * moveSpd, moveDirection.y * jumpPwr);
+
+        //if (moveDirection.y * _jumpPower < 0) {
+        //    rb.velocity = new Vector2(moveDirection.x * moveSpd, 0);
+        //}
+        Move();
     }
 
     private void Fire(InputAction.CallbackContext context) {
@@ -89,6 +91,23 @@ public class PlayerController : Units
             // animator.SetTrigger("Launch");
             // PlaySound(throwSound);
         }
+    }   
+
+    private void Jump(InputAction.CallbackContext context)
+    {
+       
+        if (canJump)
+        {
+            Debug.Log("Jumped!");
+            StartCoroutine(_jumpTimer(_jumpCooldown));
+            rb.AddForce(new Vector2(0f, _jumpPower), ForceMode2D.Impulse);
+            //rb.AddForce(new Vector2(_jumpPower * moveDirection.x, 0), ForceMode2D.Impulse); //long jump?
+        }
+    }
+
+    private void Move()
+    {
+        transform.position += transform.right * moveDirection.x * _moveSpeed * Time.deltaTime;
     }
 
     IEnumerator fireTimer(float timer){
@@ -100,7 +119,7 @@ public class PlayerController : Units
         canFire = true;
     }
 
-    IEnumerator jumpTimer(float timer){
+    IEnumerator _jumpTimer(float timer){
         canJump = false;
         while(timer > 0){
             yield return null;
