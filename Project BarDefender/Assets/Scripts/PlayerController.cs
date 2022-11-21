@@ -27,8 +27,12 @@ public class PlayerController : Units
     private InputAction move;
     private InputAction fire;
     private InputAction jump;
+    private InputAction melee;
 
     public GameObject projectilePrefab;
+    public Transform atkPt;
+    public float atkRange = 0.5f;
+    public LayerMask enemyLayers;
 
 
     void Awake() {
@@ -48,12 +52,17 @@ public class PlayerController : Units
         jump.Enable();
         jump.performed += Jump;
 
+        melee = playerControls.Player.Melee;
+        melee.Enable();
+        melee.performed += Melee;
+
     }
 
     private void OnDisable() {
         move.Disable();
         fire.Disable();
         jump.Disable();
+        melee.Disable();
     }
     
     // Start is called before the first frame update
@@ -97,6 +106,8 @@ public class PlayerController : Units
 
     private void Jump(InputAction.CallbackContext context)
     {
+    
+        if (canJump)
        
         if (canJump && _currentJumps < _maxJumps)
         {
@@ -107,6 +118,23 @@ public class PlayerController : Units
             //rb.AddForce(new Vector2(_jumpPower * moveDirection.x, 0), ForceMode2D.Impulse); //long jump?
         }
     }
+
+    private void Melee(InputAction.CallbackContext context) {
+        //Play an atk animation
+        //animator.SetTrigger("Attack");
+
+        //Detect enemies in range of atk
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(atkPt.position, atkRange, enemyLayers);
+
+        //dmg them
+        foreach (Collider2D enemy in hitEnemies) {
+            // Debug.Log("We hit " + enemy.name);
+            Units enemyStat = enemy.gameObject.GetComponent<Units>();
+            enemyStat.TakeDmg(ATK);
+            Debug.Log("Enemy HP: " + enemyStat.currHP);        
+        }
+
+    } 
 
     private void Move()
     {
@@ -129,6 +157,12 @@ public class PlayerController : Units
             timer -= Time.deltaTime;
         }
         canJump = true;
+    }
+
+    private void OnDrawGizmosSelected() {
+        if(atkPt == null) {return; }
+
+        Gizmos.DrawWireSphere(atkPt.position, atkRange);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
