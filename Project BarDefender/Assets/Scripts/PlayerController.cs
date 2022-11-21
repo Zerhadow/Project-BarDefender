@@ -32,6 +32,8 @@ public class PlayerController : Units
     public float atkRange = 0.5f;
     public LayerMask enemyLayers;
 
+    // Interactable interactable = hit.collider.GetComponent<Interactable>();
+
 
     void Awake() {
         playerControls = new PlayerInputActions();
