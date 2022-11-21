@@ -157,7 +157,7 @@ MonoBehaviour:
   rb: {fileID: 2659721188117305407}
   ATK: 5
   moveSpd: 5
-  jumpPwr: 100
+  jumpPwr: 15
   fireCooldown: 0.5
   jumpCooldown: 0.3
   projectilePrefab: {fileID: 5304383336054094429, guid: 08044bbf5fe3c5e44b9f59092819c2cf, type: 3}
