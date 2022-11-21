@@ -526,7 +526,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 3
   interactionTransform: {fileID: 1775284749}
-  item: {fileID: 0}
+  item: {fileID: 11400000, guid: c66c8b641e8eadd41995281bd09e983b, type: 2}
 --- !u!212 &1775284748
 SpriteRenderer:
   m_ObjectHideFlags: 0
