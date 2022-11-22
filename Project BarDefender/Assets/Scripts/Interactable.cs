@@ -5,6 +5,8 @@ public class Interactable : MonoBehaviour
     public float radius = 3f;
     public Transform interactionTransform;
     public Item item;
+    GameObject playerPrefab;
+    PlayerController player;
 
     void OnDrawGizmosSelected() {
         Gizmos.color = Color.yellow;
@@ -18,11 +20,28 @@ public class Interactable : MonoBehaviour
         }
     }
 
+    private void Update() {
+        player = playerPrefab.GetComponent<PlayerController>();
+    }
+
     void PickUp() {
         Debug.Log("Picking up " + item.name);
         bool wasPickedUp = Inventory.instance.Add(item);
+        findSkill(item.name);
 
         if(wasPickedUp) {Destroy(gameObject);}
 
+    }
+
+    void findSkill(string name) {
+        switch (name) {
+            case "Attack Mushroom S":
+                //call function
+                //IncreaseATK_DecreaseHP("common");
+                break;
+            default:
+                break;
+        }
+        
     }
 }
