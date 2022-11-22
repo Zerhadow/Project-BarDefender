@@ -22,6 +22,7 @@ public class PlayerController : Units
     public PlayerInputActions playerControls;
     [SerializeField] private int _currentJumps = 0;
     [SerializeField] Animator _playerAnimator;
+    [SerializeField] SpriteRenderer _playerSprite;
 
     Vector2 moveDirection = Vector2.zero;
     Vector2 lookDirection = new Vector2(1,0);
@@ -89,6 +90,15 @@ public class PlayerController : Units
         {
             _playerAnimator.SetBool("Jump", true);
         }
+        if (lookDirection.x < 0)
+        {
+            _playerSprite.flipX = true;
+        } else if (lookDirection.x > 0)
+        {
+            _playerSprite.flipX = false;
+        }
+        
+        
     }
 
     private void FixedUpdate() {
@@ -149,6 +159,7 @@ public class PlayerController : Units
     private void Move()
     {
         transform.position += transform.right * moveDirection.x * _moveSpeed * Time.deltaTime;
+        _playerAnimator.SetFloat("xVelocity", moveDirection.x);
     }
 
     IEnumerator fireTimer(float timer){
