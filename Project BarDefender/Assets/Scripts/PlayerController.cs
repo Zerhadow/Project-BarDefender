@@ -13,6 +13,7 @@ public class PlayerController : Units
     public float _jumpPower = 10f;
     public float fireCooldown = 0.3f;
     public float _jumpCooldown = 0.3f;
+    public float atkRange = 0.5f;
     public int _maxJumps = 2;
     public float _rebound = 2;
     #endregion
@@ -34,9 +35,10 @@ public class PlayerController : Units
 
     public GameObject projectilePrefab;
     public Transform atkPt;
-    public float atkRange = 0.5f;
     public LayerMask enemyLayers;
     private bool isGrounded = false;
+
+    // Interactable interactable = hit.collider.GetComponent<Interactable>();
 
 
     void Awake() {
@@ -186,6 +188,10 @@ public class PlayerController : Units
         Gizmos.DrawWireSphere(atkPt.position, atkRange);
     }
 
+    public void IncreaseATK_DecreaseHP(string rarity) {
+        ATK += 1;
+        Debug.Log("New ATK: " + ATK);
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == 6)
@@ -194,5 +200,6 @@ public class PlayerController : Units
             _currentJumps = 0;
             _playerAnimator.SetBool("Jump", !isGrounded);
         }
+
     }
 }
