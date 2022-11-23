@@ -2,13 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseEnemy : Units
+public class BaseEnemy : MonoBehaviour
 {
-    public override void Die() {
-        base.Die();
-        // AudioManager.PlaySound("EnemyDeath");
-        Destroy(this.gameObject);
-        //drop ingredient function based on monster rarity
-        Debug.Log(transform.name + " died");
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }
