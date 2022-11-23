@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 357289285632000939}
   - component: {fileID: 357289285632000937}
-  - component: {fileID: 357289285632000936}
+  - component: {fileID: 4674013612465557339}
   m_Layer: 0
   m_Name: PlayerSprite
   m_TagString: Untagged
@@ -169,7 +169,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &357289285632000936
+--- !u!95 &4674013612465557339
 Animator:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -328,7 +328,7 @@ MonoBehaviour:
   _maxJumps: 2
   _rebound: 10
   _currentJumps: 0
-  _playerAnimator: {fileID: 357289285632000936}
+  _playerAnimator: {fileID: 4674013612465557339}
   _playerSprite: {fileID: 357289285632000937}
   _footPos: {fileID: 706687096908092054}
   _groundLayer:

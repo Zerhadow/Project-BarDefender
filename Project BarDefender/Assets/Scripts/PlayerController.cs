@@ -84,6 +84,7 @@ public class PlayerController : Units
 
         _playerAnimator.SetFloat("xVelocity", moveDirection.x, 0.1f, 0.1f);
         _playerAnimator.SetFloat("yVelocity", rb.velocity.y, 0.1f, 0.1f);
+        _playerAnimator.SetFloat("Health", currHP, 0.1f, 0.1f);
         _playerAnimator.SetBool("isGrounded", isGrounded);
         _playerAnimator.SetBool("Jump", !isGrounded);
         _playerAnimator.SetBool("isGrounded", isGrounded);
@@ -159,7 +160,7 @@ public class PlayerController : Units
             Units enemyStat = enemy.gameObject.GetComponent<Units>();
             enemyStat.TakeDmg(ATK);
             rb.AddForce(new Vector2(-lookDirection.x - (moveDirection.x/2) * _rebound, -lookDirection.x - moveDirection.y * _rebound), ForceMode2D.Impulse); //long jump?
-            Debug.Log("Enemy HP: " + enemyStat.currHP);        
+            Debug.Log("Enemy HP: " + enemyStat.currHP);         
         }
 
     } 
