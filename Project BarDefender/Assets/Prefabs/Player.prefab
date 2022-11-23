@@ -325,6 +325,7 @@ MonoBehaviour:
   _jumpPower: 10
   fireCooldown: 0.5
   _jumpCooldown: 0.5
+  _atkrange: 0.5
   _maxJumps: 2
   _rebound: 10
   _currentJumps: 0
