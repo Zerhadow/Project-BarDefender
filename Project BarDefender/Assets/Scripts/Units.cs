@@ -16,7 +16,7 @@ public class Units : MonoBehaviour
     void Start()
     {
         currHP = maxHP;        
-
+        HPBar.SetMaxHealth(maxHP);
     }
 
     // Update is called once per frame
@@ -41,7 +41,7 @@ public class Units : MonoBehaviour
             }
 
 
-            //HPBar.SetHealth(currHP);
+            HPBar.SetHealth(currHP);
             // if(hitEffect != null)
             //     Instantiate(hitEffect, transform.position, Quaternion.identity);
 

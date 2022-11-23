@@ -73,7 +73,7 @@ public class PlayerController : Units
     void Start()
     {
         //for now only the player has a healthbar so only he will call the set health function
-        HPBar.SetMaxHealth(maxHP);
+        
 
     }
 
@@ -101,7 +101,7 @@ public class PlayerController : Units
         }
 
         //on update since player doesnt have a damage funct and enemies dont have health 
-        HPBar.SetHealth(currHP);
+        
         
     }
 
