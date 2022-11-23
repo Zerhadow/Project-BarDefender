@@ -21,7 +21,7 @@ public class Interactable : MonoBehaviour
     }
 
     private void Update() {
-        player = playerPrefab.GetComponent<PlayerController>();
+        //player = playerPrefab.GetComponent<PlayerController>();
     }
 
     void PickUp() {
