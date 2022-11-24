@@ -34,11 +34,13 @@ public class BaseEnemy : Units
         int randNum = Random.Range(1, 101);
         Item drop = null;
 
+        //find all assets in item folder
+        // string[] items2 = AssetDatabase.FindAssets("1:Items", null);
+        // assetDB not working
+
         //depening on rarity, drop a random ingredient
 
         //roll for rarity: for 1 to 100
-
-
         if(randNum >= 25) {
             //looks for common
 
