@@ -23,7 +23,8 @@ public class Interactable : MonoBehaviour
     } 
 
     private void Update() { 
-        // player = playerPrefab.GetComponent<PlayerController>(); 
+        // player = playerPrefab.GetComponent<PlayerController>();
+        interactionTransform = this.GetComponent<Transform>();
     } 
 
     void PickUp() { 
@@ -39,7 +40,7 @@ public class Interactable : MonoBehaviour
         switch (name) { 
             case "Attack Mushroom": 
                 //call function 
-                //IncreaseATK_DecreaseHP("common"); 
+                // IncreaseATK_DecreaseHP("common"); 
                 break;
             case "Blueberry": 
                 //call function 
@@ -55,7 +56,7 @@ public class Interactable : MonoBehaviour
                 break;
             default: 
                 break; 
-        } 
+        }
 
     } 
 } 
