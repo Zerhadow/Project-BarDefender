@@ -5,9 +5,9 @@ using UnityEngine;
 public class Units : MonoBehaviour
 {
     public int maxHP = 100;
-    public float currHP {get; private set;}
+    public float currHP ;//{get; private set;}
     public int dmg;
-    //public HUDHealth HPBar;
+    public HealthBar HPBar;
     //public AudioSource dmgSound;
     public bool invincible = false;
     float invcibilityDuration = 0.001f;
@@ -15,9 +15,8 @@ public class Units : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currHP = maxHP;
-        //HPBar.SetMaxHealth(maxHP);
-
+        currHP = maxHP;        
+        HPBar.SetMaxHealth(maxHP);
     }
 
     // Update is called once per frame
@@ -41,7 +40,8 @@ public class Units : MonoBehaviour
                 //AudioManager.PlaySound("PlayerDamage");
             }
 
-            //HPBar.SetHealth(currHP, originalHP);
+
+            HPBar.SetHealth(currHP);
             // if(hitEffect != null)
             //     Instantiate(hitEffect, transform.position, Quaternion.identity);
 
