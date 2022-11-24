@@ -189,7 +189,7 @@ GameObject:
   - component: {fileID: 5114941099323567991}
   - component: {fileID: 5114941099323567992}
   - component: {fileID: 5114941099323567993}
-  - component: {fileID: 2738025788554571887}
+  - component: {fileID: 7134060878322972755}
   m_Layer: 8
   m_Name: BasicEnemyV2
   m_TagString: Enemy
@@ -312,7 +312,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &2738025788554571887
+--- !u!114 &7134060878322972755
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -321,11 +321,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5114941099323567995}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce876733a8752d54cbe063084ba9b2e4, type: 3}
+  m_Script: {fileID: 11500000, guid: 1247f02a10e6f9541a7062aa2b9d47b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 100
-  currHP: 0
   dmg: 0
   HPBar: {fileID: 5114941099375419066}
   invincible: 0

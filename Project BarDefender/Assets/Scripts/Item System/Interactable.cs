@@ -37,10 +37,22 @@ public class Interactable : MonoBehaviour
 
     void findSkill(string name) { 
         switch (name) { 
-            case "Attack Mushroom S": 
+            case "Attack Mushroom": 
                 //call function 
                 //IncreaseATK_DecreaseHP("common"); 
-                break; 
+                break;
+            case "Blueberry": 
+                //call function 
+                //IncreaseATK_DecreaseHP("common"); 
+            break;
+                case "Frog Leg": 
+                //call function 
+                //IncreaseATK_DecreaseHP("common"); 
+                break;
+                case "Hemp Thread": 
+                //call function 
+                //IncreaseATK_DecreaseHP("common"); 
+                break;
             default: 
                 break; 
         } 

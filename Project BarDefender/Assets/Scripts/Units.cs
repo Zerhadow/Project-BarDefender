@@ -5,7 +5,7 @@ using UnityEngine;
 public class Units : MonoBehaviour
 {
     public int maxHP = 100;
-    public float currHP ;//{get; private set;}
+    public float currHP {get; private set;}
     public int dmg;
     public HealthBar HPBar;
     //public AudioSource dmgSound;
@@ -15,7 +15,8 @@ public class Units : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currHP = maxHP;        
+        currHP = maxHP;
+        // Debug.Log("currHP: " + currHP);        
         HPBar.SetMaxHealth(maxHP);
     }
 
