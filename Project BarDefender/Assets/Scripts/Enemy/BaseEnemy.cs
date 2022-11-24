@@ -15,4 +15,11 @@ public class BaseEnemy : Units
     {
         
     }
+
+    public override void Die() {
+        //Die in some way
+        //This method is meant to be overwritten
+        Destroy(gameObject);
+        Debug.Log(transform.name + " died");
+    }
 }
