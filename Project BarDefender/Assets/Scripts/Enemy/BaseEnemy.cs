@@ -63,4 +63,15 @@ public class BaseEnemy : Units
         //spawn object
         itemDrop = Instantiate(itemDrop, rb.position + Vector2.up * 0.5f, Quaternion.identity);
     }
+
+    // Item ListOfItems() {
+    //     string item1 = "Attack Mushroom";
+    // }
+
+    /*
+    Attack Mushroom
+    Blueberry
+    Frog Leg
+    Hemp Thread
+    */
 }
