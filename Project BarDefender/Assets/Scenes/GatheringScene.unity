@@ -320,7 +320,7 @@ MonoBehaviour:
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
     m_Style: 1
-    m_Time: 2
+    m_Time: 1
     m_CustomCurve:
       serializedVersion: 2
       m_Curve: []
@@ -334,11 +334,6 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!95 &464861009 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 357289285632000936, guid: a6f8ac154077a5845aeadb82f9d941c8, type: 3}
-  m_PrefabInstance: {fileID: 357289284926580290}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &625857101
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -672,10 +667,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 357289285633908093, guid: a6f8ac154077a5845aeadb82f9d941c8, type: 3}
-      propertyPath: _playerAnimator
-      value: 
-      objectReference: {fileID: 464861009}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6f8ac154077a5845aeadb82f9d941c8, type: 3}
 --- !u!1001 &2442202649592127990
@@ -696,6 +687,18 @@ PrefabInstance:
     - target: {fileID: 6663438918840354921, guid: a2f9a02a5708f6e44b86ed11504f0577, type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6663438918840354921, guid: a2f9a02a5708f6e44b86ed11504f0577, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.69948
+      objectReference: {fileID: 0}
+    - target: {fileID: 6663438918840354921, guid: a2f9a02a5708f6e44b86ed11504f0577, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.69948
+      objectReference: {fileID: 0}
+    - target: {fileID: 6663438918840354921, guid: a2f9a02a5708f6e44b86ed11504f0577, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.69948
       objectReference: {fileID: 0}
     - target: {fileID: 6663438918840354921, guid: a2f9a02a5708f6e44b86ed11504f0577, type: 3}
       propertyPath: m_LocalPosition.x

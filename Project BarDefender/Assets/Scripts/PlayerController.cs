@@ -13,6 +13,7 @@ public class PlayerController : Units
     public float _jumpPower = 10f;
     public float fireCooldown = 0.3f;
     public float _jumpCooldown = 0.3f;
+    public float _atkrange = 0.5f;
     public int _maxJumps = 2;
     public float _rebound = 2;
     #endregion
@@ -21,8 +22,10 @@ public class PlayerController : Units
     bool canFire = true, canJump = true;
     public PlayerInputActions playerControls;
     [SerializeField] private int _currentJumps = 0;
-    [SerializeField] Animator _playerAnimator;
+    [SerializeField] UnityEngine.Animator _playerAnimator;
     [SerializeField] SpriteRenderer _playerSprite;
+    [SerializeField] Transform _footPos;
+    public LayerMask _groundLayer;
 
     Vector2 moveDirection = Vector2.zero;
     Vector2 lookDirection = new Vector2(1,0);
@@ -35,7 +38,8 @@ public class PlayerController : Units
     public GameObject projectilePrefab;
     public Transform atkPt;
     public float atkRange = 0.5f;
-    public LayerMask enemyLayers;
+    public LayerMask enemyLayers; 
+    // Interactable interactable = hit.collider.GetComponent<Interactable>(); 
     private bool isGrounded = false;
 
 
@@ -82,12 +86,19 @@ public class PlayerController : Units
     {
         moveDirection = move.ReadValue<Vector2>();
 
-        if(!Mathf.Approximately(moveDirection.x, 0.0f) || !Mathf.Approximately(moveDirection.y, 0.0f))
+        _playerAnimator.SetFloat("xVelocity", moveDirection.x, 0.1f, 0.1f);
+        _playerAnimator.SetFloat("yVelocity", rb.velocity.y, 0.1f, 0.1f);
+        _playerAnimator.SetFloat("Health", currHP, 0.1f, 0.1f);
+        _playerAnimator.SetBool("isGrounded", isGrounded);
+        _playerAnimator.SetBool("Jump", !isGrounded);
+        _playerAnimator.SetBool("isGrounded", isGrounded);
+
+        if (!Mathf.Approximately(moveDirection.x, 0.0f) || !Mathf.Approximately(moveDirection.y, 0.0f))
         {
             lookDirection.Set(moveDirection.x, moveDirection.y);
             lookDirection.Normalize();
         }
-        _playerAnimator.SetFloat("yVelocity", rb.velocity.y, 0.1f, 0.1f);
+        
         if (!isGrounded)
         {
             _playerAnimator.SetBool("Jump", true);
@@ -100,9 +111,7 @@ public class PlayerController : Units
             _playerSprite.flipX = false;
         }
 
-        //on update since player doesnt have a damage funct and enemies dont have health 
-        
-        
+
     }
 
     private void FixedUpdate() {
@@ -112,7 +121,7 @@ public class PlayerController : Units
         //}
         Move();
         atkPt.position = this.transform.position + new Vector3(lookDirection.x * (atkRange+0.5f), lookDirection.y * (atkRange + 1), 0);
-
+        isGrounded = Physics2D.OverlapCircle(_footPos.position, 1f, _groundLayer);
 
     }
 
@@ -155,7 +164,7 @@ public class PlayerController : Units
             Units enemyStat = enemy.gameObject.GetComponent<Units>();
             enemyStat.TakeDmg(ATK);
             rb.AddForce(new Vector2(-lookDirection.x - (moveDirection.x/2) * _rebound, -lookDirection.x - moveDirection.y * _rebound), ForceMode2D.Impulse); //long jump?
-            Debug.Log("Enemy HP: " + enemyStat.currHP);        
+            Debug.Log("Enemy HP: " + enemyStat.currHP);         
         }
 
     } 
@@ -163,7 +172,8 @@ public class PlayerController : Units
     private void Move()
     {
         transform.position += transform.right * moveDirection.x * _moveSpeed * Time.deltaTime;
-        _playerAnimator.SetFloat("xVelocity", moveDirection.x);
+        
+
     }
 
     IEnumerator fireTimer(float timer){
@@ -190,13 +200,15 @@ public class PlayerController : Units
         Gizmos.DrawWireSphere(atkPt.position, atkRange);
     }
 
+    public void IncreaseATK_DecreaseHP(string rarity) { 
+        ATK += 1; 
+        Debug.Log("New ATK: " + ATK); 
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == 6)
         {
-            isGrounded = true;
-            _currentJumps = 0;
-            _playerAnimator.SetBool("Jump", !isGrounded);
+            _currentJumps = 0;   
         }
     }
 }
