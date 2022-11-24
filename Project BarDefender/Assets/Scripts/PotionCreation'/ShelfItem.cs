@@ -3,19 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ShelfItem : Interactable, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
+public class ShelfItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler
 {
 
-    private RectTransform rectTransform;
+    
+
 
     [SerializeField]
     private Canvas canvas; 
+    private RectTransform rectTransform;
+    private CanvasGroup canvasGroup;
+    public Item item;
+    public int count; 
 
     private void Awake(){
         rectTransform = GetComponent<RectTransform>();
+        canvasGroup = GetComponent<CanvasGroup>();
     }
     public void OnBeginDrag(PointerEventData eventData){
         Debug.Log("Start Drag");
+        canvasGroup.alpha = .6f;
+        canvasGroup.blocksRaycasts = false; 
     }
 
     public void OnDrag(PointerEventData eventData){
@@ -24,10 +32,21 @@ public class ShelfItem : Interactable, IPointerDownHandler, IBeginDragHandler, I
     }
     public void OnEndDrag(PointerEventData eventData){
         Debug.Log("End Drag");
+        canvasGroup.alpha = 1f;
+        canvasGroup.blocksRaycasts = true;
     }
 
     public void OnPointerDown(PointerEventData eventData){
         Debug.Log("On Pointer down");
     }
+
+    public void OnDrop(PointerEventData eventData){
+        Debug.Log("Drop");
+        //item count -1 
+        //dragged item disappears 
+
+        
+    }
+
 
 }
