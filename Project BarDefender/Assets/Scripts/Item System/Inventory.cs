@@ -24,7 +24,6 @@ public class Inventory : MonoBehaviour
     private int count; 
 
     public List<Item> items = new List<Item>();
-    public List<Item> fullItemList = new List<Item>(); 
 
     public bool Add(Item item) { 
         if(!item.isDefaultItem) { 
@@ -45,13 +44,6 @@ public class Inventory : MonoBehaviour
     public void Remove(Item item) { 
         items.Remove(item); 
         count--; 
-    }
-
-    void fillList() {
-        
-        // fullItemList.Add();
-    }
-
-    
+    }    
 } 
 
