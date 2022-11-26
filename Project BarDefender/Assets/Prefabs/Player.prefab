@@ -318,6 +318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 100
   dmg: 6
+  HPBar: {fileID: 0}
   invincible: 0
   rb: {fileID: 357289285633907970}
   ATK: 5

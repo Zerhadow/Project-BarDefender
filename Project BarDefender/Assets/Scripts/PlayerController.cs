@@ -76,6 +76,8 @@ public class PlayerController : Units
     // Start is called before the first frame update
     void Start()
     {
+        //for now only the player has a healthbar so only he will call the set health function
+        
 
     }
 

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseEnemy : MonoBehaviour
+public class BaseEnemy : Units
 {
     // Start is called before the first frame update
     void Start()
@@ -14,5 +14,12 @@ public class BaseEnemy : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public override void Die() {
+        //Die in some way
+        //This method is meant to be overwritten
+        Destroy(gameObject);
+        Debug.Log(transform.name + " died");
     }
 }

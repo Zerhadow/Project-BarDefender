@@ -1,0 +1,530 @@
+fileFormatVersion: 2
+guid: cda2f0a397381a74296cd127c923c419
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: VineMan_GemPower-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 351
+        width: 71
+        height: 52
+      alignment: 9
+      pivot: {x: 0.7681545, y: 0.6590934}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 509282de4d3f6854880647c5d0ad7054
+      internalID: 1524152264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_GemPower-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 351
+        width: 71
+        height: 51
+      alignment: 9
+      pivot: {x: 0.7681545, y: 0.6590934}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f78a94aaf39528046b32570ab60ae245
+      internalID: 891297929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_GemPower-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 351
+        width: 71
+        height: 58
+      alignment: 9
+      pivot: {x: 0.76995075, y: 0.62392133}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acffbcb9ce4769f4db4215b81ea7a2a7
+      internalID: -212752370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_GemPower-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 351
+        width: 71
+        height: 62
+      alignment: 9
+      pivot: {x: 0.7705912, y: 0.58475125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e21f4a0dbf3a12c459e75aa0ab9f01f6
+      internalID: -41286762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_GemPower-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 351
+        width: 71
+        height: 77
+      alignment: 9
+      pivot: {x: 0.7655373, y: 0.47026914}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56e6e55b323dfeb4481d5f86fea5e6a5
+      internalID: -44846231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_GemPower-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 238
+        width: 71
+        height: 68
+      alignment: 9
+      pivot: {x: 0.76912034, y: 0.5365991}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f2c2b83dfc39e643939ca148b1bb354
+      internalID: 1727819151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_GemPower-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 238
+        width: 71
+        height: 68
+      alignment: 9
+      pivot: {x: 0.7660819, y: 0.5347272}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be6b7df36802df44f8739b5962b646d1
+      internalID: 118920500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_GemPower-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 238
+        width: 71
+        height: 64
+      alignment: 9
+      pivot: {x: 0.7681455, y: 0.570312}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 706470dbab6d193419057cd7c3e40a0f
+      internalID: -502858512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_GemPower-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 238
+        width: 71
+        height: 60
+      alignment: 9
+      pivot: {x: 0.7687077, y: 0.60655415}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1ccb50cc490cea409f83039261dcd19
+      internalID: -76177703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_GemPower-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 238
+        width: 71
+        height: 58
+      alignment: 9
+      pivot: {x: 0.7685856, y: 0.63151443}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48151aaf1092d2049a71a8e92fd9633f
+      internalID: 1164195274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_GemPower-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 125
+        width: 71
+        height: 76
+      alignment: 9
+      pivot: {x: 0.7730223, y: 0.47863287}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41a0346b3211b4e4891c3324e901bcea
+      internalID: 1040120217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_GemPower-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 125
+        width: 71
+        height: 58
+      alignment: 9
+      pivot: {x: 0.770963, y: 0.62596077}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64dd6b67bf11f514db780b345428fe07
+      internalID: -246480871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_GemPower-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 125
+        width: 71
+        height: 59
+      alignment: 9
+      pivot: {x: 0.7693176, y: 0.61785245}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91f624419e9e58040b22e28986fd67bd
+      internalID: -2011383692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_GemPower-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 125
+        width: 71
+        height: 61
+      alignment: 9
+      pivot: {x: 0.76607716, y: 0.59649956}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 346a91b95e73bca4c8a7ca68087171e6
+      internalID: 598594590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_GemPower-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 125
+        width: 71
+        height: 76
+      alignment: 9
+      pivot: {x: 0.7730386, y: 0.47914785}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3010f7e7cfa4474091f0cb8cbd2fd03
+      internalID: -2039908776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_GemPower-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 12
+        width: 71
+        height: 84
+      alignment: 9
+      pivot: {x: 0.7737917, y: 0.43417802}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88ebe3896aa5cba418ee5586577c68d3
+      internalID: 1171661822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_GemPower-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 12
+        width: 71
+        height: 84
+      alignment: 9
+      pivot: {x: 0.7737803, y: 0.4338755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c027e1237d91bf54683ce2abd04b2e19
+      internalID: 1545224632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_GemPower-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 12
+        width: 71
+        height: 56
+      alignment: 9
+      pivot: {x: 0.77303433, y: 0.65241927}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33b189b5e03ec0c45ac063e0ba9b4834
+      internalID: 242975307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      VineMan_GemPower-Sheet_25: 1545224632
+      VineMan_GemPower-Sheet_28: 242975307
+      VineMan_GemPower-Sheet_11: -2131896903
+      VineMan_GemPower-Sheet_26: 1109707750
+      VineMan_GemPower-Sheet_16: -246480871
+      VineMan_GemPower-Sheet_27: 1814929833
+      VineMan_GemPower-Sheet_18: 598594590
+      VineMan_GemPower-Sheet_14: -286170627
+      VineMan_GemPower-Sheet_1: 891297929
+      VineMan_GemPower-Sheet_5: 1727819151
+      VineMan_GemPower-Sheet_3: -41286762
+      VineMan_GemPower-Sheet_2: -212752370
+      VineMan_GemPower-Sheet_22: -523922516
+      VineMan_GemPower-Sheet_19: -2039908776
+      VineMan_GemPower-Sheet_0: 1524152264
+      VineMan_GemPower-Sheet_24: 1171661822
+      VineMan_GemPower-Sheet_7: -502858512
+      VineMan_GemPower-Sheet_15: 1709532485
+      VineMan_GemPower-Sheet_17: -2011383692
+      VineMan_GemPower-Sheet_23: -1675182339
+      VineMan_GemPower-Sheet_6: 118920500
+      VineMan_GemPower-Sheet_8: -76177703
+      VineMan_GemPower-Sheet_13: 2015157025
+      VineMan_GemPower-Sheet_12: 1917576452
+      VineMan_GemPower-Sheet_4: -44846231
+      VineMan_GemPower-Sheet_10: 1040120217
+      VineMan_GemPower-Sheet_9: 1164195274
+      VineMan_GemPower-Sheet_21: 419370104
+      VineMan_GemPower-Sheet_20: -335030856
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
