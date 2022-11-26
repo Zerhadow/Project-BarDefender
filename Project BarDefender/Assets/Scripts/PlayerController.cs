@@ -103,6 +103,8 @@ public class PlayerController : Units
 
         _playerAnimator.SetFloat("xVelocity", moveDirection.x, 0.1f, 0.1f);
         _playerAnimator.SetFloat("yVelocity", rb.velocity.y, 0.1f, 0.1f);
+        _playerAnimator.SetFloat("xLookDirection", lookDirection.x);
+        _playerAnimator.SetFloat("yLookDirection", lookDirection.y);
         _playerAnimator.SetFloat("Health", currHP, 0.1f, 0.1f);
         _playerAnimator.SetBool("isGrounded", isGrounded);
         _playerAnimator.SetBool("Jump", !isGrounded);
@@ -126,7 +128,6 @@ public class PlayerController : Units
             _playerSprite.flipX = false;
         }
 
-
     }
 
     private void FixedUpdate() {
@@ -144,6 +145,7 @@ public class PlayerController : Units
         Debug.Log("We Fired");
 
         if(canFire) {
+            _playerAnimator.SetTrigger("Shoot");
             StartCoroutine(fireTimer(fireCooldown));
             GameObject projectileObject = Instantiate(projectilePrefab, rb.position + Vector2.up * 0.5f, Quaternion.identity);
             Projectile projectile = projectileObject.GetComponent<Projectile>();
