@@ -8,6 +8,7 @@ public class BaseEnemy : Units
     public Rigidbody2D rb;
     public Inventory inv;
     public Interactable interactable;
+    public GameObject itemDrops; //item we want to drop
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,7 @@ public class BaseEnemy : Units
         //Die in some way
         //This method is meant to be overwritten
         //drop item
+        // ItemDropTest();
         Destroy(gameObject);
         Debug.Log(transform.name + " died");
     }
@@ -74,4 +76,8 @@ public class BaseEnemy : Units
     Frog Leg
     Hemp Thread
     */
+
+    private void ItemDropTest() {
+        Instantiate(itemDrops, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
+    }
 }
