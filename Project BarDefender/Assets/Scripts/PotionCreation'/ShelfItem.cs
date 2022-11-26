@@ -15,11 +15,13 @@ public class ShelfItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, 
     private CanvasGroup canvasGroup;
     public Item item;
     public int count;
-    public Potion potion; 
+    public Potion potion;
+    private Vector3 startPos;
 
     private void Awake(){
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
+        startPos = transform.position; 
     }
     public void OnBeginDrag(PointerEventData eventData){
         Debug.Log("Start Drag");
@@ -28,7 +30,7 @@ public class ShelfItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, 
     }
 
     public void OnDrag(PointerEventData eventData){
-        Debug.Log("On Drag");
+        //Debug.Log("On Drag");
         rectTransform.anchoredPosition += eventData.delta/ canvas.scaleFactor;
     }
     public void OnEndDrag(PointerEventData eventData){
@@ -42,7 +44,15 @@ public class ShelfItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, 
             // events when dropped on potion
             count -= 1;
             potion.itemCount += 1;
-            Destroy(this.gameObject);
+            if (count <= 0)
+            {
+                Destroy(this.gameObject);
+            }
+            else 
+            {
+                transform.position = startPos;
+            }
+            
         }
     }
 
