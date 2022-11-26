@@ -54,6 +54,10 @@ public class ShelfItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, 
             }
             
         }
+        else
+        {
+            transform.position = startPos;
+        }
     }
 
     public void OnPointerDown(PointerEventData eventData)
