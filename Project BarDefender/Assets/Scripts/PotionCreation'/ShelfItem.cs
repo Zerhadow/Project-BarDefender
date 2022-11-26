@@ -17,11 +17,13 @@ public class ShelfItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, 
     public int count;
     public Potion potion;
     private Vector3 startPos;
+    public ShelfCounter counterdisplay;
 
     private void Awake(){
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
-        startPos = transform.position; 
+        startPos = transform.position;
+        counterdisplay.updateShelfCount(count);
     }
     public void OnBeginDrag(PointerEventData eventData){
         Debug.Log("Start Drag");
@@ -43,7 +45,9 @@ public class ShelfItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, 
             Debug.Log("Dropped on potion");
             // events when dropped on potion
             count -= 1;
+            counterdisplay.updateShelfCount(count);
             potion.itemCount += 1;
+
             if (count <= 0)
             {
                 Destroy(this.gameObject);
