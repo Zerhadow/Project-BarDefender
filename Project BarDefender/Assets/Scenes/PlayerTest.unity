@@ -155,7 +155,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 3
-  interactionTransform: {fileID: 204059941}
   item: {fileID: 11400000, guid: d582a0be76847d444ab223224ccc440d, type: 2}
 --- !u!212 &204059940
 SpriteRenderer:
@@ -222,7 +221,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &204059942
 BoxCollider2D:
@@ -459,6 +458,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   inv: {fileID: 1222956527}
   interactable: {fileID: 0}
+  ItemDropTestObj: {fileID: 0}
 --- !u!114 &1222956527 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3808841059067650212, guid: 560bd205246ca7e45877577902d170b9, type: 3}
@@ -924,7 +924,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3808841059067650213, guid: 560bd205246ca7e45877577902d170b9, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3808841059067650213, guid: 560bd205246ca7e45877577902d170b9, type: 3}
       propertyPath: m_LocalPosition.x

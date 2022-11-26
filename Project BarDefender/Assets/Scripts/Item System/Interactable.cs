@@ -5,7 +5,7 @@ using UnityEngine;
 public class Interactable : MonoBehaviour 
 { 
     public float radius = 3f; 
-    public Transform interactionTransform; 
+    private Transform interactionTransform; 
     public Item item; 
     GameObject playerPrefab; 
     PlayerController player; 
@@ -20,7 +20,11 @@ public class Interactable : MonoBehaviour
             Debug.Log("Item was interacted with " + other.name); 
             PickUp(); 
         } 
-    } 
+    }
+
+    void start() {
+        interactionTransform = GetComponent<Transform>();
+    }
 
     private void Update() { 
         // player = playerPrefab.GetComponent<PlayerController>();
