@@ -39,6 +39,10 @@ public class ShelfItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, 
         if (potion.potionDrop)
         {
             Debug.Log("Dropped on potion");
+            // events when dropped on potion
+            count -= 1;
+            potion.itemCount += 1;
+            Destroy(this.gameObject);
         }
     }
 

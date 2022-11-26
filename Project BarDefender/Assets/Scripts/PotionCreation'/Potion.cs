@@ -22,4 +22,10 @@ public class Potion : MonoBehaviour
         Debug.Log("Triggered");
         potionDrop = true;
     }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        Debug.Log("Not Triggered");
+        potionDrop = false;
+    }
 }
