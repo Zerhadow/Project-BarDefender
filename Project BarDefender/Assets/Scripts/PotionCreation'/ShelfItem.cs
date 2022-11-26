@@ -14,7 +14,8 @@ public class ShelfItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, 
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
     public Item item;
-    public int count; 
+    public int count;
+    public Potion potion; 
 
     private void Awake(){
         rectTransform = GetComponent<RectTransform>();
@@ -34,14 +35,23 @@ public class ShelfItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, 
         Debug.Log("End Drag");
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
+
+        if (potion.potionDrop)
+        {
+            Debug.Log("Dropped on potion");
+        }
     }
 
-    public void OnPointerDown(PointerEventData eventData){
+    public void OnPointerDown(PointerEventData eventData)
+    {
         Debug.Log("On Pointer down");
     }
 
+
     public void OnDrop(PointerEventData eventData){
         Debug.Log("Drop");
+        
+
         //item count -1 
         //dragged item disappears 
 
