@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4171d304483ad646a97127e54ffefda, type: 3}
+  m_Name: Potion2_DLG
+  m_EditorClassIdentifier: 
+  _characterName: Bartender
+  _dialogue:
+  - Great, another picky prick.
+  - I hate to ask you for another favor, love, but...
+  - If you can help me out of this situation, the rest of your drinks tonight are
+    on me.
+  - Just give me the materials you gathered, and I'll whip up a potion to help you
+    out.
