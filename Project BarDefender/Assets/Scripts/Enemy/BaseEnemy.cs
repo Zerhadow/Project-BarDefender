@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BaseEnemy : Units
 {
-    public Rigidbody2D rb;
+    private Rigidbody2D rb;
 
     //possible item drops
     public List<GameObject> itemDropList = new List<GameObject>();

@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerController : Units
 {
-    public Rigidbody2D rb;
+    private Rigidbody2D rb;
 
     #region Stats & Cooldowns
     public int ATK;
@@ -13,9 +14,9 @@ public class PlayerController : Units
     public float _jumpPower = 10f;
     public float fireCooldown = 0.3f;
     public float _jumpCooldown = 0.3f;
-    public float _atkrange = 0.5f;
+    public float atkRange = 0.5f;
     public int _maxJumps = 2;
-    public float _rebound = 2;
+    public float _rebound = 2; //how much you bounce enemies
     #endregion
 
     #region Variables: Attack
@@ -36,22 +37,31 @@ public class PlayerController : Units
     [SerializeField] UnityEngine.Animator _playerAnimator;
     [SerializeField] SpriteRenderer _playerSprite;
     [SerializeField] Transform _footPos;
+    [SerializeField] public PauseMenuSM _pauseMenuSM;
     public LayerMask _groundLayer;
 
     Vector2 moveDirection = Vector2.zero;
     Vector2 lookDirection = new Vector2(1,0);
 
+
+    #region #Input Actions
     private InputAction move;
     private InputAction fire;
     private InputAction jump;
     private InputAction melee;
+    private InputAction pause;
+    private InputAction flex;
+    #endregion
 
     public GameObject projectilePrefab;
     public Transform atkPt;
-    public float atkRange = 0.5f;
     public LayerMask enemyLayers; 
     // Interactable interactable = hit.collider.GetComponent<Interactable>(); 
     private bool isGrounded = false;
+    private bool _paused = false;
+    private bool isFlexing = false;
+    private bool isAttacking = false;
+    private bool canMove = true;
 
 
     void Awake() {
@@ -61,6 +71,12 @@ public class PlayerController : Units
         _animAttackComboStepParamHash = Animator.StringToHash("AttackComboStep");
         _comboHitStep = -1;
         _comboAttackResetCoroutine = null;
+    }
+
+    void Start() {
+        //for now only the player has a healthbar so only he will call the set health function
+
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void OnEnable() {
@@ -79,6 +95,14 @@ public class PlayerController : Units
         melee.Enable();
         melee.performed += Melee;
 
+        pause = playerControls.Player.Pause;
+        pause.Enable();
+        pause.performed += Pause;
+
+        flex = playerControls.Player.Flex;
+        flex.Enable();
+        flex.performed += Flex;
+
     }
 
     private void OnDisable() {
@@ -86,47 +110,45 @@ public class PlayerController : Units
         fire.Disable();
         jump.Disable();
         melee.Disable();
-    }
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        //for now only the player has a healthbar so only he will call the set health function
-        
-
+        pause.Disable();
     }
 
     // Update is called once per frame
     void Update()
     {
-        moveDirection = move.ReadValue<Vector2>();
-
-        _playerAnimator.SetFloat("xVelocity", moveDirection.x, 0.1f, 0.1f);
-        _playerAnimator.SetFloat("yVelocity", rb.velocity.y, 0.1f, 0.1f);
-        _playerAnimator.SetFloat("Health", currHP, 0.1f, 0.1f);
-        _playerAnimator.SetBool("isGrounded", isGrounded);
-        _playerAnimator.SetBool("Jump", !isGrounded);
-        _playerAnimator.SetBool("isGrounded", isGrounded);
-
-        if (!Mathf.Approximately(moveDirection.x, 0.0f) || !Mathf.Approximately(moveDirection.y, 0.0f))
+        if (!_paused)
         {
-            lookDirection.Set(moveDirection.x, moveDirection.y);
-            lookDirection.Normalize();
+            moveDirection = move.ReadValue<Vector2>();
+
+            _playerAnimator.SetFloat("xVelocity", moveDirection.x, 0.1f, 0.1f);
+            _playerAnimator.SetFloat("yVelocity", rb.velocity.y, 0.1f, 0.1f);
+            _playerAnimator.SetFloat("xLookDirection", lookDirection.x);
+            _playerAnimator.SetFloat("yLookDirection", lookDirection.y);
+            _playerAnimator.SetFloat("Health", currHP, 0.1f, 0.1f);
+            _playerAnimator.SetBool("isGrounded", isGrounded);
+            _playerAnimator.SetBool("Jump", !isGrounded);
+            _playerAnimator.SetBool("isGrounded", isGrounded);
+
+            if (!Mathf.Approximately(moveDirection.x, 0.0f) || !Mathf.Approximately(moveDirection.y, 0.0f))
+            {
+                lookDirection.Set(moveDirection.x, moveDirection.y);
+                lookDirection.Normalize();
+            }
+
+            if (!isGrounded)
+            {
+                _playerAnimator.SetBool("Jump", true);
+            }
+            if (lookDirection.x < 0)
+            {
+                _playerSprite.flipX = true;
+            }
+
+            else if (lookDirection.x > 0)
+            {
+                _playerSprite.flipX = false;
+            }
         }
-        
-        if (!isGrounded)
-        {
-            _playerAnimator.SetBool("Jump", true);
-        }
-        if (lookDirection.x < 0)
-        {
-            _playerSprite.flipX = true;
-        } else if (lookDirection.x > 0)
-        {
-            _playerSprite.flipX = false;
-        }
-
-
     }
 
     private void FixedUpdate() {
@@ -134,8 +156,14 @@ public class PlayerController : Units
         //if (moveDirection.y * _jumpPower < 0) {
         //    rb.velocity = new Vector2(moveDirection.x * moveSpd, 0);
         //}
-        Move();
+        if (!_paused)
+        {
+            Move();
+        }
+
         atkPt.position = this.transform.position + new Vector3(lookDirection.x * (atkRange+0.5f), lookDirection.y * (atkRange + 1), 0);
+        Move();
+        atkPt.position = this.transform.position + new Vector3(lookDirection.x * ((atkRange/2)+0.5f), lookDirection.y * ((atkRange/2) + 0.6f), 0);
         isGrounded = Physics2D.OverlapCircle(_footPos.position, 1f, _groundLayer);
 
     }
@@ -144,6 +172,7 @@ public class PlayerController : Units
         Debug.Log("We Fired");
 
         if(canFire) {
+            _playerAnimator.SetTrigger("Shoot");
             StartCoroutine(fireTimer(fireCooldown));
             GameObject projectileObject = Instantiate(projectilePrefab, rb.position + Vector2.up * 0.5f, Quaternion.identity);
             Projectile projectile = projectileObject.GetComponent<Projectile>();
@@ -162,13 +191,14 @@ public class PlayerController : Units
             StartCoroutine(_jumpTimer(_jumpCooldown));
             rb.AddForce(new Vector2(0f, _jumpPower), ForceMode2D.Impulse);
             isGrounded = false;
+            canMove = true;
             //rb.AddForce(new Vector2(_jumpPower * moveDirection.x, 0), ForceMode2D.Impulse); //long jump?
         }
     }
 
     private void Melee(InputAction.CallbackContext context) {
         //Play an atk animation
-  
+
 
         if (_comboHitStep == _COMBO_MAX_STEP)
             return;
@@ -179,7 +209,11 @@ public class PlayerController : Units
                 StopCoroutine(_comboAttackResetCoroutine);
             _comboHitStep++;
             _playerAnimator.SetTrigger("Attack");
-            
+
+            if (isGrounded)
+                canMove = false;
+            //isAttacking = true;
+
             //Detect enemies in range of atk
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(atkPt.position, atkRange, enemyLayers);
             //dmg them
@@ -201,6 +235,7 @@ public class PlayerController : Units
 
     private IEnumerator _ResettingAttackCombo()
     {
+        _playerAnimator.SetFloat("yLookDirection", 0f);
         yield return new WaitForEndOfFrame();
         yield return new WaitForSeconds(
             _playerAnimator.GetAnimatorTransitionInfo(0).duration);
@@ -208,6 +243,8 @@ public class PlayerController : Units
         yield return new WaitUntil(() =>
             _playerAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.95f);
         _comboHitStep = -1;
+        isAttacking = false;
+        canMove = true;
         _playerAnimator.SetInteger(
             _animAttackComboStepParamHash, _comboHitStep);
 
@@ -216,8 +253,13 @@ public class PlayerController : Units
 
     private void Move()
     {
-        transform.position += transform.right * moveDirection.x * _moveSpeed * Time.deltaTime;
-        
+        //if (!isFlexing && !isAttacking)
+        if (canMove)
+        {
+            transform.position += transform.right * moveDirection.x * _moveSpeed * Time.deltaTime;
+            rb.AddForce(new Vector2(lookDirection.x - moveDirection.x, 0), ForceMode2D.Force);
+        }
+
 
     }
 
@@ -245,13 +287,105 @@ public class PlayerController : Units
         Gizmos.DrawWireSphere(atkPt.position, atkRange);
     }
 
+    #region Function Modifers
+
     public void IncreaseATK_DecreaseHP(string rarity) { 
         ATK += 1;
+        maxHP -= 20;
+        // currHP += 20 maybe won't be needed
+        Debug.Log("New ATK: " + ATK);
+        Debug.Log("New Max HP: " + maxHP); 
+    }
+
+    public void IncreaseHP_DecreaseATK(string rarity) { 
+        ATK -= 1;
         maxHP += 20;
         // currHP += 20 maybe won't be needed
         Debug.Log("New ATK: " + ATK);
         Debug.Log("New Max HP: " + maxHP); 
     }
+
+    public void IncreaseRunSpd_DecreaseJumpPwr(string rarity) { 
+        _moveSpeed += 1f;
+        _jumpPower -= 2f;
+
+        Debug.Log("New Move Speed: " + _moveSpeed);
+        Debug.Log("New Jump Power: " + _jumpPower); 
+    }
+
+    public void IncreaseJumpPwr_DecreaseRunSpd(string rarity) { 
+        _moveSpeed -= 1f;
+        _jumpPower += 2f;
+
+        Debug.Log("New Move Speed: " + _moveSpeed);
+        Debug.Log("New Jump Power: " + _jumpPower); 
+    }
+
+    public void IncreaseFireCooldown_DecreaseMeleeCooldown(string rarity) { 
+        fireCooldown -= 0.1f;
+        // melee atk? change the animator speeds
+
+        Debug.Log("New Fire Cooldown: " + fireCooldown);
+        // Debug.Log("New Jump Power: " + _jumpPower); 
+    }
+
+    public void IncreaseMeleeCooldown_DecreaseFireCooldown(string rarity) { 
+        fireCooldown += 0.1f;
+        // melee atk? change the animator speeds
+
+        Debug.Log("New Fire Cooldown: " + fireCooldown);
+        // Debug.Log("New Jump Power: " + _jumpPower); 
+    }
+
+    public void IncreaseSize_DecreaseRunSpd(string rarity) { // Growth Serum
+        // get player scale/transform
+        _moveSpeed -= 1f;
+
+        // Debug.Log("New Player Scale: " + _jumpPower); 
+        Debug.Log("New Move Speed: " + _moveSpeed);
+    }
+
+    public void IncreaseRunSpd_DecreaseSize(string rarity) { // Shrink Serum
+        // get player scale/transform
+        _moveSpeed += 1f;
+
+        // Debug.Log("New Player Scale: " + _jumpPower); 
+        Debug.Log("New Move Speed: " + _moveSpeed);
+    }
+
+    public void PoisonTipped_LifeDrain(string rarity) { // for poison lotus
+        // amp dmg on melee
+        // loss life slowly; use boolean to turn on
+
+        // Debug.Log("New Player Scale: " + _jumpPower); 
+        // Debug.Log("New Move Speed: " + _moveSpeed);
+    }
+
+    public void IncreaseEnemySpd_SlowlyLossSight(string rarity) { //for Sharingan eye
+        // get enemy speed value
+        // reduce camera visibility???
+
+        // Debug.Log("New Player Scale: " + _jumpPower); 
+        // Debug.Log("New Move Speed: " + _moveSpeed);
+    }
+
+    public void SuperSaiyan_Burnout(string rarity) { // Saiyan Blood
+        //get player scale/transform
+        // _moveSpeed += 1f;
+
+        // Debug.Log("New Player Scale: " + _jumpPower); 
+        // Debug.Log("New Move Speed: " + _moveSpeed);
+    }
+
+    public void Cripple(string rarity) { // Krillin
+        //get player scale/transform
+        // _moveSpeed += 1f;
+
+        // Debug.Log("New Player Scale: " + _jumpPower); 
+        // Debug.Log("New Move Speed: " + _moveSpeed);
+    }
+
+    #endregion
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -259,5 +393,47 @@ public class PlayerController : Units
         {
             _currentJumps = 0;   
         }
+    }
+
+    private void Pause(InputAction.CallbackContext context)
+    {
+        Debug.Log("Paused");
+
+        if (!_paused)
+        {
+            _pauseMenuSM.ChangeState<PauseState>();
+            _paused = true;
+        }
+
+        else
+        {
+            _pauseMenuSM.ChangeState<PlayState>();
+            _paused = false;
+        }
+    }
+
+    private void Flex (InputAction.CallbackContext context)
+    {
+
+        if (isGrounded)
+        {
+            StartCoroutine(flexTimer());
+            
+        }
+    }
+
+    IEnumerator flexTimer()
+    {
+        _playerAnimator.SetTrigger("Flex");
+        //isFlexing = true;
+        canMove = false;
+        yield return new WaitForEndOfFrame();
+        yield return new WaitForSeconds(
+            _playerAnimator.GetAnimatorTransitionInfo(0).duration);
+        yield return new WaitForEndOfFrame();
+        yield return new WaitUntil(() =>
+            _playerAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.95f);
+        canMove = true;
+        //isFlexing = false;
     }
 }

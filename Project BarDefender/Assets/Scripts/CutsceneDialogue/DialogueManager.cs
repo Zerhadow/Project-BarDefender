@@ -10,8 +10,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _characterNameHolder;
     [SerializeField] private TextMeshProUGUI _dialogueHolder;
     [SerializeField] private TextMeshProUGUI _continueDialogue;
-    [SerializeField] private Image _characterHead;
-    [SerializeField] private Image _characterBody;
+    //[SerializeField] private Image _characterHead;
+    //[SerializeField] private Image _characterBody;
 
 
     private bool _dialogueStarted = false;
@@ -31,8 +31,8 @@ public class DialogueManager : MonoBehaviour
     {
         _dialogueStarted = true;
 
-        _characterHead.sprite = dialogueData.CharacterHead;
-        _characterBody.sprite = dialogueData.CharacterBody;
+        //_characterHead.sprite = dialogueData.CharacterHead;
+        //_characterBody.sprite = dialogueData.CharacterBody;
 
         // Load in character name into CharacterName UI
         _characterNameHolder.text = dialogueData.CharacterName;
