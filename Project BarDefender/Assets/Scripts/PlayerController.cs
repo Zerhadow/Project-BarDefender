@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : Units
 {
-    public Rigidbody2D rb;
+    private Rigidbody2D rb;
 
     #region Stats & Cooldowns
     public int ATK;
@@ -63,6 +63,12 @@ public class PlayerController : Units
         _comboAttackResetCoroutine = null;
     }
 
+    void Start() {
+        //for now only the player has a healthbar so only he will call the set health function
+
+        rb = GetComponent<Rigidbody2D>();
+    }
+
     private void OnEnable() {
         move = playerControls.Player.Move;
         move.Enable();
@@ -86,14 +92,6 @@ public class PlayerController : Units
         fire.Disable();
         jump.Disable();
         melee.Disable();
-    }
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        //for now only the player has a healthbar so only he will call the set health function
-        
-
     }
 
     // Update is called once per frame
@@ -168,7 +166,7 @@ public class PlayerController : Units
 
     private void Melee(InputAction.CallbackContext context) {
         //Play an atk animation
-  
+
 
         if (_comboHitStep == _COMBO_MAX_STEP)
             return;
