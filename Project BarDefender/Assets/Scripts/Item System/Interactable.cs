@@ -22,7 +22,7 @@ public class Interactable : MonoBehaviour
         } 
     }
 
-    void start() {
+    public virtual void Start() {
         interactionTransform = GetComponent<Transform>();
     }
 

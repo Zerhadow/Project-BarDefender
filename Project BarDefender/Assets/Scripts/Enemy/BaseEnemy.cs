@@ -38,7 +38,7 @@ public class BaseEnemy : Units
         //Die in some way
         //This method is meant to be overwritten
         //drop item
-        // ItemDropTest();
+        ItemDropTest();
         Debug.Log(transform.name + " died");
         Destroy(gameObject);
     }
