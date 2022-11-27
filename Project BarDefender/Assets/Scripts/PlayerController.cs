@@ -38,7 +38,6 @@ public class PlayerController : Units
     [SerializeField] SpriteRenderer _playerSprite;
     [SerializeField] Transform _footPos;
     [SerializeField] public PauseMenuSM _pauseMenuSM;
-    [SerializeField] Transform _footPos;    
     public LayerMask _groundLayer;
 
     Vector2 moveDirection = Vector2.zero;
@@ -257,7 +256,6 @@ public class PlayerController : Units
 
     private void Move()
     {
-        transform.position += transform.right * moveDirection.x * _moveSpeed * Time.deltaTime;
         //if (!isFlexing && !isAttacking)
         if (canMove)
         {
