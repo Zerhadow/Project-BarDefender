@@ -19,5 +19,6 @@ public class Footstep_Script : MonoBehaviour
             {
             footStepSound.Stop();
             }
+            
     }
 }
