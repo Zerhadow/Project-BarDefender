@@ -544,6 +544,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 995790052}
+  - {fileID: 1319163480}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1334,7 +1335,6 @@ RectTransform:
   - {fileID: 1388311158}
   - {fileID: 554194604}
   - {fileID: 641676912}
-  - {fileID: 1319163480}
   m_Father: {fileID: 366604530}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1783,18 +1783,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1319163479}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1483227320}
-  m_Father: {fileID: 995790052}
-  m_RootOrder: 4
+  m_Father: {fileID: 366604530}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -61.323364, y: 66.55629}
+  m_AnchoredPosition: {x: -61.32233, y: 65.65813}
   m_SizeDelta: {x: 122.64673, y: 53.68741}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1319163482
@@ -1841,16 +1841,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 24450fae292ca6846b2a2c9890399eaa, type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 1319163485}
+        m_TargetAssemblyTypeName: ToBoss, Assembly-CSharp
+        m_MethodName: toNextScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: LoadingScreen_5
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1319163483
