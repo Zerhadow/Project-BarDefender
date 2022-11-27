@@ -1915,10 +1915,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -25
       objectReference: {fileID: 0}
-    - target: {fileID: 3152437044028985750, guid: 51e98ba7cca035a49a14cee16316627d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3152437044779886342, guid: 51e98ba7cca035a49a14cee16316627d, type: 3}
       propertyPath: m_SizeDelta.x
       value: 13.368
@@ -2030,14 +2026,6 @@ PrefabInstance:
     - target: {fileID: 3152437045586936388, guid: 51e98ba7cca035a49a14cee16316627d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3152437045586936389, guid: 51e98ba7cca035a49a14cee16316627d, type: 3}
-      propertyPath: m_AdditionalShaderChannelsFlag
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 3152437045586936390, guid: 51e98ba7cca035a49a14cee16316627d, type: 3}
-      propertyPath: m_UiScaleMode
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3152437045966341576, guid: 51e98ba7cca035a49a14cee16316627d, type: 3}
       propertyPath: m_AnchorMax.x
