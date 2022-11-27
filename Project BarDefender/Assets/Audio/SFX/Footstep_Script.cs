@@ -14,7 +14,7 @@ public class Footstep_Script : MonoBehaviour
 
     void Update()
     {
-        footStepSound.enabled = (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow)) && PlayerController.isGrounded == true;
+        footStepSound.enabled = (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow)); //&& PlayerController.isGrounded == true;
 
     }
 }
