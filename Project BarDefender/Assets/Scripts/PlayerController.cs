@@ -13,7 +13,7 @@ public class PlayerController : Units
     public float _jumpPower = 10f;
     public float fireCooldown = 0.3f;
     public float _jumpCooldown = 0.3f;
-    public float _atkrange = 0.5f;
+    public float _atkrange = 1f;
     public int _maxJumps = 2;
     public float _rebound = 2;
     #endregion
@@ -136,7 +136,7 @@ public class PlayerController : Units
         //    rb.velocity = new Vector2(moveDirection.x * moveSpd, 0);
         //}
         Move();
-        atkPt.position = this.transform.position + new Vector3(lookDirection.x * (atkRange+0.5f), lookDirection.y * (atkRange + 1), 0);
+        atkPt.position = this.transform.position + new Vector3(lookDirection.x * ((atkRange/2)+0.5f), lookDirection.y * ((atkRange/2) + 0.6f), 0);
         isGrounded = Physics2D.OverlapCircle(_footPos.position, 1f, _groundLayer);
 
     }
@@ -203,6 +203,7 @@ public class PlayerController : Units
 
     private IEnumerator _ResettingAttackCombo()
     {
+        _playerAnimator.SetFloat("yLookDirection", 0f);
         yield return new WaitForEndOfFrame();
         yield return new WaitForSeconds(
             _playerAnimator.GetAnimatorTransitionInfo(0).duration);
