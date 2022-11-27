@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PlayerTest.unity
     guid: 6dd19eb13b1871d43a800343b6daceae
+  - enabled: 1
+    path: Assets/Scenes/Potion Creation.unity
+    guid: 2a5d99f6c04256041993e50c35381401
+  - enabled: 1
+    path: Assets/Scenes/GatheringScene.unity
+    guid: c20095b8f2f9fd34ea9f66213a6d2e90
   m_configObjects: {}
