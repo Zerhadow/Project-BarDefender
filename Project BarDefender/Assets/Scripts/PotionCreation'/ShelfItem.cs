@@ -26,7 +26,7 @@ public class ShelfItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, 
         counterdisplay.updateShelfCount(count);
     }
     public void OnBeginDrag(PointerEventData eventData){
-        Debug.Log("Start Drag");
+        //Debug.Log("Start Drag");
         canvasGroup.alpha = .6f;
         canvasGroup.blocksRaycasts = false; 
     }
@@ -36,13 +36,13 @@ public class ShelfItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, 
         rectTransform.anchoredPosition += eventData.delta/ canvas.scaleFactor;
     }
     public void OnEndDrag(PointerEventData eventData){
-        Debug.Log("End Drag");
+        //Debug.Log("End Drag");
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
 
         if (potion.potionDrop)
         {
-            Debug.Log("Dropped on potion");
+            //Debug.Log("Dropped on potion");
             // events when dropped on potion
             count -= 1;
             counterdisplay.updateShelfCount(count);
@@ -66,12 +66,12 @@ public class ShelfItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, 
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        Debug.Log("On Pointer down");
+        //Debug.Log("On Pointer down");
     }
 
 
     public void OnDrop(PointerEventData eventData){
-        Debug.Log("Drop");
+        //Debug.Log("Drop");
         
 
         //item count -1 
