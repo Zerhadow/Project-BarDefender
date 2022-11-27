@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -54,6 +55,7 @@ public class PlayerController : Units
     public LayerMask enemyLayers; 
     // Interactable interactable = hit.collider.GetComponent<Interactable>(); 
     private bool isGrounded = false;
+    private bool _paused = false;
 
 
     void Awake() {
@@ -105,34 +107,37 @@ public class PlayerController : Units
     // Update is called once per frame
     void Update()
     {
-        moveDirection = move.ReadValue<Vector2>();
-
-        _playerAnimator.SetFloat("xVelocity", moveDirection.x, 0.1f, 0.1f);
-        _playerAnimator.SetFloat("yVelocity", rb.velocity.y, 0.1f, 0.1f);
-        _playerAnimator.SetFloat("Health", currHP, 0.1f, 0.1f);
-        _playerAnimator.SetBool("isGrounded", isGrounded);
-        _playerAnimator.SetBool("Jump", !isGrounded);
-        _playerAnimator.SetBool("isGrounded", isGrounded);
-
-        if (!Mathf.Approximately(moveDirection.x, 0.0f) || !Mathf.Approximately(moveDirection.y, 0.0f))
+        if (!_paused)
         {
-            lookDirection.Set(moveDirection.x, moveDirection.y);
-            lookDirection.Normalize();
+            moveDirection = move.ReadValue<Vector2>();
+
+            _playerAnimator.SetFloat("xVelocity", moveDirection.x, 0.1f, 0.1f);
+            _playerAnimator.SetFloat("yVelocity", rb.velocity.y, 0.1f, 0.1f);
+            _playerAnimator.SetFloat("Health", currHP, 0.1f, 0.1f);
+            _playerAnimator.SetBool("isGrounded", isGrounded);
+            _playerAnimator.SetBool("Jump", !isGrounded);
+            _playerAnimator.SetBool("isGrounded", isGrounded);
+
+            if (!Mathf.Approximately(moveDirection.x, 0.0f) || !Mathf.Approximately(moveDirection.y, 0.0f))
+            {
+                lookDirection.Set(moveDirection.x, moveDirection.y);
+                lookDirection.Normalize();
+            }
+
+            if (!isGrounded)
+            {
+                _playerAnimator.SetBool("Jump", true);
+            }
+            if (lookDirection.x < 0)
+            {
+                _playerSprite.flipX = true;
+            }
+
+            else if (lookDirection.x > 0)
+            {
+                _playerSprite.flipX = false;
+            }
         }
-        
-        if (!isGrounded)
-        {
-            _playerAnimator.SetBool("Jump", true);
-        }
-        if (lookDirection.x < 0)
-        {
-            _playerSprite.flipX = true;
-        } else if (lookDirection.x > 0)
-        {
-            _playerSprite.flipX = false;
-        }
-
-
     }
 
     private void FixedUpdate() {
@@ -140,7 +145,11 @@ public class PlayerController : Units
         //if (moveDirection.y * _jumpPower < 0) {
         //    rb.velocity = new Vector2(moveDirection.x * moveSpd, 0);
         //}
-        Move();
+        if (!_paused)
+        {
+            Move();
+        }
+
         atkPt.position = this.transform.position + new Vector3(lookDirection.x * (atkRange+0.5f), lookDirection.y * (atkRange + 1), 0);
         isGrounded = Physics2D.OverlapCircle(_footPos.position, 1f, _groundLayer);
 
@@ -265,6 +274,16 @@ public class PlayerController : Units
     {
         Debug.Log("Paused");
 
-        _pauseMenuSM.ChangeState<PauseState>();
+        if (!_paused)
+        {
+            _pauseMenuSM.ChangeState<PauseState>();
+            _paused = true;
+        }
+
+        else
+        {
+            _pauseMenuSM.ChangeState<PlayState>();
+            _paused = false;
+        }
     }
 }
