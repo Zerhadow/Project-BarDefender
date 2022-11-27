@@ -65,6 +65,7 @@ public class PlayerController : Units
     private bool canMove = true;
     bool enemyPoisoned = false;
     bool evaded = false;
+    bool burnout = false;
 
 
     void Awake() {
@@ -151,6 +152,10 @@ public class PlayerController : Units
             {
                 _playerSprite.flipX = false;
             }
+        }
+
+        if(burnout) {
+            currHP -= 10;
         }
     }
 
@@ -369,7 +374,7 @@ public class PlayerController : Units
     public void IncreaseEnemySpd_SlowlyLossSight(string rarity) { //for Sharingan eye
         evasion += 10;
         ATK -= 1;
-        currHP -= 20;
+        currHP -= 10;
 
         Debug.Log("New Evasion: " + evasion + "%");
         Debug.Log("New ATK: " + ATK);
@@ -380,8 +385,20 @@ public class PlayerController : Units
         //get player scale/transform
         // _moveSpeed += 1f;
 
-        // Debug.Log("New Player Scale: " + _jumpPower); 
-        // Debug.Log("New Move Speed: " + _moveSpeed);
+        evasion += 20;
+        ATK *= 2;
+        maxHP *= 10;
+        _moveSpeed += 1f;
+        _jumpPower += 2f;
+
+        //slowly loss hp
+        burnout = true;
+
+        Debug.Log("New Evasion: " + evasion + "%");
+        Debug.Log("New ATK: " + ATK);
+        Debug.Log("New Max HP: " + maxHP);
+        Debug.Log("New Move Speed: " + _moveSpeed);
+        Debug.Log("New Jump Power: " + _jumpPower); 
     }
 
     public void Cripple(string rarity) { // Krillin
