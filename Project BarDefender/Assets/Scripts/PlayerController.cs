@@ -14,9 +14,9 @@ public class PlayerController : Units
     public float _jumpPower = 10f;
     public float fireCooldown = 0.3f;
     public float _jumpCooldown = 0.3f;
-    public float _atkrange = 1f;
+    public float atkRange = 0.5f;
     public int _maxJumps = 2;
-    public float _rebound = 2;
+    public float _rebound = 2; //how much you bounce enemies
     #endregion
 
     #region Variables: Attack
@@ -43,16 +43,18 @@ public class PlayerController : Units
     Vector2 moveDirection = Vector2.zero;
     Vector2 lookDirection = new Vector2(1,0);
 
+
+    #region #Input Actions
     private InputAction move;
     private InputAction fire;
     private InputAction jump;
     private InputAction melee;
     private InputAction pause;
     private InputAction flex;
+    #endregion
 
     public GameObject projectilePrefab;
     public Transform atkPt;
-    public float atkRange = 0.5f;
     public LayerMask enemyLayers; 
     // Interactable interactable = hit.collider.GetComponent<Interactable>(); 
     private bool isGrounded = false;
@@ -96,6 +98,7 @@ public class PlayerController : Units
         pause = playerControls.Player.Pause;
         pause.Enable();
         pause.performed += Pause;
+
         flex = playerControls.Player.Flex;
         flex.Enable();
         flex.performed += Flex;
@@ -119,18 +122,12 @@ public class PlayerController : Units
 
             _playerAnimator.SetFloat("xVelocity", moveDirection.x, 0.1f, 0.1f);
             _playerAnimator.SetFloat("yVelocity", rb.velocity.y, 0.1f, 0.1f);
+            _playerAnimator.SetFloat("xLookDirection", lookDirection.x);
+            _playerAnimator.SetFloat("yLookDirection", lookDirection.y);
             _playerAnimator.SetFloat("Health", currHP, 0.1f, 0.1f);
             _playerAnimator.SetBool("isGrounded", isGrounded);
             _playerAnimator.SetBool("Jump", !isGrounded);
             _playerAnimator.SetBool("isGrounded", isGrounded);
-        _playerAnimator.SetFloat("xVelocity", moveDirection.x, 0.1f, 0.1f);
-        _playerAnimator.SetFloat("yVelocity", rb.velocity.y, 0.1f, 0.1f);
-        _playerAnimator.SetFloat("xLookDirection", lookDirection.x);
-        _playerAnimator.SetFloat("yLookDirection", lookDirection.y);
-        _playerAnimator.SetFloat("Health", currHP, 0.1f, 0.1f);
-        _playerAnimator.SetBool("isGrounded", isGrounded);
-        _playerAnimator.SetBool("Jump", !isGrounded);
-        _playerAnimator.SetBool("isGrounded", isGrounded);
 
             if (!Mathf.Approximately(moveDirection.x, 0.0f) || !Mathf.Approximately(moveDirection.y, 0.0f))
             {
@@ -290,13 +287,105 @@ public class PlayerController : Units
         Gizmos.DrawWireSphere(atkPt.position, atkRange);
     }
 
+    #region Function Modifers
+
     public void IncreaseATK_DecreaseHP(string rarity) { 
         ATK += 1;
+        maxHP -= 20;
+        // currHP += 20 maybe won't be needed
+        Debug.Log("New ATK: " + ATK);
+        Debug.Log("New Max HP: " + maxHP); 
+    }
+
+    public void IncreaseHP_DecreaseATK(string rarity) { 
+        ATK -= 1;
         maxHP += 20;
         // currHP += 20 maybe won't be needed
         Debug.Log("New ATK: " + ATK);
         Debug.Log("New Max HP: " + maxHP); 
     }
+
+    public void IncreaseRunSpd_DecreaseJumpPwr(string rarity) { 
+        _moveSpeed += 1f;
+        _jumpPower -= 2f;
+
+        Debug.Log("New Move Speed: " + _moveSpeed);
+        Debug.Log("New Jump Power: " + _jumpPower); 
+    }
+
+    public void IncreaseJumpPwr_DecreaseRunSpd(string rarity) { 
+        _moveSpeed -= 1f;
+        _jumpPower += 2f;
+
+        Debug.Log("New Move Speed: " + _moveSpeed);
+        Debug.Log("New Jump Power: " + _jumpPower); 
+    }
+
+    public void IncreaseFireCooldown_DecreaseMeleeCooldown(string rarity) { 
+        fireCooldown -= 0.1f;
+        // melee atk? change the animator speeds
+
+        Debug.Log("New Fire Cooldown: " + fireCooldown);
+        // Debug.Log("New Jump Power: " + _jumpPower); 
+    }
+
+    public void IncreaseMeleeCooldown_DecreaseFireCooldown(string rarity) { 
+        fireCooldown += 0.1f;
+        // melee atk? change the animator speeds
+
+        Debug.Log("New Fire Cooldown: " + fireCooldown);
+        // Debug.Log("New Jump Power: " + _jumpPower); 
+    }
+
+    public void IncreaseSize_DecreaseRunSpd(string rarity) { // Growth Serum
+        // get player scale/transform
+        _moveSpeed -= 1f;
+
+        // Debug.Log("New Player Scale: " + _jumpPower); 
+        Debug.Log("New Move Speed: " + _moveSpeed);
+    }
+
+    public void IncreaseRunSpd_DecreaseSize(string rarity) { // Shrink Serum
+        // get player scale/transform
+        _moveSpeed += 1f;
+
+        // Debug.Log("New Player Scale: " + _jumpPower); 
+        Debug.Log("New Move Speed: " + _moveSpeed);
+    }
+
+    public void PoisonTipped_LifeDrain(string rarity) { // for poison lotus
+        // amp dmg on melee
+        // loss life slowly; use boolean to turn on
+
+        // Debug.Log("New Player Scale: " + _jumpPower); 
+        // Debug.Log("New Move Speed: " + _moveSpeed);
+    }
+
+    public void IncreaseEnemySpd_SlowlyLossSight(string rarity) { //for Sharingan eye
+        // get enemy speed value
+        // reduce camera visibility???
+
+        // Debug.Log("New Player Scale: " + _jumpPower); 
+        // Debug.Log("New Move Speed: " + _moveSpeed);
+    }
+
+    public void SuperSaiyan_Burnout(string rarity) { // Saiyan Blood
+        //get player scale/transform
+        // _moveSpeed += 1f;
+
+        // Debug.Log("New Player Scale: " + _jumpPower); 
+        // Debug.Log("New Move Speed: " + _moveSpeed);
+    }
+
+    public void Cripple(string rarity) { // Krillin
+        //get player scale/transform
+        // _moveSpeed += 1f;
+
+        // Debug.Log("New Player Scale: " + _jumpPower); 
+        // Debug.Log("New Move Speed: " + _moveSpeed);
+    }
+
+    #endregion
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
