@@ -19,13 +19,13 @@ public class Potion : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Triggered");
+        //Debug.Log("Triggered");
         potionDrop = true;
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log("Not Triggered");
+        //Debug.Log("Not Triggered");
         potionDrop = false;
     }
 }
