@@ -36,6 +36,7 @@ public class PlayerController : Units
     [SerializeField] UnityEngine.Animator _playerAnimator;
     [SerializeField] SpriteRenderer _playerSprite;
     [SerializeField] Transform _footPos;
+    [SerializeField] public PauseMenuSM _pauseMenuSM;
     public LayerMask _groundLayer;
 
     Vector2 moveDirection = Vector2.zero;
@@ -45,6 +46,7 @@ public class PlayerController : Units
     private InputAction fire;
     private InputAction jump;
     private InputAction melee;
+    private InputAction pause;
 
     public GameObject projectilePrefab;
     public Transform atkPt;
@@ -79,6 +81,9 @@ public class PlayerController : Units
         melee.Enable();
         melee.performed += Melee;
 
+        pause = playerControls.Player.Pause;
+        pause.Enable();
+        pause.performed += Pause;
     }
 
     private void OnDisable() {
@@ -86,6 +91,7 @@ public class PlayerController : Units
         fire.Disable();
         jump.Disable();
         melee.Disable();
+        pause.Disable();
     }
     
     // Start is called before the first frame update
@@ -217,8 +223,6 @@ public class PlayerController : Units
     private void Move()
     {
         transform.position += transform.right * moveDirection.x * _moveSpeed * Time.deltaTime;
-        
-
     }
 
     IEnumerator fireTimer(float timer){
@@ -255,5 +259,12 @@ public class PlayerController : Units
         {
             _currentJumps = 0;   
         }
+    }
+
+    private void Pause(InputAction.CallbackContext context)
+    {
+        Debug.Log("Paused");
+
+        _pauseMenuSM.ChangeState<PauseState>();
     }
 }
