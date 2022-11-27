@@ -877,6 +877,54 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Cutscene"",
+            ""id"": ""3b795853-a989-4a2b-9f88-ab1dda42b97a"",
+            ""actions"": [
+                {
+                    ""name"": ""Progress"",
+                    ""type"": ""Button"",
+                    ""id"": ""457ec081-1af9-47ff-a629-9f982660c603"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Continue"",
+                    ""type"": ""Button"",
+                    ""id"": ""1889670b-af44-447d-b076-c846ad18c072"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""3435c6c1-ec57-4da9-9612-b3b7bbf0eb19"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Progress"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1b31d43f-aaaf-47ce-b172-092e4109e38c"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Continue"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -961,6 +1009,10 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         m_UI_RightClick = m_UI.FindAction("RightClick", throwIfNotFound: true);
         m_UI_TrackedDevicePosition = m_UI.FindAction("TrackedDevicePosition", throwIfNotFound: true);
         m_UI_TrackedDeviceOrientation = m_UI.FindAction("TrackedDeviceOrientation", throwIfNotFound: true);
+        // Cutscene
+        m_Cutscene = asset.FindActionMap("Cutscene", throwIfNotFound: true);
+        m_Cutscene_Progress = m_Cutscene.FindAction("Progress", throwIfNotFound: true);
+        m_Cutscene_Continue = m_Cutscene.FindAction("Continue", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1186,6 +1238,47 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         }
     }
     public UIActions @UI => new UIActions(this);
+
+    // Cutscene
+    private readonly InputActionMap m_Cutscene;
+    private ICutsceneActions m_CutsceneActionsCallbackInterface;
+    private readonly InputAction m_Cutscene_Progress;
+    private readonly InputAction m_Cutscene_Continue;
+    public struct CutsceneActions
+    {
+        private @PlayerInputActions m_Wrapper;
+        public CutsceneActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Progress => m_Wrapper.m_Cutscene_Progress;
+        public InputAction @Continue => m_Wrapper.m_Cutscene_Continue;
+        public InputActionMap Get() { return m_Wrapper.m_Cutscene; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(CutsceneActions set) { return set.Get(); }
+        public void SetCallbacks(ICutsceneActions instance)
+        {
+            if (m_Wrapper.m_CutsceneActionsCallbackInterface != null)
+            {
+                @Progress.started -= m_Wrapper.m_CutsceneActionsCallbackInterface.OnProgress;
+                @Progress.performed -= m_Wrapper.m_CutsceneActionsCallbackInterface.OnProgress;
+                @Progress.canceled -= m_Wrapper.m_CutsceneActionsCallbackInterface.OnProgress;
+                @Continue.started -= m_Wrapper.m_CutsceneActionsCallbackInterface.OnContinue;
+                @Continue.performed -= m_Wrapper.m_CutsceneActionsCallbackInterface.OnContinue;
+                @Continue.canceled -= m_Wrapper.m_CutsceneActionsCallbackInterface.OnContinue;
+            }
+            m_Wrapper.m_CutsceneActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Progress.started += instance.OnProgress;
+                @Progress.performed += instance.OnProgress;
+                @Progress.canceled += instance.OnProgress;
+                @Continue.started += instance.OnContinue;
+                @Continue.performed += instance.OnContinue;
+                @Continue.canceled += instance.OnContinue;
+            }
+        }
+    }
+    public CutsceneActions @Cutscene => new CutsceneActions(this);
     private int m_KeyboardMouseSchemeIndex = -1;
     public InputControlScheme KeyboardMouseScheme
     {
@@ -1251,5 +1344,10 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         void OnRightClick(InputAction.CallbackContext context);
         void OnTrackedDevicePosition(InputAction.CallbackContext context);
         void OnTrackedDeviceOrientation(InputAction.CallbackContext context);
+    }
+    public interface ICutsceneActions
+    {
+        void OnProgress(InputAction.CallbackContext context);
+        void OnContinue(InputAction.CallbackContext context);
     }
 }
