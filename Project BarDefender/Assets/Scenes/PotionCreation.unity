@@ -442,6 +442,7 @@ MonoBehaviour:
   count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 944260871}
+  description: {fileID: 1404939025}
   img: {fileID: 828140375}
 --- !u!1 &34224388
 GameObject:
@@ -1167,6 +1168,7 @@ MonoBehaviour:
   count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 299318559}
+  description: {fileID: 714119212}
   img: {fileID: 1285319928}
 --- !u!1 &109963678
 GameObject:
@@ -1648,6 +1650,7 @@ MonoBehaviour:
   count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 804200088}
+  description: {fileID: 1439275778}
   img: {fileID: 1991581649}
 --- !u!1 &206046591
 GameObject:
@@ -1892,6 +1895,7 @@ MonoBehaviour:
   count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 230186293}
+  description: {fileID: 1935418231}
   img: {fileID: 333286173}
 --- !u!1 &218174784
 GameObject:
@@ -2001,6 +2005,7 @@ MonoBehaviour:
   count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 1315731423}
+  description: {fileID: 576371179}
   img: {fileID: 638663856}
 --- !u!1 &230186291
 GameObject:
@@ -3074,6 +3079,7 @@ MonoBehaviour:
   count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 2136396762}
+  description: {fileID: 1116362812}
   img: {fileID: 1636226250}
 --- !u!1 &387750431
 GameObject:
@@ -3445,6 +3451,7 @@ MonoBehaviour:
   count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 1480195711}
+  description: {fileID: 1304272263}
   img: {fileID: 652102934}
 --- !u!1 &453790314
 GameObject:
@@ -3850,6 +3857,7 @@ MonoBehaviour:
   count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 1558421946}
+  description: {fileID: 842607378}
   img: {fileID: 304583924}
 --- !u!1 &499379572
 GameObject:
@@ -7897,6 +7905,7 @@ MonoBehaviour:
   count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 1559669512}
+  description: {fileID: 801832193}
   img: {fileID: 1338723236}
 --- !u!1 &984011968
 GameObject:
@@ -8815,6 +8824,7 @@ MonoBehaviour:
   count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 1328022433}
+  description: {fileID: 250682138}
   img: {fileID: 741106918}
 --- !u!1 &1104351528
 GameObject:
@@ -9583,6 +9593,7 @@ MonoBehaviour:
   count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 464323934}
+  description: {fileID: 711091925}
   img: {fileID: 1783714573}
 --- !u!1 &1264896353
 GameObject:
@@ -10564,6 +10575,7 @@ MonoBehaviour:
   count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 389458730}
+  description: {fileID: 931141032}
   img: {fileID: 299814162}
 --- !u!1 &1381245796
 GameObject:
@@ -10673,6 +10685,7 @@ MonoBehaviour:
   count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 149433571}
+  description: {fileID: 523805500}
   img: {fileID: 1114761741}
 --- !u!1 &1392416509
 GameObject:
@@ -11128,6 +11141,7 @@ MonoBehaviour:
   count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 235379087}
+  description: {fileID: 729075142}
   img: {fileID: 618366576}
 --- !u!1 &1428619914
 GameObject:
@@ -11507,6 +11521,7 @@ MonoBehaviour:
   count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 152949205}
+  description: {fileID: 1859909310}
   img: {fileID: 1060174693}
 --- !u!1 &1480195709
 GameObject:
@@ -11802,6 +11817,7 @@ MonoBehaviour:
   count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 948337520}
+  description: {fileID: 612801328}
   img: {fileID: 1757591570}
 --- !u!1 &1544404580
 GameObject:
@@ -11911,6 +11927,7 @@ MonoBehaviour:
   count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 260718164}
+  description: {fileID: 608265875}
   img: {fileID: 2049982615}
 --- !u!1 &1554639443
 GameObject:
@@ -12198,6 +12215,7 @@ MonoBehaviour:
   count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 1091104088}
+  description: {fileID: 1351530845}
   img: {fileID: 396579722}
 --- !u!1 &1577917666
 GameObject:
@@ -12442,6 +12460,7 @@ MonoBehaviour:
   count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 847101384}
+  description: {fileID: 193392209}
   img: {fileID: 293119805}
 --- !u!1 &1604605569
 GameObject:
@@ -12703,6 +12722,7 @@ MonoBehaviour:
   count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 1625699139}
+  description: {fileID: 1997845723}
   img: {fileID: 1793409599}
 --- !u!50 &1644694111
 Rigidbody2D:
@@ -12833,6 +12853,7 @@ MonoBehaviour:
   count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 1187792718}
+  description: {fileID: 206046593}
   img: {fileID: 43872685}
 --- !u!1 &1748161796
 GameObject:
@@ -12942,6 +12963,7 @@ MonoBehaviour:
   count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 1046812384}
+  description: {fileID: 707023235}
   img: {fileID: 628942086}
 --- !u!1 &1757591568
 GameObject:
@@ -13541,6 +13563,7 @@ MonoBehaviour:
   count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 1946813037}
+  description: {fileID: 19537824}
   img: {fileID: 1264896355}
 --- !u!1 &1837763949
 GameObject:
@@ -13650,6 +13673,7 @@ MonoBehaviour:
   count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 1114897009}
+  description: {fileID: 837701636}
   img: {fileID: 1398926131}
 --- !u!1 &1859909308
 GameObject:
@@ -14561,6 +14585,7 @@ MonoBehaviour:
   count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 898638280}
+  description: {fileID: 1784583905}
   img: {fileID: 541567441}
 --- !u!1 &2014805650
 GameObject:
@@ -15322,6 +15347,7 @@ MonoBehaviour:
   count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 986305451}
+  description: {fileID: 464666594}
   img: {fileID: 16551664}
 --- !u!1 &2137499298
 GameObject:

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using TMPro;
 
 public class ShelfItem : MonoBehaviour, IPointerDownHandler//, IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler
 {
@@ -15,10 +16,13 @@ public class ShelfItem : MonoBehaviour, IPointerDownHandler//, IBeginDragHandler
     public int count;
     public Potion potion;
     public ShelfCounter counterdisplay;
+    public TextMeshProUGUI description; 
+
     public Image img;
 
     private void Awake(){
         counterdisplay.updateShelfCount(count);
+        description.text = item.description;
         if(item.icon != null){
             img.sprite = item.icon;
         }
@@ -33,7 +37,6 @@ public class ShelfItem : MonoBehaviour, IPointerDownHandler//, IBeginDragHandler
             count--;
             counterdisplay.updateShelfCount(count);
         }
-        
     }
 
 
