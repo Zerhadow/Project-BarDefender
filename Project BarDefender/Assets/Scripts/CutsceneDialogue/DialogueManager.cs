@@ -3,18 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.InputSystem.Interactions;
 
 public class DialogueManager : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private TextMeshProUGUI _characterNameHolder;
     [SerializeField] private TextMeshProUGUI _dialogueHolder;
-    [SerializeField] private TextMeshProUGUI _continueDialogue;
+    [SerializeField] private TextMeshProUGUI _instructionDialogue;
+    [SerializeField] public string _progressInstruction;
+    [SerializeField] public string _continueInstruction;
+
     //[SerializeField] private Image _characterHead;
     //[SerializeField] private Image _characterBody;
 
 
     private bool _dialogueStarted = false;
+    private bool _firstTime = true;
     // Queue for FIFO
     private Queue<string> sentences;
 
@@ -22,7 +27,9 @@ public class DialogueManager : MonoBehaviour
 
     private void Awake()
     {
-        _continueDialogue.enabled = false;
+        _instructionDialogue.text = _progressInstruction;
+        _instructionDialogue.enabled = true;
+        _firstTime = true;
         sentences = new Queue<string>();
     }
 
@@ -57,7 +64,16 @@ public class DialogueManager : MonoBehaviour
         if (sentences.Count == 0)
         {
             EndDialogue();
-            return;
+        }
+
+        if (!_firstTime)
+        {
+            _instructionDialogue.enabled = false;
+        }
+
+        else
+        {
+            _firstTime = false;
         }
     }
 
@@ -68,6 +84,7 @@ public class DialogueManager : MonoBehaviour
 
     public void EndCutscene()
     {
-        _continueDialogue.enabled = true;
+        _instructionDialogue.text = _continueInstruction;
+        _instructionDialogue.enabled = true;
     }
 }

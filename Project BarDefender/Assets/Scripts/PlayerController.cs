@@ -17,6 +17,7 @@ public class PlayerController : Units
     public float atkRange = 0.5f;
     public int _maxJumps = 2;
     public float _rebound = 2; //how much you bounce enemies
+    public int evasion = 0;
     #endregion
 
     #region Variables: Attack
@@ -56,12 +57,15 @@ public class PlayerController : Units
     public GameObject projectilePrefab;
     public Transform atkPt;
     public LayerMask enemyLayers; 
-    // Interactable interactable = hit.collider.GetComponent<Interactable>(); 
+
     private bool isGrounded = false;
     private bool _paused = false;
     private bool isFlexing = false;
     private bool isAttacking = false;
     private bool canMove = true;
+    bool enemyPoisoned = false;
+    bool evaded = false;
+    bool burnout = false;
 
 
     void Awake() {
@@ -148,6 +152,10 @@ public class PlayerController : Units
             {
                 _playerSprite.flipX = false;
             }
+        }
+
+        if(burnout) {
+            currHP -= 10;
         }
     }
 
@@ -364,19 +372,33 @@ public class PlayerController : Units
     }
 
     public void IncreaseEnemySpd_SlowlyLossSight(string rarity) { //for Sharingan eye
-        // get enemy speed value
-        // reduce camera visibility???
+        evasion += 10;
+        ATK -= 1;
+        currHP -= 10;
 
-        // Debug.Log("New Player Scale: " + _jumpPower); 
-        // Debug.Log("New Move Speed: " + _moveSpeed);
+        Debug.Log("New Evasion: " + evasion + "%");
+        Debug.Log("New ATK: " + ATK);
+        Debug.Log("New Max HP: " + maxHP); 
     }
 
     public void SuperSaiyan_Burnout(string rarity) { // Saiyan Blood
         //get player scale/transform
         // _moveSpeed += 1f;
 
-        // Debug.Log("New Player Scale: " + _jumpPower); 
-        // Debug.Log("New Move Speed: " + _moveSpeed);
+        evasion += 20;
+        ATK *= 2;
+        maxHP *= 10;
+        _moveSpeed += 1f;
+        _jumpPower += 2f;
+
+        //slowly loss hp
+        burnout = true;
+
+        Debug.Log("New Evasion: " + evasion + "%");
+        Debug.Log("New ATK: " + ATK);
+        Debug.Log("New Max HP: " + maxHP);
+        Debug.Log("New Move Speed: " + _moveSpeed);
+        Debug.Log("New Jump Power: " + _jumpPower); 
     }
 
     public void Cripple(string rarity) { // Krillin
@@ -385,6 +407,17 @@ public class PlayerController : Units
 
         // Debug.Log("New Player Scale: " + _jumpPower); 
         // Debug.Log("New Move Speed: " + _moveSpeed);
+    }
+
+    bool evasionCheck(int evasion) {
+        if(evasion != 0) {
+            int randNum = Random.Range(1, 101); //random number from 1 to 100
+            if(randNum <= evasion) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     #endregion
@@ -437,5 +470,36 @@ public class PlayerController : Units
             _playerAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.95f);
         canMove = true;
         //isFlexing = false;
+    }
+    
+    public override void TakeDmg(int dmg) {
+        if(!invincible){
+            evaded = evasionCheck(evasion);
+            if(!evaded) {
+                float originalHP = currHP;
+                dmg = Mathf.Clamp(dmg, 0, int.MaxValue);
+                currHP -= dmg;
+                HPBar.SetHealth(currHP);
+
+                if (currHP <= 0) {
+                    Die();
+                }
+
+                StartCoroutine(Invincible(invcibilityDuration));
+
+                evaded = false;
+            } else {
+                StartCoroutine(Invincible(invcibilityDuration));
+            }
+
+        }
+    }
+
+    public override void Die() {
+        //Die in some way
+        //This method is meant to be overwritten
+        Debug.Log(transform.name + " died");
+        //die animation
+        Destroy(gameObject);
     }
 }

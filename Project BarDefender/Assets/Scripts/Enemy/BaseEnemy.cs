@@ -34,6 +34,16 @@ public class BaseEnemy : Units
         
     }
 
+    public override void TakeDmg(int dmg) {
+        float originalHP = currHP;
+        dmg = Mathf.Clamp(dmg, 0, int.MaxValue);
+        currHP -= dmg;
+        HPBar.SetHealth(currHP);
+        if (currHP <= 0) {
+            Die();
+        }
+    }
+
     public override void Die() {
         //Die in some way
         //This method is meant to be overwritten
