@@ -9,6 +9,7 @@ public class DialogueController : MonoBehaviour
 {
     [SerializeField] DialogueManager _dialogueManager;
     [SerializeField] private DialogueData[] _dialogueArray = null;
+    [SerializeField] bool _loadSceneAfterDialogue = true;
     [SerializeField] private string _nextSceneName;
 
     private DialogueData _activeDialogueData;
@@ -53,10 +54,10 @@ public class DialogueController : MonoBehaviour
     {
         if (context.performed && _endCutscene)
         {
-            // Reconsider loading a specific scene by name / string
-            int currentActiveSceneIndex = SceneManager.GetActiveScene().buildIndex;
-
-            SceneManager.LoadScene(_nextSceneName);
+            if (_loadSceneAfterDialogue)
+            {
+                LoadScene(_nextSceneName);
+            }
         }
     }
 
@@ -76,5 +77,10 @@ public class DialogueController : MonoBehaviour
             _dialogueManager.EndCutscene();
             _endCutscene = true;
         }
+    }
+
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }

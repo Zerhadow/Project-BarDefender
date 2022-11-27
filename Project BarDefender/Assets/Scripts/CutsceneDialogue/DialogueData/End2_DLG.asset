@@ -10,13 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4171d304483ad646a97127e54ffefda, type: 3}
-  m_Name: Potion2_DLG
+  m_Name: End2_DLG
   m_EditorClassIdentifier: 
-  _characterName: Bartender
+  _characterName: Prompt
   _dialogue:
-  - Great, another picky prick.
-  - I hate to ask you for another favor, love, but...
-  - If you can help me out of this situation, the rest of your drinks tonight are
-    on me.
-  - Just give me the materials you gathered, and I'll whip up something to help you
-    out.
+  - If you stay, the game will end.
+  - If you leave, you will retain the potion's effect and can continue playing the
+    game.

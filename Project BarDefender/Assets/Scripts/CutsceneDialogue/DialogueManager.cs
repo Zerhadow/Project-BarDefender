@@ -11,8 +11,12 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _characterNameHolder;
     [SerializeField] private TextMeshProUGUI _dialogueHolder;
     [SerializeField] private TextMeshProUGUI _instructionDialogue;
+    [SerializeField] bool _loadChoicePanelAfterDialogue = false;
+    [SerializeField] GameObject _choicePanel = null;
     [SerializeField] public string _progressInstruction;
     [SerializeField] public string _continueInstruction;
+
+    
 
     //[SerializeField] private Image _characterHead;
     //[SerializeField] private Image _characterBody;
@@ -31,6 +35,11 @@ public class DialogueManager : MonoBehaviour
         _instructionDialogue.enabled = true;
         _firstTime = true;
         sentences = new Queue<string>();
+
+        if (_choicePanel != null)
+        {
+            _choicePanel.SetActive(false);
+        }
     }
 
     // Load in new CharacterName and start new queue
@@ -86,5 +95,10 @@ public class DialogueManager : MonoBehaviour
     {
         _instructionDialogue.text = _continueInstruction;
         _instructionDialogue.enabled = true;
+
+        if (_loadChoicePanelAfterDialogue)
+        {
+            _choicePanel.SetActive(true);
+        }
     }
 }

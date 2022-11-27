@@ -1007,7 +1007,8 @@ MonoBehaviour:
   _dialogueManager: {fileID: 1688953887}
   _dialogueArray:
   - {fileID: 11400000, guid: 133183bf44627ae45b8916fd54abed09, type: 2}
-  _nextSceneName: LoadingScreen_2
+  _loadSceneAfterDialogue: 1
+  _nextSceneName: LoadingScreen_2_Gather
 --- !u!114 &1688953887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1023,6 +1024,8 @@ MonoBehaviour:
   _characterNameHolder: {fileID: 505194861}
   _dialogueHolder: {fileID: 7016936651552366216}
   _instructionDialogue: {fileID: 1461986950}
+  _loadChoicePanelAfterDialogue: 0
+  _choicePanel: {fileID: 0}
   _progressInstruction: Press "Space" to progress.
   _continueInstruction: Press "Enter" to continue...
 --- !u!4 &1688953888
@@ -1311,6 +1314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dialogueManager: {fileID: 0}
   _dialogueArray: []
+  _loadSceneAfterDialogue: 1
   _nextSceneName: 
 --- !u!1 &7016936652614082386
 GameObject:

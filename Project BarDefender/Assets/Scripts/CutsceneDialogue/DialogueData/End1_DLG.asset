@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4171d304483ad646a97127e54ffefda, type: 3}
-  m_Name: Potion2_DLG
+  m_Name: End1_DLG
   m_EditorClassIdentifier: 
   _characterName: Bartender
   _dialogue:
-  - Great, another picky prick.
-  - I hate to ask you for another favor, love, but...
-  - If you can help me out of this situation, the rest of your drinks tonight are
-    on me.
-  - Just give me the materials you gathered, and I'll whip up something to help you
-    out.
+  - That was a pretty impressive display you put on there, love.
+  - This is why your my favorite~
+  - Why don't you sit back and get comfortable, and I'll pour you some nice cold
+    drinks.
+  - ...Or, if you're interested, I can make you something extra special.
+  - I'd just need a couple more ingredients from the forest.
+  - But, the choice is yours, love.
