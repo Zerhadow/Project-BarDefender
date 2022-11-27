@@ -42,6 +42,8 @@ public class Projectile : MonoBehaviour
                 //Instantiate(particles,transform.position,Quaternion.identity);
                 //AudioManager.PlaySound("BulletCollide");
                 Destroy(gameObject);
+            } else if(other.tag == "Player") {
+                Debug.Log("collide w player");
             }
         } else if(this.tag == "EnemyBullet"){
             if(other.tag == "Player") {

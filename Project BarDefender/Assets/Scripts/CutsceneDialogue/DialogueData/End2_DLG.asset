@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4171d304483ad646a97127e54ffefda, type: 3}
+  m_Name: End2_DLG
+  m_EditorClassIdentifier: 
+  _characterName: Prompt
+  _dialogue:
+  - If you stay, the game will end.
+  - If you leave, you will retain the potion's effect and can continue playing the
+    game.

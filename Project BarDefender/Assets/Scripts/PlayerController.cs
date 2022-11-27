@@ -58,7 +58,7 @@ public class PlayerController : Units
     public Transform atkPt;
     public LayerMask enemyLayers; 
 
-    private bool isGrounded = false;
+    public static bool isGrounded = false;
     private bool _paused = false;
     private bool isFlexing = false;
     private bool isAttacking = false;
@@ -479,7 +479,7 @@ public class PlayerController : Units
                 float originalHP = currHP;
                 dmg = Mathf.Clamp(dmg, 0, int.MaxValue);
                 currHP -= dmg;
-                HPBar.SetHealth(currHP);
+                HPBar.SetHealth(currHP, originalHP);
 
                 if (currHP <= 0) {
                     Die();
