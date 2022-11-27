@@ -266,6 +266,7 @@ public class PlayerController : Units
     private void Move()
     {
         //if (!isFlexing && !isAttacking)
+        //if (!isFlexing && !isAttacking)
         if (canMove)
         {
             transform.position += transform.right * moveDirection.x * _moveSpeed * Time.deltaTime;
@@ -501,9 +502,24 @@ public class PlayerController : Units
 
     public override void Die() {
         //Die in some way
-        //This method is meant to be overwritten
+        StartCoroutine(deathTimer());
+
+
+    }
+
+    IEnumerator deathTimer()
+    {
+        _playerAnimator.SetTrigger("Die");
+        //isFlexing = true;
+        canMove = false;
         Debug.Log(transform.name + " died");
-        //die animation
+        yield return new WaitForEndOfFrame();
+        yield return new WaitForSeconds(
+            _playerAnimator.GetAnimatorTransitionInfo(0).duration);
+        yield return new WaitForEndOfFrame();
+        yield return new WaitUntil(() =>
+            _playerAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.95f);
         Destroy(gameObject);
+        //isFlexing = false;
     }
 }
