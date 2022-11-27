@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ToBoss : MonoBehaviour
 {
-    public void toNextScene(int scn) {
-        SceneManager.LoadScene(scn);
+    public void toNextScene(string sceneName) {
+        SceneManager.LoadScene(sceneName);
     }
 }
