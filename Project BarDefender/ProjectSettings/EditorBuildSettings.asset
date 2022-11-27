@@ -48,7 +48,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Cutscene_3_EndDialog.unity
     guid: f989614eaac9bc54ab574fdaec755ebc
   - enabled: 1
-    path: Assets/Scenes/LoadingScreen_7_stay.unity
+    path: Assets/Scenes/LoadingScreen_7_Stay.unity
     guid: ebeb38c237cae954e933d70c75da6c1c
   - enabled: 1
     path: Assets/Scenes/EndScene.unity

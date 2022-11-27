@@ -130,6 +130,8 @@ MonoBehaviour:
   spawnPoints:
   - {fileID: 300453146}
   - {fileID: 1213521488}
+  - {fileID: 0}
+  - {fileID: 0}
   timeBetweenWaves: 5
 --- !u!114 &1051247006396813846
 MonoBehaviour:
