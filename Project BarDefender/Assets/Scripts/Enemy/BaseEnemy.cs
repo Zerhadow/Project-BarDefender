@@ -92,10 +92,11 @@ public class BaseEnemy : Units
         Instantiate(itemFound, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
+            Debug.Log("Collided with player");
             collision.gameObject.GetComponent<PlayerController>().TakeDmg(damage);
         }
     }
