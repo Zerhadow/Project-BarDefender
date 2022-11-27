@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4171d304483ad646a97127e54ffefda, type: 3}
+  m_Name: Intro_DLG
+  m_EditorClassIdentifier: 
+  _characterName: ???
+  _dialogue:
+  - Ah...
+  - A little test is better than none...
+  - Hello?
+  _characterHead: {fileID: -697808690, guid: afd9681c0979bdf45bb225513bed85b6, type: 3}
+  _characterBody: {fileID: 1205465189, guid: 889548b03e7a13940a6b79c42c7a4659, type: 3}
