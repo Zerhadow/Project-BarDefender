@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &96687392 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3743012776460623171, guid: 55a79f7012e48c945822b378330bffe9, type: 3}
-  m_PrefabInstance: {fileID: 3743012776540129379}
-  m_PrefabAsset: {fileID: 0}
 --- !u!95 &236247595 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 4674013612465557339, guid: a6f8ac154077a5845aeadb82f9d941c8, type: 3}
@@ -406,10 +401,10 @@ MonoBehaviour:
   invincible: 0
   rb: {fileID: 818723997}
   itemDropList:
-  - {fileID: 96687392}
-  - {fileID: 0}
-  - {fileID: 96687392}
-  - {fileID: 0}
+  - {fileID: 3743012776460623171, guid: 55a79f7012e48c945822b378330bffe9, type: 3}
+  - {fileID: 3743012776460623171, guid: 55a79f7012e48c945822b378330bffe9, type: 3}
+  - {fileID: 3743012776460623171, guid: 55a79f7012e48c945822b378330bffe9, type: 3}
+  - {fileID: 3743012776460623171, guid: 55a79f7012e48c945822b378330bffe9, type: 3}
   itemDropTestObj: {fileID: 0}
 --- !u!50 &818723997 stripped
 Rigidbody2D:
@@ -1169,6 +1164,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 6508274363216419672, guid: 427a237f756ba144f98c8d32a0b273fd, type: 3}
+      propertyPath: waves.Array.data[0].enemy
+      value: 
+      objectReference: {fileID: 7851186290186491859, guid: b1e967f8479107f46ac1976619d9854e, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 427a237f756ba144f98c8d32a0b273fd, type: 3}
 --- !u!1001 &7851186289511054618
