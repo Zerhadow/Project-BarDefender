@@ -26,7 +26,10 @@ public class ShelfItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, 
         canvasGroup = GetComponent<CanvasGroup>();
         startPos = transform.position;
         counterdisplay.updateShelfCount(count);
-        img.sprite = item.icon;
+        if(item.icon != null){
+            img.sprite = item.icon;
+        }
+
     }
     public void OnBeginDrag(PointerEventData eventData){
         //Debug.Log("Start Drag");
