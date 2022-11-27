@@ -5,12 +5,12 @@ using UnityEngine;
 public class Units : MonoBehaviour
 {
     public int maxHP = 100;
-    public float currHP {get; private set;}
+    public float currHP;
     public int dmg;
     public HealthBar HPBar;
     //public AudioSource dmgSound;
     public bool invincible = false;
-    float invcibilityDuration = 0.001f;
+    public float invcibilityDuration = 0.001f;
     
     // Start is called before the first frame update
     public virtual void Start()
@@ -26,31 +26,10 @@ public class Units : MonoBehaviour
         
     }
 
-    public void TakeDmg(int dmg) {
-        if(!invincible){
-            float originalHP = currHP;
-            dmg = Mathf.Clamp(dmg, 0, int.MaxValue);
-            currHP -= dmg;
-            if(gameObject.tag != "Player"){
-                //GameManager.comboManager.IncrementCombo();
-                //CameraShaker.Instance.ShakeOnce(0.5f + shakeMultiplier*dmg, 0.5f, 0.3f, 0.15f);
-            }
-
-            if(gameObject.tag == "Player"){
-                //CameraShaker.Instance.ShakeOnce(1.3f,3f,0.2f,0.4f);
-                //AudioManager.PlaySound("PlayerDamage");
-            }
-
-
-            HPBar.SetHealth(currHP);
-            // if(hitEffect != null)
-            //     Instantiate(hitEffect, transform.position, Quaternion.identity);
-
-            if (currHP <= 0) {
-                Die();
-            }
-            StartCoroutine(Invincible(invcibilityDuration));
-        }
+    public virtual void TakeDmg(int dmg) {
+        // Player or some mob take dmg
+        // method meant to be overwritten
+        Debug.Log(transform.name + "took dmg");
     }
 
     public virtual void Die() {
