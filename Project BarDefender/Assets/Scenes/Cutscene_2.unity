@@ -388,7 +388,7 @@ GameObject:
   - component: {fileID: 1461986951}
   - component: {fileID: 1461986950}
   m_Layer: 5
-  m_Name: Continue_txt
+  m_Name: Instruction_txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -756,6 +756,14 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 1889670b-af44-447d-b076-c846ad18c072
     m_ActionName: Cutscene/Continue[/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9b6d7171-d4c7-4f74-98e1-a29b4b6f6383
+    m_ActionName: Player/Pause[/Keyboard/backspace]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4783ef80-6c96-4113-b4b9-5e086c206341
+    m_ActionName: Player/Flex[/Keyboard/f]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Cutscene
@@ -793,8 +801,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dialogueManager: {fileID: 1688953887}
   _dialogueArray:
-  - {fileID: 11400000, guid: 133183bf44627ae45b8916fd54abed09, type: 2}
-  _nextSceneName: GatheringScene
+  - {fileID: 11400000, guid: fb3bde451d3cf5644979ce010647ba54, type: 2}
+  - {fileID: 11400000, guid: 49fe70e5a310acd459cd76a3d87b317a, type: 2}
+  - {fileID: 11400000, guid: ca9c7fba8dbc7884e91a3942a32cb222, type: 2}
+  _nextSceneName: LoadingScreen_4
 --- !u!114 &1688953887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -809,7 +819,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _characterNameHolder: {fileID: 505194861}
   _dialogueHolder: {fileID: 7016936651552366216}
-  _continueDialogue: {fileID: 1461986950}
+  _instructionDialogue: {fileID: 1461986950}
+  _progressInstruction: Press "Space" to progress.
+  _continueInstruction: Press "Enter" to continue...
 --- !u!4 &1688953888
 Transform:
   m_ObjectHideFlags: 0

@@ -23,4 +23,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LoadingScreen_3.unity
     guid: 8f4f645230b3b534eb7658b5617f427a
+  - enabled: 1
+    path: Assets/Scenes/Cutscene_2.unity
+    guid: d5e0c0da66cf2cf4ca9525e1124b1baa
+  - enabled: 1
+    path: Assets/Scenes/LoadingScreen_4.unity
+    guid: f1b5839f0af56ae4caf986977d3fe14c
+  - enabled: 1
+    path: Assets/Scenes/PotionCreation.unity
+    guid: 2a5d99f6c04256041993e50c35381401
+  - enabled: 1
+    path: Assets/Scenes/LoadingScreen_5.unity
+    guid: abd4ed540c171d74d999fb4ffebb107c
   m_configObjects: {}
