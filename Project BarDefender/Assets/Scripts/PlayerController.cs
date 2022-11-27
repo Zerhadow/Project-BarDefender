@@ -35,7 +35,7 @@ public class PlayerController : Units
     [SerializeField] private int _currentJumps = 0;
     [SerializeField] UnityEngine.Animator _playerAnimator;
     [SerializeField] SpriteRenderer _playerSprite;
-    [SerializeField] Transform _footPos;
+    [SerializeField] Transform _footPos;    
     public LayerMask _groundLayer;
 
     Vector2 moveDirection = Vector2.zero;
@@ -45,6 +45,7 @@ public class PlayerController : Units
     private InputAction fire;
     private InputAction jump;
     private InputAction melee;
+    private InputAction flex;
 
     public GameObject projectilePrefab;
     public Transform atkPt;
@@ -52,6 +53,9 @@ public class PlayerController : Units
     public LayerMask enemyLayers; 
     // Interactable interactable = hit.collider.GetComponent<Interactable>(); 
     private bool isGrounded = false;
+    private bool isFlexing = false;
+    private bool isAttacking = false;
+    private bool canMove = true;
 
 
     void Awake() {
@@ -78,6 +82,10 @@ public class PlayerController : Units
         melee = playerControls.Player.Melee;
         melee.Enable();
         melee.performed += Melee;
+
+        flex = playerControls.Player.Flex;
+        flex.Enable();
+        flex.performed += Flex;
 
     }
 
@@ -164,6 +172,7 @@ public class PlayerController : Units
             StartCoroutine(_jumpTimer(_jumpCooldown));
             rb.AddForce(new Vector2(0f, _jumpPower), ForceMode2D.Impulse);
             isGrounded = false;
+            canMove = true;
             //rb.AddForce(new Vector2(_jumpPower * moveDirection.x, 0), ForceMode2D.Impulse); //long jump?
         }
     }
@@ -181,7 +190,11 @@ public class PlayerController : Units
                 StopCoroutine(_comboAttackResetCoroutine);
             _comboHitStep++;
             _playerAnimator.SetTrigger("Attack");
-            
+
+            if (isGrounded)
+                canMove = false;
+            //isAttacking = true;
+
             //Detect enemies in range of atk
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(atkPt.position, atkRange, enemyLayers);
             //dmg them
@@ -211,6 +224,8 @@ public class PlayerController : Units
         yield return new WaitUntil(() =>
             _playerAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.95f);
         _comboHitStep = -1;
+        isAttacking = false;
+        canMove = true;
         _playerAnimator.SetInteger(
             _animAttackComboStepParamHash, _comboHitStep);
 
@@ -219,8 +234,13 @@ public class PlayerController : Units
 
     private void Move()
     {
-        transform.position += transform.right * moveDirection.x * _moveSpeed * Time.deltaTime;
-        
+        //if (!isFlexing && !isAttacking)
+        if (canMove)
+        {
+            transform.position += transform.right * moveDirection.x * _moveSpeed * Time.deltaTime;
+            rb.AddForce(new Vector2(lookDirection.x - moveDirection.x, 0), ForceMode2D.Force);
+        }
+
 
     }
 
@@ -258,5 +278,30 @@ public class PlayerController : Units
         {
             _currentJumps = 0;   
         }
+    }
+
+    private void Flex (InputAction.CallbackContext context)
+    {
+
+        if (isGrounded)
+        {
+            StartCoroutine(flexTimer());
+            
+        }
+    }
+
+    IEnumerator flexTimer()
+    {
+        _playerAnimator.SetTrigger("Flex");
+        //isFlexing = true;
+        canMove = false;
+        yield return new WaitForEndOfFrame();
+        yield return new WaitForSeconds(
+            _playerAnimator.GetAnimatorTransitionInfo(0).duration);
+        yield return new WaitForEndOfFrame();
+        yield return new WaitUntil(() =>
+            _playerAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.95f);
+        canMove = true;
+        //isFlexing = false;
     }
 }
