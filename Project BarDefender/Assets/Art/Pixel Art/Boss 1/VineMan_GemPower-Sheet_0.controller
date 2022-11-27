@@ -6,7 +6,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: VineMan-Charge-Sheet_0
+  m_Name: VineMan_GemPower-Sheet_0
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers: []

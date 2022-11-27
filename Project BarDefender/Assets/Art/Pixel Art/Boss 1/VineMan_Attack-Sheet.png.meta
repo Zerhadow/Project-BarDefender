@@ -1,0 +1,755 @@
+fileFormatVersion: 2
+guid: aa4708638993fae4e87f970a16967bfc
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: VineMan_Attack-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 467
+        width: 86
+        height: 88
+      alignment: 9
+      pivot: {x: 0.24480544, y: 0.24508286}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6428bae21e3f38f4684e4ac94c5db59f
+      internalID: 56979749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_Attack-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 467
+        width: 83
+        height: 84
+      alignment: 9
+      pivot: {x: 0.24224706, y: 0.256477}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64cd9e8b18d192a48b59b296bcccaf7b
+      internalID: -595614988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_Attack-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 467
+        width: 83
+        height: 76
+      alignment: 9
+      pivot: {x: 0.25, y: 0.2830413}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2087e78594d3c2498ac73817e43619e
+      internalID: 393458796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_Attack-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 467
+        width: 83
+        height: 70
+      alignment: 9
+      pivot: {x: 0.2388666, y: 0.30391106}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3496268dc970b684caa9855b5b2bc892
+      internalID: -1559123262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_Attack-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 467
+        width: 59
+        height: 88
+      alignment: 9
+      pivot: {x: 0.37206826, y: 0.25154704}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac144a4f4d8cbf246a5b6fa4b19ffa56
+      internalID: 117718211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_Attack-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 467
+        width: 94
+        height: 74
+      alignment: 9
+      pivot: {x: 0.83259225, y: 0.2969777}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3f9a340f4be58c4cadb33887e83f815
+      internalID: 446368086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_Attack-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 353
+        width: 165
+        height: 50
+      alignment: 9
+      pivot: {x: 0.91366696, y: 0.43969482}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b533109b8693644bacbcec415f5d49e
+      internalID: -1253341868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_Attack-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 348
+        width: 194
+        height: 55
+      alignment: 9
+      pivot: {x: 0.9252565, y: 0.49999943}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10d82ffdceba50342a550f015efa10b7
+      internalID: -1836412698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_Attack-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 348
+        width: 197
+        height: 55
+      alignment: 9
+      pivot: {x: 0.9310077, y: 0.49999943}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9916d9fa11923724696e4c0fc95073b0
+      internalID: 747437366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_Attack-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 349
+        width: 199
+        height: 54
+      alignment: 9
+      pivot: {x: 0.9266756, y: 0.4888481}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 630e1cd6b2a16134faf33a27a7c907eb
+      internalID: -1123937828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_Attack-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1196
+        y: 350
+        width: 203
+        height: 54
+      alignment: 9
+      pivot: {x: 0.9271673, y: 0.46654484}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15188ec2a87a0d34bafbc328a3698423
+      internalID: -1188224710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_Attack-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 351
+        width: 160
+        height: 52
+      alignment: 9
+      pivot: {x: 0.9102402, y: 0.4652581}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9cbad3ef64ea054eba46f78394348c7
+      internalID: -488264068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_Attack-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 240
+        width: 147
+        height: 50
+      alignment: 9
+      pivot: {x: 0.90965176, y: 0.4397809}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a92540cf4aedffa4aae6daa28d96f97f
+      internalID: -747352676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_Attack-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 240
+        width: 137
+        height: 50
+      alignment: 9
+      pivot: {x: 0.9043891, y: 0.4397809}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5c651bc670364545af08cd9690d5815
+      internalID: 168394616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_Attack-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 240
+        width: 127
+        height: 50
+      alignment: 9
+      pivot: {x: 0.88881415, y: 0.4397809}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b600d7f40f00df4ab0bb0a8fcb3f294
+      internalID: -854567779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_Attack-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 1037
+        y: 240
+        width: 71
+        height: 50
+      alignment: 9
+      pivot: {x: 0.805334, y: 0.4397809}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c897c3306fe62b54a9eec2ae9b7dc971
+      internalID: 1639295393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_Attack-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 240
+        width: 34
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5708403, y: 0.45182496}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 367cd98bfd76d9a43a64f2cce93ae23f
+      internalID: 1252612865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_Attack-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 240
+        width: 34
+        height: 50
+      alignment: 9
+      pivot: {x: 0.58855486, y: 0.4397809}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59b6a19835d7e7b45ae56ee7e37daaba
+      internalID: 1989381453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_Attack-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 127
+        width: 36
+        height: 50
+      alignment: 9
+      pivot: {x: 0.51672703, y: 0.4397809}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b73eea7c9f159d4bbadc8c766d2a7b0
+      internalID: 827240801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_Attack-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 171
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fccaadc234b33324c8c9f4eda78373f0
+      internalID: -666239706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_Attack-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 127
+        width: 35
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5344099, y: 0.4397809}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1956feb45465d8247a29af7d71b2bab3
+      internalID: -1129181436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_Attack-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 127
+        width: 37
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5650998, y: 0.4397809}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25346a36a98a5b449ba8250a424a6945
+      internalID: 296921361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_Attack-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 127
+        width: 35
+        height: 51
+      alignment: 9
+      pivot: {x: 0.60322964, y: 0.45276955}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c3aa121f109f21409762162c0e33208
+      internalID: -1276395130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_Attack-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 127
+        width: 38
+        height: 51
+      alignment: 9
+      pivot: {x: 0.54753995, y: 0.45276955}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08f5d4f4f5bc2c44d8e99c2a63f791ef
+      internalID: 202536432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_Attack-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 129
+        width: 36
+        height: 49
+      alignment: 9
+      pivot: {x: 0.5669081, y: 0.42626238}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 970e012ccfcf26a4aa2dfaffcfe774b4
+      internalID: 12371103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_Attack-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 13
+        width: 74
+        height: 53
+      alignment: 9
+      pivot: {x: 0.76040524, y: 0.4545521}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e924430c1b96634cbe53ac0fe645b9b
+      internalID: -1896122401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_Attack-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 12
+        width: 71
+        height: 52
+      alignment: 9
+      pivot: {x: 0.74596393, y: 0.47683927}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c534e46ddf337a47900252c62117f41
+      internalID: -2121501763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VineMan_Attack-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 12
+        width: 71
+        height: 52
+      alignment: 9
+      pivot: {x: 0.75444525, y: 0.47683927}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c241054e9a356dc408983e5ca9e9078d
+      internalID: -1572340409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      VineMan_Attack-Sheet_26: -1276395130
+      VineMan_Attack-Sheet_10: 678758116
+      VineMan_Attack-Sheet_4: 117718211
+      VineMan_Attack-Sheet_16: -747352676
+      VineMan_Attack-Sheet_11: 747437366
+      VineMan_Attack-Sheet_25: 296921361
+      VineMan_Attack-Sheet_17: 168394616
+      VineMan_Attack-Sheet_21: 1989381453
+      VineMan_Attack-Sheet_9: -1659010851
+      VineMan_Attack-Sheet_8: -1836412698
+      VineMan_Attack-Sheet_22: 827240801
+      VineMan_Attack-Sheet_30: -2121501763
+      VineMan_Attack-Sheet_3: -1559123262
+      VineMan_Attack-Sheet_24: -1129181436
+      VineMan_Attack-Sheet_0: 56979749
+      VineMan_Attack-Sheet_19: 1639295393
+      VineMan_Attack-Sheet_1: -595614988
+      VineMan_Attack-Sheet_5: 446368086
+      VineMan_Attack-Sheet_31: -1572340409
+      VineMan_Attack-Sheet_15: -488264068
+      VineMan_Attack-Sheet_23: -666239706
+      VineMan_Attack-Sheet_27: 202536432
+      VineMan_Attack-Sheet_2: 393458796
+      VineMan_Attack-Sheet_7: 364376794
+      VineMan_Attack-Sheet_14: -1188224710
+      VineMan_Attack-Sheet_12: 672455122
+      VineMan_Attack-Sheet_29: -1896122401
+      VineMan_Attack-Sheet_28: 12371103
+      VineMan_Attack-Sheet_6: -1253341868
+      VineMan_Attack-Sheet_13: -1123937828
+      VineMan_Attack-Sheet_18: -854567779
+      VineMan_Attack-Sheet_20: 1252612865
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
