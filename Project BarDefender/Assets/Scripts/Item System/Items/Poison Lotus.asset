@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf68974b07d86494c861e1d297707337, type: 3}
   m_Name: Poison Lotus
   m_EditorClassIdentifier: 
-  name: New Item
-  icon: {fileID: 0}
+  name: Poison Lotus
+  icon: {fileID: -1855124612, guid: 5f6b41bb14308364b84e24cfbdd0e0b7, type: 3}
   isDefaultItem: 0
-  rarity: 
+  rarity: common

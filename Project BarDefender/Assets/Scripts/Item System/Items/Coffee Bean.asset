@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf68974b07d86494c861e1d297707337, type: 3}
   m_Name: Coffee Bean
   m_EditorClassIdentifier: 
-  name: New Item
+  name: Coffee Bean
   icon: {fileID: 0}
   isDefaultItem: 0
-  rarity: 
+  rarity: common
