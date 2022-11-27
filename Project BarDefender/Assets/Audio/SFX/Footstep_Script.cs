@@ -8,7 +8,7 @@ public class Footstep_Script : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
+        if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))) //&& PlayerController.isGrounded = false)
         {
             footStepSound.enabled = true;
         }
