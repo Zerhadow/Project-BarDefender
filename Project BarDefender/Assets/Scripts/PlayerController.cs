@@ -70,7 +70,7 @@ public class PlayerController : Units
 
     void Awake() {
         playerControls = new PlayerInputActions();
-        ATK = dmg;
+        dmg = ATK;
 
         _animAttackComboStepParamHash = Animator.StringToHash("AttackComboStep");
         _comboHitStep = -1;
