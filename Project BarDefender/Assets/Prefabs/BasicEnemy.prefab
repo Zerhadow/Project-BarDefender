@@ -433,7 +433,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -505,10 +505,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 100
+  currHP: 0
   dmg: 0
   HPBar: {fileID: 1529469701}
   invincible: 0
-  rb: {fileID: 0}
+  invcibilityDuration: 0.001
   itemDropList:
   - {fileID: 3743012776460623171, guid: 55a79f7012e48c945822b378330bffe9, type: 3}
   - {fileID: 3743012776460623171, guid: 55a79f7012e48c945822b378330bffe9, type: 3}
