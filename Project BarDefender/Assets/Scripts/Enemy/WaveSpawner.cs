@@ -38,6 +38,7 @@ public class WaveSpawner : MonoBehaviour
         if(state == SpawnState.WAITING) {
             //check if enemies are still alive
             if(!EnemyIsAlive()) {
+                Debug.Log("All enemies ded");
                 WaveCompleted();
             } else {
                 return;
