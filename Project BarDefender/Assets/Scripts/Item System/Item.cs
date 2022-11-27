@@ -8,22 +8,6 @@ public class Item : ScriptableObject
     new public string name = "New Item"; 
     public Sprite icon = null; 
     public bool isDefaultItem = false;      
-    public int id;   
-} 
- 
-public class Abilities : Item { 
-    public int inventorySlot; 
-     PlayerController player; 
-
-     public int atkMod; 
-     public int moveSpdMod; 
-     public int jumpPwrMod; 
-     public int fireCooldownMod; 
-     public int jumpCooldownMod; 
-     public int atkRange; 
- 
-//     Awake() { 
- 
-//     } 
+    public string rarity;   
 } 
 
