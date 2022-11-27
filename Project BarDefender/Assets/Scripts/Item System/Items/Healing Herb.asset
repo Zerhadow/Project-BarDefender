@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Healing Herb
   m_EditorClassIdentifier: 
   name: Healing Herb
-  icon: {fileID: 0}
+  icon: {fileID: 240456439, guid: 5f6b41bb14308364b84e24cfbdd0e0b7, type: 3}
   isDefaultItem: 0
   rarity: common
