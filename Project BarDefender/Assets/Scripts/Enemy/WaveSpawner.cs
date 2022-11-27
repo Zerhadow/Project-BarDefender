@@ -63,6 +63,7 @@ public class WaveSpawner : MonoBehaviour
 
         if(nextWave + 1 > waves.Length - 1) {
             nextWave = 0;
+            Debug.Log("Spawn state: " + state);
             Debug.Log("All waves complete! Looping. . .");
         } else {
             nextWave++;
