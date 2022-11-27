@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Creatine
   m_EditorClassIdentifier: 
   name: Creatine
-  icon: {fileID: 0}
+  icon: {fileID: -1711716623, guid: 5f6b41bb14308364b84e24cfbdd0e0b7, type: 3}
   isDefaultItem: 0
   rarity: rare

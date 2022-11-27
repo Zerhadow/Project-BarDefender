@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class ShelfItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler
 {
@@ -18,12 +19,17 @@ public class ShelfItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, 
     public Potion potion;
     private Vector3 startPos;
     public ShelfCounter counterdisplay;
+    public Image img;
 
     private void Awake(){
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
         startPos = transform.position;
         counterdisplay.updateShelfCount(count);
+        if(item.icon != null){
+            img.sprite = item.icon;
+        }
+
     }
     public void OnBeginDrag(PointerEventData eventData){
         //Debug.Log("Start Drag");

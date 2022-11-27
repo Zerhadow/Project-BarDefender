@@ -15,6 +15,8 @@ public class Inventory : MonoBehaviour
         } 
         instance = this; 
 
+        DontDestroyOnLoad(this.gameObject);
+
         count = 0; 
     } 
 
