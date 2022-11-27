@@ -7,7 +7,7 @@ public class DialogueData : ScriptableObject
 {
     [SerializeField] private string _characterName = "...";
     // [NonReorderable]
-    [Multiline(3)] [SerializeField] private string[] _dialogue;
+    [TextArea(0, 5)][SerializeField] private string[] _dialogue;
     //[SerializeField] public Sprite _characterHead = null;
     //[SerializeField] public Sprite _characterBody = null;
 

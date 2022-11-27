@@ -12,10 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4171d304483ad646a97127e54ffefda, type: 3}
   m_Name: Intro_Character_DLG
   m_EditorClassIdentifier: 
-  _characterName: Protagonist
+  _characterName: Bartender
   _dialogue:
-  - Huh?
-  - This is another test...
-  - Hello???
-  _characterHead: {fileID: 1059838224, guid: afd9681c0979bdf45bb225513bed85b6, type: 3}
-  _characterBody: {fileID: 1205465189, guid: 889548b03e7a13940a6b79c42c7a4659, type: 3}
+  - 
+  - 
