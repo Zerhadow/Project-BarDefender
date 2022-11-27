@@ -13,7 +13,7 @@ public class Units : MonoBehaviour
     float invcibilityDuration = 0.001f;
     
     // Start is called before the first frame update
-    void Start()
+    public virtual void Start()
     {
         currHP = maxHP;
         // Debug.Log("currHP: " + currHP);        

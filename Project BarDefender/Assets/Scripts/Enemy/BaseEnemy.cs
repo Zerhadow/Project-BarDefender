@@ -19,8 +19,9 @@ public class BaseEnemy : Units
 
 
     // Start is called before the first frame update
-    void Start()
+    public override void Start()
     {
+        base.Start();
         rb = GetComponent<Rigidbody2D>();
         
         //add all items to list
@@ -38,8 +39,8 @@ public class BaseEnemy : Units
         //This method is meant to be overwritten
         //drop item
         // ItemDropTest();
-        Destroy(gameObject);
         Debug.Log(transform.name + " died");
+        Destroy(gameObject);
     }
 
     private int DetermineDropRNG() {
