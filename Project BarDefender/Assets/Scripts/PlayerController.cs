@@ -78,8 +78,11 @@ public class PlayerController : Units
     }
 
     void Start() {
-        //for now only the player has a healthbar so only he will call the set health function
 
+        currHP = maxHP;
+        // Debug.Log("currHP: " + currHP);        
+        HPBar.SetMaxHealth(maxHP);
+        //for now only the player has a healthbar so only he will call the set health function
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -173,6 +176,7 @@ public class PlayerController : Units
         Move();
         atkPt.position = this.transform.position + new Vector3(lookDirection.x * ((atkRange/2)+0.5f), lookDirection.y * ((atkRange/2) + 0.6f), 0);
         isGrounded = Physics2D.OverlapCircle(_footPos.position, 1f, _groundLayer);
+
 
     }
 

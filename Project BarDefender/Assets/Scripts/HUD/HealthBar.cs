@@ -17,8 +17,9 @@ public class HealthBar : MonoBehaviour
 
     public void SetHealth(float health, float orginalHP){
         time = 0;
-
+        Debug.Log("Health is " + health);
         slider.value = health;
+        Debug.Log("Slider Value is " + slider.value);
         
         if(!lerpHP) {
             StartCoroutine(LerpHP(health, orginalHP));
