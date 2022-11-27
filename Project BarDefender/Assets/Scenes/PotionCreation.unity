@@ -438,7 +438,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf23adf78ddec4598a135d5185b43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 366604529}
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
   count: 4
   potion: {fileID: 641676913}
@@ -1164,7 +1163,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf23adf78ddec4598a135d5185b43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 366604529}
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
   count: 4
   potion: {fileID: 641676913}
@@ -1646,7 +1644,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf23adf78ddec4598a135d5185b43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 366604529}
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
   count: 4
   potion: {fileID: 641676913}
@@ -1891,7 +1888,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf23adf78ddec4598a135d5185b43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 366604529}
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
   count: 4
   potion: {fileID: 641676913}
@@ -2001,7 +1997,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf23adf78ddec4598a135d5185b43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 366604529}
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
   count: 4
   potion: {fileID: 641676913}
@@ -2962,7 +2957,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 995790052}
-  - {fileID: 453790315}
   - {fileID: 1319163480}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -3076,7 +3070,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf23adf78ddec4598a135d5185b43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 366604529}
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
   count: 4
   potion: {fileID: 641676913}
@@ -3448,7 +3441,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf23adf78ddec4598a135d5185b43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 366604529}
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
   count: 4
   potion: {fileID: 641676913}
@@ -3480,7 +3472,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 453790314}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3488,12 +3480,12 @@ RectTransform:
   - {fileID: 568796358}
   - {fileID: 2110610552}
   - {fileID: 1774641162}
-  m_Father: {fileID: 366604530}
+  m_Father: {fileID: 995790052}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 254, y: 113}
+  m_AnchoredPosition: {x: 253.99901, y: 113.00083}
   m_SizeDelta: {x: 260.3175, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &453790316
@@ -3509,7 +3501,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Content: {fileID: 551638530}
-  m_Horizontal: 1
+  m_Horizontal: 0
   m_Vertical: 1
   m_MovementType: 1
   m_Elasticity: 0.1
@@ -3854,7 +3846,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf23adf78ddec4598a135d5185b43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 366604529}
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
   count: 4
   potion: {fileID: 641676913}
@@ -4283,7 +4274,7 @@ RectTransform:
   - {fileID: 630273592}
   - {fileID: 636061809}
   m_Father: {fileID: 995790052}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -5205,7 +5196,7 @@ RectTransform:
   m_Children:
   - {fileID: 1554639444}
   m_Father: {fileID: 995790052}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7902,7 +7893,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf23adf78ddec4598a135d5185b43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 366604529}
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
   count: 4
   potion: {fileID: 641676913}
@@ -8123,6 +8113,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1154552998}
+  - {fileID: 453790315}
   - {fileID: 554194604}
   - {fileID: 641676912}
   m_Father: {fileID: 366604530}
@@ -8820,7 +8811,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf23adf78ddec4598a135d5185b43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 366604529}
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
   count: 4
   potion: {fileID: 641676913}
@@ -9589,7 +9579,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf23adf78ddec4598a135d5185b43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 366604529}
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
   count: 4
   potion: {fileID: 641676913}
@@ -9967,7 +9956,7 @@ RectTransform:
   m_Children:
   - {fileID: 1483227320}
   m_Father: {fileID: 366604530}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -10571,7 +10560,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf23adf78ddec4598a135d5185b43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 366604529}
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
   count: 4
   potion: {fileID: 641676913}
@@ -10681,7 +10669,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf23adf78ddec4598a135d5185b43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 366604529}
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
   count: 4
   potion: {fileID: 641676913}
@@ -11137,7 +11124,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf23adf78ddec4598a135d5185b43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 366604529}
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
   count: 4
   potion: {fileID: 641676913}
@@ -11517,7 +11503,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf23adf78ddec4598a135d5185b43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 366604529}
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
   count: 4
   potion: {fileID: 641676913}
@@ -11813,7 +11798,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf23adf78ddec4598a135d5185b43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 366604529}
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
   count: 4
   potion: {fileID: 641676913}
@@ -11923,7 +11907,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf23adf78ddec4598a135d5185b43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 366604529}
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
   count: 4
   potion: {fileID: 641676913}
@@ -12211,7 +12194,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf23adf78ddec4598a135d5185b43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 366604529}
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
   count: 4
   potion: {fileID: 641676913}
@@ -12456,7 +12438,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf23adf78ddec4598a135d5185b43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 366604529}
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
   count: 4
   potion: {fileID: 641676913}
@@ -12718,7 +12699,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf23adf78ddec4598a135d5185b43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 366604529}
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
   count: 4
   potion: {fileID: 641676913}
@@ -12849,7 +12829,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf23adf78ddec4598a135d5185b43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 366604529}
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
   count: 4
   potion: {fileID: 641676913}
@@ -12959,7 +12938,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf23adf78ddec4598a135d5185b43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 366604529}
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
   count: 4
   potion: {fileID: 641676913}
@@ -13559,7 +13537,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf23adf78ddec4598a135d5185b43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 366604529}
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
   count: 4
   potion: {fileID: 641676913}
@@ -13669,7 +13646,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf23adf78ddec4598a135d5185b43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 366604529}
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
   count: 4
   potion: {fileID: 641676913}
@@ -14581,7 +14557,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf23adf78ddec4598a135d5185b43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 366604529}
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
   count: 4
   potion: {fileID: 641676913}
@@ -15343,7 +15318,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf23adf78ddec4598a135d5185b43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 366604529}
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
   count: 4
   potion: {fileID: 641676913}

@@ -4,34 +4,27 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ShelfItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler
+public class ShelfItem : MonoBehaviour, IPointerDownHandler//, IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler
 {
 
     
 
 
     [SerializeField]
-    private Canvas canvas; 
-    private RectTransform rectTransform;
-    private CanvasGroup canvasGroup;
     public Item item;
     public int count;
     public Potion potion;
-    private Vector3 startPos;
     public ShelfCounter counterdisplay;
     public Image img;
 
     private void Awake(){
-        rectTransform = GetComponent<RectTransform>();
-        canvasGroup = GetComponent<CanvasGroup>();
-        startPos = transform.position;
         counterdisplay.updateShelfCount(count);
         if(item.icon != null){
             img.sprite = item.icon;
         }
 
     }
-    public void OnBeginDrag(PointerEventData eventData){
+    /*public void OnBeginDrag(PointerEventData eventData){
         //Debug.Log("Start Drag");
         canvasGroup.alpha = .6f;
         canvasGroup.blocksRaycasts = false; 
@@ -68,15 +61,20 @@ public class ShelfItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, 
         {
             transform.position = startPos;
         }
-    }
+    }*/
 
     public void OnPointerDown(PointerEventData eventData)
     {
         //Debug.Log("On Pointer down");
+        if(count > 0){
+            potion.AddItem(item);
+            count--;
+            counterdisplay.updateShelfCount(count);
+        }
     }
 
 
-    public void OnDrop(PointerEventData eventData){
+    /*public void OnDrop(PointerEventData eventData){
         //Debug.Log("Drop");
         
 
@@ -84,7 +82,7 @@ public class ShelfItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, 
         //dragged item disappears 
 
         
-    }
+    }*/
 
 
 }
