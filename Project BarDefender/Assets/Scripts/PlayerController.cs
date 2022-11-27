@@ -246,9 +246,13 @@ public class PlayerController : Units
     }
 
     public void IncreaseATK_DecreaseHP(string rarity) { 
-        ATK += 1; 
-        Debug.Log("New ATK: " + ATK); 
+        ATK += 1;
+        maxHP += 20;
+        // currHP += 20 maybe won't be needed
+        Debug.Log("New ATK: " + ATK);
+        Debug.Log("New Max HP: " + maxHP); 
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == 6)

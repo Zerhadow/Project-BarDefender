@@ -5,7 +5,7 @@ using UnityEngine;
 public class Interactable : MonoBehaviour 
 { 
     public float radius = 3f; 
-    public Transform interactionTransform; 
+    private Transform interactionTransform; 
     public Item item; 
     GameObject playerPrefab; 
     PlayerController player; 
@@ -20,10 +20,15 @@ public class Interactable : MonoBehaviour
             Debug.Log("Item was interacted with " + other.name); 
             PickUp(); 
         } 
-    } 
+    }
+
+    public virtual void Start() {
+        interactionTransform = GetComponent<Transform>();
+    }
 
     private void Update() { 
-        // player = playerPrefab.GetComponent<PlayerController>(); 
+        // player = playerPrefab.GetComponent<PlayerController>();
+        interactionTransform = this.GetComponent<Transform>();
     } 
 
     void PickUp() { 
@@ -39,7 +44,7 @@ public class Interactable : MonoBehaviour
         switch (name) { 
             case "Attack Mushroom": 
                 //call function 
-                //IncreaseATK_DecreaseHP("common"); 
+                // IncreaseATK_DecreaseHP("common"); 
                 break;
             case "Blueberry": 
                 //call function 
@@ -55,7 +60,7 @@ public class Interactable : MonoBehaviour
                 break;
             default: 
                 break; 
-        } 
+        }
 
     } 
 } 
