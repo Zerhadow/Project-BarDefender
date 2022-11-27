@@ -9,5 +9,7 @@ public class Item : ScriptableObject
     public Sprite icon = null; 
     public bool isDefaultItem = false;      
     public string rarity;   
+
+    public string description; 
 } 
 
