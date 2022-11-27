@@ -318,7 +318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab2237544e968c94ebdb549eead30639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneName: Cutscene_2
+  _sceneName: EndScene
   _loadingScreen: {fileID: 832090332}
   _loadingBar: {fileID: 452494291}
   _progressText: {fileID: 743082997}

@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf68974b07d86494c861e1d297707337, type: 3}
-  m_Name: Rage Shroom
+  m_Script: {fileID: 11500000, guid: d4171d304483ad646a97127e54ffefda, type: 3}
+  m_Name: Potion1_DLG
   m_EditorClassIdentifier: 
-  name: Rage Shroom
-  icon: {fileID: -1945413677, guid: 5f6b41bb14308364b84e24cfbdd0e0b7, type: 3}
-  isDefaultItem: 0
-  rarity: rare
+  _characterName: Bartender
+  _dialogue:
+  - Welcome back love~
+  - Glad to see my favorite customer is back in one piece!
+  - Why don't you set down your weapon, and I'll make you a nice little-
