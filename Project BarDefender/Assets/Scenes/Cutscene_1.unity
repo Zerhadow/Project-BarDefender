@@ -376,6 +376,37 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!1 &1205673963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1205673964}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1205673964
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205673963}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 562.44165, y: 350.2108, z: 2.5193393}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1461986948
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,7 +419,7 @@ GameObject:
   - component: {fileID: 1461986951}
   - component: {fileID: 1461986950}
   m_Layer: 5
-  m_Name: Continue_txt
+  m_Name: Instruction_txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -756,6 +787,14 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 1889670b-af44-447d-b076-c846ad18c072
     m_ActionName: Cutscene/Continue[/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9b6d7171-d4c7-4f74-98e1-a29b4b6f6383
+    m_ActionName: Player/Pause[/Keyboard/backspace]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4783ef80-6c96-4113-b4b9-5e086c206341
+    m_ActionName: Player/Flex[/Keyboard/f]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Cutscene
@@ -794,7 +833,7 @@ MonoBehaviour:
   _dialogueManager: {fileID: 1688953887}
   _dialogueArray:
   - {fileID: 11400000, guid: 133183bf44627ae45b8916fd54abed09, type: 2}
-  _nextSceneName: PlayerTest
+  _nextSceneName: LoadingScreen_2
 --- !u!114 &1688953887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -809,7 +848,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _characterNameHolder: {fileID: 505194861}
   _dialogueHolder: {fileID: 7016936651552366216}
-  _continueDialogue: {fileID: 1461986950}
+  _instructionDialogue: {fileID: 1461986950}
+  _progressInstruction: Press "Space" to progress.
+  _continueInstruction: Press "Enter" to continue...
 --- !u!4 &1688953888
 Transform:
   m_ObjectHideFlags: 0
