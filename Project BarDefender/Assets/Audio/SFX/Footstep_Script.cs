@@ -2,20 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Footstep_Script : MonoBehaviour
+public class Footstep_Script : PlayerController
 {
     public AudioSource footStepSound;
 
-    void Update()
+    private bool GetIsGrounded()
     {
-        if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
-            ) //&& PlayerController.isGrounded = false)
-        {
-            footStepSound.enabled = true;
-        }
-        else
-        {
-            footStepSound.enabled = false;
-        }
+        return isGrounded;
+    }
+
+    void Update(bool isGrounded)
+    {
+        footStepSound.enabled = (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow)) && isGrounded == true;
     }
 }
