@@ -338,18 +338,20 @@ public class PlayerController : Units
     }
 
     public void IncreaseSize_DecreaseRunSpd(string rarity) { // Growth Serum
-        // get player scale/transform
+        Vector3 scaleChange = new Vector3(0.01f, 0.01f, 0.01f);
+        transform.localScale += scaleChange;
         _moveSpeed -= 1f;
 
-        // Debug.Log("New Player Scale: " + _jumpPower); 
+        Debug.Log("New Player Scale: " + transform.localScale); 
         Debug.Log("New Move Speed: " + _moveSpeed);
     }
 
     public void IncreaseRunSpd_DecreaseSize(string rarity) { // Shrink Serum
-        // get player scale/transform
+        Vector3 scaleChange = new Vector3(0.01f, 0.01f, 0.01f);
+        transform.localScale -= scaleChange;
         _moveSpeed += 1f;
 
-        // Debug.Log("New Player Scale: " + _jumpPower); 
+        Debug.Log("New Player Scale: " + transform.localScale); 
         Debug.Log("New Move Speed: " + _moveSpeed);
     }
 

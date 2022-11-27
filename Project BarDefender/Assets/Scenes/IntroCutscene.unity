@@ -794,7 +794,6 @@ MonoBehaviour:
   _dialogueManager: {fileID: 1688953887}
   _dialogueArray:
   - {fileID: 11400000, guid: 133183bf44627ae45b8916fd54abed09, type: 2}
-  - {fileID: 11400000, guid: 91bae8fe7761a2c4abad923a82e91061, type: 2}
   _nextSceneName: PlayerTest
 --- !u!114 &1688953887
 MonoBehaviour:
