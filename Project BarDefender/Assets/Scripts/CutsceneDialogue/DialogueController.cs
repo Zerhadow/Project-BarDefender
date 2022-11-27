@@ -26,7 +26,7 @@ public class DialogueController : MonoBehaviour
         //_playerInput.onActionTriggered += PlayerInput_onActionTriggered;
 
         // Assign active dialogue and pass to manager if valid
-        if (_dialogueArray[_dialogueIndex] != null)
+        if (_dialogueArray.Length > 0)
         {
             _activeDialogueData = _dialogueArray[_dialogueIndex];
             _dialogueManager.StartDialogue(_activeDialogueData);

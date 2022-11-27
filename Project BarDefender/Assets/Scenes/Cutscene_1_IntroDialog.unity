@@ -1021,6 +1021,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36fe7c57fad9ed54a8cedc3054497898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _dialoguePanel: {fileID: 0}
   _characterNameHolder: {fileID: 505194861}
   _dialogueHolder: {fileID: 7016936651552366216}
   _instructionDialogue: {fileID: 1461986950}
@@ -1209,7 +1210,6 @@ GameObject:
   - component: {fileID: 7016936651658631303}
   - component: {fileID: 7016936651658631302}
   - component: {fileID: 7016936651658631301}
-  - component: {fileID: 7016936651658631417}
   m_Layer: 5
   m_Name: Dialogue_cnv
   m_TagString: Untagged
@@ -1300,22 +1300,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &7016936651658631417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7016936651658631300}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 047c2104ee009574cab1fd62dda07f97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _dialogueManager: {fileID: 0}
-  _dialogueArray: []
-  _loadSceneAfterDialogue: 1
-  _nextSceneName: 
 --- !u!1 &7016936652614082386
 GameObject:
   m_ObjectHideFlags: 0
