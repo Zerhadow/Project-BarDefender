@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &300453146
 Transform:
   m_ObjectHideFlags: 0
@@ -46,7 +46,7 @@ GameObject:
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &399626618
 Transform:
   m_ObjectHideFlags: 0
@@ -77,7 +77,7 @@ GameObject:
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &612578917
 Transform:
   m_ObjectHideFlags: 0
@@ -108,7 +108,7 @@ GameObject:
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &791945683
 Transform:
   m_ObjectHideFlags: 0
@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1041123899
 Transform:
   m_ObjectHideFlags: 0
@@ -170,7 +170,7 @@ GameObject:
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1213521488
 Transform:
   m_ObjectHideFlags: 0
@@ -201,7 +201,7 @@ GameObject:
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1887915584
 Transform:
   m_ObjectHideFlags: 0
@@ -285,7 +285,7 @@ MonoBehaviour:
   waves:
   - name: Wave 1
     enemy: {fileID: 7851186290186491859, guid: b1e967f8479107f46ac1976619d9854e, type: 3}
-    count: 2
+    count: 7
     rate: 1
   spawnPoints:
   - {fileID: 300453146}
