@@ -5,6 +5,7 @@ using UnityEngine;
 public class BaseEnemy : Units
 {
     private Rigidbody2D rb;
+    public Animator _myAnimator;
 
     //possible item drops
     public List<GameObject> itemDropList = new List<GameObject>();
@@ -42,6 +43,7 @@ public class BaseEnemy : Units
         HPBar.SetHealth(currHP, originalHP);
         if (currHP <= 0) {
             Die();
+            
         }
     }
 
@@ -49,9 +51,9 @@ public class BaseEnemy : Units
         //Die in some way
         //This method is meant to be overwritten
         //drop item
+        StartCoroutine(deathTimer());
         ItemDropTest();
-        Debug.Log(transform.name + " died");
-        Destroy(gameObject);
+     
     }
 
     private int DetermineDropRNG() {
@@ -99,5 +101,20 @@ public class BaseEnemy : Units
             Debug.Log("Collided with player");
             collision.gameObject.GetComponent<PlayerController>().TakeDmg(damage);
         }
+    }
+
+    IEnumerator deathTimer()
+    {
+        _myAnimator.SetTrigger("Die");
+        //isFlexing = true;
+        yield return new WaitForEndOfFrame();
+        yield return new WaitForSeconds(
+            _myAnimator.GetAnimatorTransitionInfo(0).duration);
+        yield return new WaitForEndOfFrame();
+        yield return new WaitUntil(() =>
+            _myAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.95f);
+        Destroy(gameObject);
+       
+        //isFlexing = false;
     }
 }

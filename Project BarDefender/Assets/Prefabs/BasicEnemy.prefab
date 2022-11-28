@@ -617,6 +617,7 @@ MonoBehaviour:
   HPBar: {fileID: 1529469701}
   invincible: 0
   invcibilityDuration: 0.001
+  _myAnimator: {fileID: 1584036298762250038}
   itemDropList:
   - {fileID: 3743012776460623171, guid: 55a79f7012e48c945822b378330bffe9, type: 3}
   - {fileID: 3743012776460623171, guid: ae556f1db6161f2419dd716616055f85, type: 3}
