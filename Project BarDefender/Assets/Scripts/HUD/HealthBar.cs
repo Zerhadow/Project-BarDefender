@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     public Slider slider;
-    public float lerpSpd = 2;
+    public float lerpSpd = 7;
     bool lerpHP = false;
     float time = 0;
 
@@ -19,9 +19,9 @@ public class HealthBar : MonoBehaviour
         time = 0;
         slider.value = health;
         
-        if(!lerpHP) {
-            StartCoroutine(LerpHP(health, orginalHP));
-        }
+        // if(!lerpHP) {
+        //     StartCoroutine(LerpHP(health, orginalHP));
+        // }
     }
 
     IEnumerator LerpHP(float health, float originalHP) {
