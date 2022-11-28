@@ -40,9 +40,19 @@ public class Potion : MonoBehaviour
     Stack<Item> itemsAdded = new Stack<Item>();
     public Item temp;
 
-    public void AddItem(Item x){
+    public void AddItem(Item item){
         itemCount ++;
-        itemsAdded.Push(x);
+        itemsAdded.Push(item);
+        maxHP = maxHP + item.maxHP;
+        ATK = ATK + item.ATK;
+        _moveSpeed = _moveSpeed + item._moveSpeed;
+        _jumpPower = _jumpPower + item._jumpPower;
+        fireCooldown = fireCooldown + item.fireCooldown;
+        _jumpCooldown = _jumpCooldown + item._jumpCooldown;
+        atkRange = atkRange + item.atkRange;
+        _maxJumps = _maxJumps + item._maxJumps;
+        _rebound = _rebound +item._rebound; //how much you bounce enemies
+        evasion = evasion + item.evasion;
     }
 
      public Item RemoveItem(){
