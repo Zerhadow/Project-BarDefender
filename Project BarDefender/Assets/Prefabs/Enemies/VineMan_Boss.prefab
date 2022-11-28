@@ -244,6 +244,7 @@ MonoBehaviour:
   invcibilityDuration: 0.001
   deathEffect: {fileID: 0}
   isInvulnerable: 0
+  projectilePrefab: {fileID: 6573094205259837413, guid: dca94b84d965a7e458c0eecff96fcff9, type: 3}
 --- !u!114 &2434871977558898526
 MonoBehaviour:
   m_ObjectHideFlags: 0
