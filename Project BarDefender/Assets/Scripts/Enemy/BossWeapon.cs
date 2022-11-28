@@ -14,6 +14,7 @@ public class BossWeapon : MonoBehaviour
     public Vector3 attackPos;
     public Animator _myAnimator;
     public PlayerController _player;
+    [SerializeField] public GameObject thornBullet;
 
     private void Awake()
     {
@@ -39,6 +40,13 @@ public class BossWeapon : MonoBehaviour
         
             //PlayerHealth is what'll be changed out for what name of thte actual player health is
     }
+
+    public void GemAttack()
+    {
+        Instantiate(thornBullet, AttackPoint.position, AttackPoint.rotation);
+    }
+
+
     void OnDrawGizmosSelected()
     {
         //Vector3 pos = transform.position; pos += transform.right * attackOffset.x; pos += transform.up * attackOffset.y;

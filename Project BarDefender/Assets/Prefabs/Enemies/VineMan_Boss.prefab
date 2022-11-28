@@ -161,6 +161,7 @@ MonoBehaviour:
   attackPos: {x: 0, y: 0, z: 0}
   _myAnimator: {fileID: 3036689462062131248}
   _player: {fileID: 0}
+  thornBullet: {fileID: 6573094205259837413, guid: dca94b84d965a7e458c0eecff96fcff9, type: 3}
 --- !u!1 &3036689462365418090
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,7 +236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 377d8480b12efe94ebbc63308bb03e6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 100
+  maxHP: 1000
   currHP: 0
   dmg: 0
   HPBar: {fileID: 0}
