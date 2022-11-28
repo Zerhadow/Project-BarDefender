@@ -58,7 +58,7 @@ public class PlayerController : Units
     public Transform atkPt;
     public LayerMask enemyLayers; 
 
-    public static bool isGrounded = false;
+    public bool isGrounded = false;
     private bool _paused = false;
     private bool isFlexing = false;
     private bool isAttacking = false;
@@ -75,6 +75,8 @@ public class PlayerController : Units
         _animAttackComboStepParamHash = Animator.StringToHash("AttackComboStep");
         _comboHitStep = -1;
         _comboAttackResetCoroutine = null;
+
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Start() {
@@ -83,7 +85,6 @@ public class PlayerController : Units
         // Debug.Log("currHP: " + currHP);        
         HPBar.SetMaxHealth(maxHP);
         //for now only the player has a healthbar so only he will call the set health function
-        rb = GetComponent<Rigidbody2D>();
     }
 
     private void OnEnable() {
