@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : Units
 {
@@ -522,7 +523,8 @@ public class PlayerController : Units
         yield return new WaitForEndOfFrame();
         yield return new WaitUntil(() =>
             _playerAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.95f);
-        Destroy(gameObject);
+        //Destroy(gameObject);
+        SceneManager.LoadScene("GatheringScene");
         //isFlexing = false;
     }
 }
