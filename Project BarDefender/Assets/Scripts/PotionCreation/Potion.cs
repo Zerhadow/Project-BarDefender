@@ -5,32 +5,28 @@ using UnityEngine.EventSystems;
 
 public class Potion : MonoBehaviour
 {
-    public int itemCount;
-    Stack<Item> itemsAdded = new Stack<Item>();
-    public bool potionDrop;
-    
 
-    
-
-    
+    public static Potion instance;
+    #region Singleton
 
     public void Awake(){
         itemCount = 0;
-        potionDrop = false;
+
+         if (instance != null && instance != this) 
+        { 
+            Destroy(this); 
+        } 
+        else 
+        { 
+            instance = this; 
+        } 
         
     }
+    #endregion
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        //Debug.Log("Triggered");
-        potionDrop = true;
-    }
-
-    void OnTriggerExit2D(Collider2D other)
-    {
-        //Debug.Log("Not Triggered");
-        potionDrop = false;
-    }
+    public int itemCount;
+    Stack<Item> itemsAdded = new Stack<Item>();
+    public Item temp;
 
     public void AddItem(Item x){
         itemCount ++;
@@ -48,6 +44,39 @@ public class Potion : MonoBehaviour
 
     public void ApplytoPlayer(){
         // script that will pop all items in potion applying effects to player
+        Item x = RemoveItem();
+        do{
+            findSkill(x.name);
+        }while(x != null);
+    }
+
+    void findSkill(string name) { 
+        switch (name) { 
+            case "Attack Mushroom": 
+                //call function 
+                //IncreaseATK_DecreaseHP("common"); 
+                Debug.Log("Attack Mushroom Aplied"); 
+                break;
+            case "Blueberry": 
+                //call function 
+                //IncreaseATK_DecreaseHP("common");
+                Debug.Log("Blue Berry Aplied"); 
+                break;
+                case "Frog Leg": 
+                //call function 
+                //IncreaseATK_DecreaseHP("common"); 
+                Debug.Log("Frog Leg Aplied");
+                break;
+                case "Hemp Thread": 
+                //call function 
+                //IncreaseATK_DecreaseHP("common"); 
+                Debug.Log("Hemp Aplied");
+                break;
+            default: 
+                Debug.Log("Hemp Aplied");
+                break; 
+        }
+
     }
 
 

@@ -439,7 +439,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: ded723e2298d68a4596c13004fccc430, type: 2}
-  count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 944260871}
   description: {fileID: 1404939025}
@@ -1165,7 +1164,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
-  count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 299318559}
   description: {fileID: 714119212}
@@ -1647,7 +1645,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
-  count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 804200088}
   description: {fileID: 1439275778}
@@ -1892,7 +1889,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
-  count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 230186293}
   description: {fileID: 1935418231}
@@ -2002,7 +1998,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 1ee7c466d2521aa429d5ebabf23e902a, type: 2}
-  count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 1315731423}
   description: {fileID: 576371179}
@@ -3076,7 +3071,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
-  count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 2136396762}
   description: {fileID: 1116362812}
@@ -3448,7 +3442,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
-  count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 1480195711}
   description: {fileID: 1304272263}
@@ -3854,7 +3847,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
-  count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 1558421946}
   description: {fileID: 842607378}
@@ -7902,7 +7894,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
-  count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 1559669512}
   description: {fileID: 801832193}
@@ -8821,7 +8812,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
-  count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 1328022433}
   description: {fileID: 250682138}
@@ -9590,7 +9580,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
-  count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 464323934}
   description: {fileID: 711091925}
@@ -10080,6 +10069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24450fae292ca6846b2a2c9890399eaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  potion: {fileID: 641676913}
 --- !u!1 &1328022431
 GameObject:
   m_ObjectHideFlags: 0
@@ -10572,7 +10562,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
-  count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 389458730}
   description: {fileID: 931141032}
@@ -10682,7 +10671,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
-  count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 149433571}
   description: {fileID: 523805500}
@@ -11138,7 +11126,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
-  count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 235379087}
   description: {fileID: 729075142}
@@ -11518,7 +11505,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
-  count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 152949205}
   description: {fileID: 1859909310}
@@ -11814,7 +11800,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
-  count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 948337520}
   description: {fileID: 612801328}
@@ -11924,7 +11909,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
-  count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 260718164}
   description: {fileID: 608265875}
@@ -12212,7 +12196,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
-  count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 1091104088}
   description: {fileID: 1351530845}
@@ -12457,7 +12440,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
-  count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 847101384}
   description: {fileID: 193392209}
@@ -12719,7 +12701,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: d582a0be76847d444ab223224ccc440d, type: 2}
-  count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 1625699139}
   description: {fileID: 1997845723}
@@ -12850,7 +12831,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: b6c189ffbc031684eb1687eeb997e791, type: 2}
-  count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 1187792718}
   description: {fileID: 206046593}
@@ -12960,7 +12940,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
-  count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 1046812384}
   description: {fileID: 707023235}
@@ -13560,7 +13539,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
-  count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 1946813037}
   description: {fileID: 19537824}
@@ -13670,7 +13648,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
-  count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 1114897009}
   description: {fileID: 837701636}
@@ -14582,7 +14559,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
-  count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 898638280}
   description: {fileID: 1784583905}
@@ -15344,7 +15320,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
-  count: 4
   potion: {fileID: 641676913}
   counterdisplay: {fileID: 986305451}
   description: {fileID: 464666594}
