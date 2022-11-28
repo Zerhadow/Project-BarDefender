@@ -16,3 +16,15 @@ MonoBehaviour:
   icon: {fileID: 384863885, guid: 5f6b41bb14308364b84e24cfbdd0e0b7, type: 3}
   isDefaultItem: 0
   rarity: common
+  description: +MELEE RNG/SHOOTING CD
+  phrase: ' What an amazing aroma!'
+  maxHP: 0
+  ATK: 0
+  _moveSpeed: 0
+  _jumpPower: 0
+  fireCooldown: 0.2
+  _jumpCooldown: 0
+  atkRange: 0.2
+  _maxJumps: 0
+  _rebound: 0
+  evasion: 0

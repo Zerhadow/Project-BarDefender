@@ -11,5 +11,17 @@ public class Item : ScriptableObject
     public string rarity;   
 
     public string description; 
+    public string phrase;
+
+    public int maxHP = 0; 
+    public int ATK =0 ;
+    public float _moveSpeed =0;
+    public float _jumpPower =0;
+    public float fireCooldown =0;
+    public float _jumpCooldown =0;
+    public float atkRange = 0.5f;
+    public int _maxJumps =0;
+    public float _rebound =0; //how much you bounce enemies
+    public int evasion = 0;
 } 
 

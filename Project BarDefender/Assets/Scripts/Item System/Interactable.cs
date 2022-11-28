@@ -34,17 +34,17 @@ public class Interactable : MonoBehaviour
     void PickUp() { 
         Debug.Log("Picking up " + item.name); 
         bool wasPickedUp = Inventory.instance.Add(item); 
-        findSkill(item.name); 
+        //findSkill(item.name); 
 
         if(wasPickedUp) {Destroy(gameObject);} 
 
     } 
 
-    void findSkill(string name) { 
+    /*void findSkill(string name) { 
         switch (name) { 
             case "Attack Mushroom": 
                 //call function 
-                // IncreaseATK_DecreaseHP("common"); 
+                //IncreaseATK_DecreaseHP("common"); 
                 Debug.Log("Attack Mushroom Aplied"); 
                 break;
             case "Blueberry": 
@@ -63,8 +63,9 @@ public class Interactable : MonoBehaviour
                 Debug.Log("Hemp Aplied");
                 break;
             default: 
+                Debug.Log("Hemp Aplied");
                 break; 
         }
 
-    } 
+    } */
 } 
