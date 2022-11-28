@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf23adf78ddec4598a135d5185b43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: ded723e2298d68a4596c13004fccc430, type: 2}
+  item: {fileID: 11400000, guid: b6c189ffbc031684eb1687eeb997e791, type: 2}
   potion: {fileID: 0}
   counterdisplay: {fileID: 944260871}
   description: {fileID: 1404939025}
@@ -818,7 +818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf23adf78ddec4598a135d5185b43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: 1ee7c466d2521aa429d5ebabf23e902a, type: 2}
+  item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
   potion: {fileID: 0}
   counterdisplay: {fileID: 1315731423}
   description: {fileID: 576371179}
@@ -4266,7 +4266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf23adf78ddec4598a135d5185b43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: b6c189ffbc031684eb1687eeb997e791, type: 2}
+  item: {fileID: 11400000, guid: 1ee7c466d2521aa429d5ebabf23e902a, type: 2}
   potion: {fileID: 0}
   counterdisplay: {fileID: 1187792718}
   description: {fileID: 206046593}
@@ -4355,8 +4355,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 928823077}
   m_HandleRect: {fileID: 928823076}
   m_Direction: 2
-  m_Value: 0.9999998
-  m_Size: 0.554307
+  m_Value: 1
+  m_Size: 0.55430704
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

@@ -2307,5 +2307,9 @@ PrefabInstance:
       propertyPath: HPBar
       value: 
       objectReference: {fileID: 398139891}
+    - target: {fileID: 4605395385160588990, guid: 289223196c1adb0468096667334cf74b, type: 3}
+      propertyPath: maxHP
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 289223196c1adb0468096667334cf74b, type: 3}
