@@ -43,6 +43,7 @@ public class BossWeapon : MonoBehaviour
 
     public void GemAttack()
     {
+        Debug.Log("Attempt Instantiate");
         Instantiate(thornBullet, AttackPoint.position, AttackPoint.rotation);
     }
 

@@ -5,6 +5,7 @@ using UnityEngine;
 public class BossHealth : Units
 {
     public GameObject deathEffect;
+    private bool Transformed = false;
 
     public bool isInvulnerable = false;
 
@@ -22,8 +23,10 @@ public class BossHealth : Units
 
         if (currHP <= 50) //can change
         {
-            GetComponentInChildren<Animator>().SetBool("IsEnraged", true);
+            GetComponentInChildren<Animator>().SetBool("Transform", true);
 
+            if (!Transformed)
+                StartCoroutine(refreshTimer());
         }
 
         if (currHP <= 0)
@@ -38,6 +41,24 @@ public class BossHealth : Units
         //This method is meant to be overwritten
         Destroy(gameObject);
         Debug.Log(transform.name + " died");
+    }
+
+    IEnumerator refreshTimer()
+    {
+        isInvulnerable = true;
+        Debug.Log(transform.name + " died");
+        yield return new WaitForEndOfFrame();
+        float originalHP = currHP;
+        currHP = maxHP;
+
+        //this.transform.position -= speed
+
+        yield return new WaitForSeconds(2);
+        HPBar.SetHealth(currHP, originalHP);
+
+        yield return new WaitForEndOfFrame();
+        Transformed = true;
+        isInvulnerable = false;
     }
 
 
