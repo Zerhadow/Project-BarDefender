@@ -8,6 +8,7 @@ using UnityEngine.InputSystem.Interactions;
 public class DialogueManager : MonoBehaviour
 {
     [Header("References")]
+    [SerializeField] private GameObject _dialoguePanel;
     [SerializeField] private TextMeshProUGUI _characterNameHolder;
     [SerializeField] private TextMeshProUGUI _dialogueHolder;
     [SerializeField] private TextMeshProUGUI _instructionDialogue;
@@ -98,6 +99,7 @@ public class DialogueManager : MonoBehaviour
 
         if (_loadChoicePanelAfterDialogue)
         {
+            _dialoguePanel.SetActive(false);
             _choicePanel.SetActive(true);
         }
     }

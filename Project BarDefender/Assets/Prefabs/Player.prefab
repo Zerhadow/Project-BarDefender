@@ -317,28 +317,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 100
+  currHP: 0
   dmg: 6
   HPBar: {fileID: 0}
   invincible: 0
-  rb: {fileID: 357289285633907970}
-  ATK: 5
+  invcibilityDuration: 0.001
+  ATK: 20
   _moveSpeed: 6
   _jumpPower: 10
   fireCooldown: 0.5
   _jumpCooldown: 0.5
-  _atkrange: 0.5
+  atkRange: 0.5
   _maxJumps: 2
   _rebound: 10
+  evasion: 0
   _currentJumps: 0
   _playerAnimator: {fileID: 4674013612465557339}
   _playerSprite: {fileID: 357289285632000937}
   _footPos: {fileID: 706687096908092054}
+  _pauseMenuSM: {fileID: 0}
   _groundLayer:
     serializedVersion: 2
     m_Bits: 64
   projectilePrefab: {fileID: 5304383336054094429, guid: 08044bbf5fe3c5e44b9f59092819c2cf, type: 3}
   atkPt: {fileID: 357289284771618048}
-  atkRange: 0.5
   enemyLayers:
     serializedVersion: 2
     m_Bits: 256

@@ -70,7 +70,7 @@ public class PlayerController : Units
 
     void Awake() {
         playerControls = new PlayerInputActions();
-        ATK = dmg;
+        dmg = ATK;
 
         _animAttackComboStepParamHash = Animator.StringToHash("AttackComboStep");
         _comboHitStep = -1;
@@ -78,8 +78,11 @@ public class PlayerController : Units
     }
 
     void Start() {
-        //for now only the player has a healthbar so only he will call the set health function
 
+        currHP = maxHP;
+        // Debug.Log("currHP: " + currHP);        
+        HPBar.SetMaxHealth(maxHP);
+        //for now only the player has a healthbar so only he will call the set health function
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -174,6 +177,7 @@ public class PlayerController : Units
         atkPt.position = this.transform.position + new Vector3(lookDirection.x * ((atkRange/2)+0.5f), lookDirection.y * ((atkRange/2) + 0.6f), 0);
         isGrounded = Physics2D.OverlapCircle(_footPos.position, 1f, _groundLayer);
 
+
     }
 
     private void Fire(InputAction.CallbackContext context) {
@@ -261,6 +265,7 @@ public class PlayerController : Units
 
     private void Move()
     {
+        //if (!isFlexing && !isAttacking)
         //if (!isFlexing && !isAttacking)
         if (canMove)
         {
@@ -497,9 +502,24 @@ public class PlayerController : Units
 
     public override void Die() {
         //Die in some way
-        //This method is meant to be overwritten
+        StartCoroutine(deathTimer());
+
+
+    }
+
+    IEnumerator deathTimer()
+    {
+        _playerAnimator.SetTrigger("Die");
+        //isFlexing = true;
+        canMove = false;
         Debug.Log(transform.name + " died");
-        //die animation
+        yield return new WaitForEndOfFrame();
+        yield return new WaitForSeconds(
+            _playerAnimator.GetAnimatorTransitionInfo(0).duration);
+        yield return new WaitForEndOfFrame();
+        yield return new WaitUntil(() =>
+            _playerAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.95f);
         Destroy(gameObject);
+        //isFlexing = false;
     }
 }
