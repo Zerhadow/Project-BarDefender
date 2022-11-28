@@ -390,6 +390,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 6508274363216419672, guid: 427a237f756ba144f98c8d32a0b273fd, type: 3}
+      propertyPath: waves.Array.data[0].count
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 427a237f756ba144f98c8d32a0b273fd, type: 3}
 --- !u!1 &70604954

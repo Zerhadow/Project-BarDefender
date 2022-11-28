@@ -69,14 +69,16 @@ public class PlayerController : Units
     bool burnout = false;
 
     Potion potion;
-    Scene sceneLoaded;
+    string sceneLoaded;
 
 
     void Awake() {
         
         playerControls = new PlayerInputActions();
         dmg = ATK;
+        potion = Potion.Instance;
 
+        sceneLoaded = SceneManager.GetActiveScene().name;
         _animAttackComboStepParamHash = Animator.StringToHash("AttackComboStep");
         _comboHitStep = -1;
         _comboAttackResetCoroutine = null;
@@ -87,8 +89,8 @@ public class PlayerController : Units
     void Start() {
 
          if(sceneLoaded.Equals("BarScene")){
-            maxHP = maxHP + potion.maxHP;
-            ATK = ATK + potion.ATK;
+            maxHP += potion.maxHP;
+            ATK += potion.ATK;
             _moveSpeed = _moveSpeed + potion._moveSpeed;
             _jumpPower = _jumpPower + potion._jumpPower;
             fireCooldown = fireCooldown + potion.fireCooldown;
@@ -103,7 +105,6 @@ public class PlayerController : Units
         // Debug.Log("currHP: " + currHP);        
         HPBar.SetMaxHealth(maxHP);
         //for now only the player has a healthbar so only he will call the set health function
-        sceneLoaded=SceneManager.GetActiveScene();
        
     }
 
