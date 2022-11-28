@@ -17,10 +17,12 @@ public class ShelfItem : MonoBehaviour, IPointerDownHandler//, IBeginDragHandler
     public Potion potion;
     public ShelfCounter counterdisplay;
     public TextMeshProUGUI description; 
+    public TextMeshProUGUI dialog; 
 
     public Image img;
 
     private void Awake(){
+        potion = Potion.Instance;
         count = Inventory.instance.Amount(item);
         counterdisplay.updateShelfCount(count);
         description.text = item.description;
@@ -35,6 +37,7 @@ public class ShelfItem : MonoBehaviour, IPointerDownHandler//, IBeginDragHandler
     public void OnPointerDown(PointerEventData eventData)
     {
         //Debug.Log("On Pointer down");
+        dialog.text  = item.phrase;
         if(count > 0){
             potion.AddItem(item);
             count--;

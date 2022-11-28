@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : Units
 {
@@ -67,11 +68,17 @@ public class PlayerController : Units
     bool evaded = false;
     bool burnout = false;
 
+    Potion potion;
+    string sceneLoaded;
+
 
     void Awake() {
+        
         playerControls = new PlayerInputActions();
         dmg = ATK;
+        potion = Potion.Instance;
 
+        sceneLoaded = SceneManager.GetActiveScene().name;
         _animAttackComboStepParamHash = Animator.StringToHash("AttackComboStep");
         _comboHitStep = -1;
         _comboAttackResetCoroutine = null;
@@ -81,10 +88,24 @@ public class PlayerController : Units
 
     void Start() {
 
+         if(sceneLoaded.Equals("BarScene")){
+            maxHP += potion.maxHP;
+            ATK += potion.ATK;
+            _moveSpeed = _moveSpeed + potion._moveSpeed;
+            _jumpPower = _jumpPower + potion._jumpPower;
+            fireCooldown = fireCooldown + potion.fireCooldown;
+            _jumpCooldown = _jumpCooldown + potion._jumpCooldown;
+            atkRange = atkRange + potion.atkRange;
+            _maxJumps = _maxJumps + potion._maxJumps;
+            _rebound = _rebound +potion._rebound; //how much you bounce enemies
+            evasion = potion.evasion;
+        }
+
         currHP = maxHP;
         // Debug.Log("currHP: " + currHP);        
         HPBar.SetMaxHealth(maxHP);
         //for now only the player has a healthbar so only he will call the set health function
+       
     }
 
     private void OnEnable() {
@@ -479,13 +500,15 @@ public class PlayerController : Units
     }
     
     public override void TakeDmg(int dmg) {
+        
         if(!invincible){
             evaded = evasionCheck(evasion);
-            if(!evaded) {
+            if (!evaded) {
                 float originalHP = currHP;
                 dmg = Mathf.Clamp(dmg, 0, int.MaxValue);
                 currHP -= dmg;
                 HPBar.SetHealth(currHP, originalHP);
+                
 
                 if (currHP <= 0) {
                     Die();

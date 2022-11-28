@@ -13,7 +13,18 @@ MonoBehaviour:
   m_Name: Hemp Thread
   m_EditorClassIdentifier: 
   name: Hemp Thread
-  icon: {fileID: 0}
+  icon: {fileID: -21120370, guid: 5f6b41bb14308364b84e24cfbdd0e0b7, type: 3}
   isDefaultItem: 0
   rarity: common
-  description: Hemp baby everybody loves hemp
+  description: +SHOOTING CD/-MELEE RNG
+  phrase: ' Pretty strong piece of thread!'
+  maxHP: 0
+  ATK: 0
+  _moveSpeed: 0
+  _jumpPower: 0
+  fireCooldown: -0.1
+  _jumpCooldown: 0
+  atkRange: -0.1
+  _maxJumps: 0
+  _rebound: 0
+  evasion: 0
