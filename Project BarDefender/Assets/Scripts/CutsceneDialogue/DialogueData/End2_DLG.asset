@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _characterName: Prompt
   _dialogue:
-  - If you stay, the game will end.
-  - If you leave, you will retain the potion's effect and can continue playing the
-    game.
+  - You can keep gathering ingredients to continue playing, but the potion's effects
+    will wear off.
+  - However, if you close-up, the game will end.

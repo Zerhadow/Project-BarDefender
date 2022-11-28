@@ -15,8 +15,10 @@ MonoBehaviour:
   _characterName: Bartender
   _dialogue:
   - That was a pretty impressive display you put on there, love.
-  - This is why your my favorite~
-  - Why don't you get comfortable, and I'll pour you some nice cold drinks.
-  - ...Or, if you're interested, I can make you something extra special.
-  - I'd just need a couple more ingredients from the forest.
-  - But, the choice is yours, love.
+  - Thank you so much for taking care of that.
+  - This is why your my favorite.
+  - After I close up, would like to have a drink with me?
+  - ...Or, if you're still okay with helping me out, I could use some more ingredients
+    for the bar.
+  - Tomorrow's supposed to be busy one!
+  - But, the choice is yours, love. I don't mind either way.
