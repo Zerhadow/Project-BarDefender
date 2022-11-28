@@ -45,6 +45,7 @@ public class BossWeapon : MonoBehaviour
     {
         Debug.Log("Attempt Instantiate");
         Instantiate(thornBullet, AttackPoint.position, AttackPoint.rotation);
+        
     }
 
 

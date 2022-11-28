@@ -6,8 +6,8 @@ public class BossHealth : Units
 {
     public GameObject deathEffect;
     private bool Transformed = false;
-
     public bool isInvulnerable = false;
+    public GameObject projectilePrefab;
 
     public override void TakeDmg(int damage)
     {

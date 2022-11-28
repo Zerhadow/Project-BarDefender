@@ -11,6 +11,7 @@ public class Projectile : MonoBehaviour
     public GameObject shooter;
     Units shooterStat;
     Transform player;
+    public bool isThorn = false;
 
     
     void Awake()
@@ -26,6 +27,14 @@ public class Projectile : MonoBehaviour
         if(transform.position.magnitude > despawnDistance)
         {
             Destroy(gameObject);
+        }
+
+        if (isThorn)
+        {
+            Vector2 target = new Vector2(player.position.x, player.position.y);
+            //Keep speed at zero to not have boss move
+            Vector2 newPos = Vector2.MoveTowards(rigidbody2d.position, target, 2 * Time.fixedDeltaTime);
+            rigidbody2d.MovePosition(newPos);
         }
     }
 
@@ -54,9 +63,7 @@ public class Projectile : MonoBehaviour
                     //Instantiate(particles,transform.position,Quaternion.identity);
                 
                     player.GetComponent<PlayerController>().TakeDmg(15);
-                    Vector2 target = new Vector2(player.position.x, player.position.y); //Keep speed at zero to not have boss move
-                    Vector2 newPos = Vector2.MoveTowards(rigidbody2d.position, target, 2 * Time.fixedDeltaTime);
-                    rigidbody2d.MovePosition(newPos);
+                    
                     Debug.Log("Player HP: " + playerStat.currHP);        
                     Destroy(gameObject);
                 }

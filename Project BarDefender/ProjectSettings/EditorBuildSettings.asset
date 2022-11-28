@@ -59,4 +59,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndScene.unity
     guid: 036b200e8902a0344bd522d3ca842a47
+  - enabled: 1
+    path: Assets/Scenes/LoadingScreen_9_BackToTitle.unity
+    guid: de2154aafedba5a438ef8cd8ba9c958e
   m_configObjects: {}
