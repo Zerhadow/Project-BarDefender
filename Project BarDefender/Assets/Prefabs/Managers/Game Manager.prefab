@@ -227,8 +227,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4606434519376771321}
   - component: {fileID: 4606434519376771320}
-  - component: {fileID: 6508274363216419672}
   - component: {fileID: 1051247006396813846}
+  - component: {fileID: 4431875463748655199}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -270,31 +270,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 390c48ee4aecf2f4fa319524ca88d5a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6508274363216419672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4606434519376771327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d340ce79f3030048bd807d4516a4218, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waves:
-  - name: Wave 1
-    enemy: {fileID: 7851186290186491859, guid: b1e967f8479107f46ac1976619d9854e, type: 3}
-    count: 7
-    rate: 1
-  spawnPoints:
-  - {fileID: 300453146}
-  - {fileID: 1213521488}
-  - {fileID: 399626618}
-  - {fileID: 791945683}
-  - {fileID: 1887915584}
-  - {fileID: 612578917}
-  timeBetweenWaves: 5
 --- !u!114 &1051247006396813846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309,3 +284,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   space: 20
   items: []
+--- !u!114 &4431875463748655199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4606434519376771327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9bb3737a298c164da8a5f4ebb45939b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemCount: 0
+  potionDrop: 0
