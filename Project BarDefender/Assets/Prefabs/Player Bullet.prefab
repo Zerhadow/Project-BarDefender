@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7534896c618d5d04a976ace7639785f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  despawnDistance: 18
+  despawnDistance: 50
   shooter: {fileID: 357289285633908092, guid: a6f8ac154077a5845aeadb82f9d941c8, type: 3}
 --- !u!61 &8805385386270695054
 BoxCollider2D:
