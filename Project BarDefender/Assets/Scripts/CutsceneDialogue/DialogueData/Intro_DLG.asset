@@ -14,14 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _characterName: Bartender
   _dialogue:
-  - Hi love~ Welcome back to the Midnight Brew.
-  - I'm *so* happy to see you here again.
-  - I'd make a nice little drink for my favorite regular, but...
+  - Hi love. Welcome back to the Midnight Brew.
+  - I'm so happy to see you here again tonight!
+  - I'd make your favorite drink for you, but...
   - It looks like we're running low on ingredients.
-  - I need someone good with their hands, and you seem the *perfect* person for the
-    job.
-  - Why don't you put those big muscles to work and fetch some materials for me?
-  - You'd do that for your favorite bartender, right love?
-  - Just go out into the forest and gather ingredients. You can leave the rest to
-    me.
+  - Would you be a dear, and gather what you can from the forest?
+  - Once you come back, you can leave the rest to me.
   - Just make sure to be back by happy hour! Thanks love~
