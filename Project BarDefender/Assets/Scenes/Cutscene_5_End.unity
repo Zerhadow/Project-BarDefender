@@ -331,7 +331,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 888b9c4474b8ed444ac5eb5ab50abb96, type: 2}
-  m_audioClip: {fileID: 8300000, guid: e3e7a3d912b5be94399e539221f560fd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d446eb4551ebeb34fabd8279c6642960, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0
   m_Pitch: 1
@@ -975,7 +975,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dialogueManager: {fileID: 1688953887}
   _dialogueArray:
-  - {fileID: 11400000, guid: 3a9110bc5d52c0d43a2a8b3cda2b5dc2, type: 2}
+  - {fileID: 11400000, guid: e9b7b3460f49eed4e81595f3d2a03e83, type: 2}
   _loadSceneAfterDialogue: 1
   _nextSceneName: LoadingScreen_8_Leave
 --- !u!114 &1688953887
