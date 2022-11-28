@@ -86,12 +86,7 @@ public class PlayerController : Units
 
     void Start() {
 
-        currHP = maxHP;
-        // Debug.Log("currHP: " + currHP);        
-        HPBar.SetMaxHealth(maxHP);
-        //for now only the player has a healthbar so only he will call the set health function
-        sceneLoaded=SceneManager.GetActiveScene();
-        if(sceneLoaded.Equals("BarScene")){
+         if(sceneLoaded.Equals("BarScene")){
             maxHP = maxHP + potion.maxHP;
             ATK = ATK + potion.ATK;
             _moveSpeed = _moveSpeed + potion._moveSpeed;
@@ -103,6 +98,13 @@ public class PlayerController : Units
             _rebound = _rebound +potion._rebound; //how much you bounce enemies
             evasion = potion.evasion;
         }
+
+        currHP = maxHP;
+        // Debug.Log("currHP: " + currHP);        
+        HPBar.SetMaxHealth(maxHP);
+        //for now only the player has a healthbar so only he will call the set health function
+        sceneLoaded=SceneManager.GetActiveScene();
+       
     }
 
     private void OnEnable() {

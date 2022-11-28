@@ -817,7 +817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf23adf78ddec4598a135d5185b43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: 1ee7c466d2521aa429d5ebabf23e902a, type: 2}
+  item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
   potion: {fileID: 0}
   counterdisplay: {fileID: 1315731423}
   description: {fileID: 576371179}
