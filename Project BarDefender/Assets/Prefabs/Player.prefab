@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 357289284771618048}
   - component: {fileID: 1893407957}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 357289285632000939}
   - component: {fileID: 357289285632000937}
   - component: {fileID: 4674013612465557339}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PlayerSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 357289285633907971}
   - component: {fileID: 357289285633907970}
   - component: {fileID: 357289285633908093}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -354,7 +354,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 357289286226909470}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Art
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -387,7 +387,7 @@ GameObject:
   m_Component:
   - component: {fileID: 706687096908092054}
   - component: {fileID: 310865039032613541}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FootPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
