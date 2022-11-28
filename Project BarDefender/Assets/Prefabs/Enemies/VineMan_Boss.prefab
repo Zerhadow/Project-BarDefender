@@ -116,6 +116,9 @@ GameObject:
   - component: {fileID: 3036689462365418088}
   - component: {fileID: 3036689462365418091}
   - component: {fileID: 8245715689207126192}
+  - component: {fileID: 4605395385160588990}
+  - component: {fileID: 2434871977558898526}
+  - component: {fileID: 3545316870893224921}
   m_Layer: 0
   m_Name: VineMan_Boss
   m_TagString: Enemy
@@ -182,6 +185,55 @@ MonoBehaviour:
   dmg: 0
   HPBar: {fileID: 0}
   invincible: 0
+  invcibilityDuration: 0.001
+--- !u!114 &4605395385160588990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3036689462365418090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 377d8480b12efe94ebbc63308bb03e6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  deathEffect: {fileID: 0}
+  isInvulnerable: 0
+--- !u!114 &2434871977558898526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3036689462365418090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f324ebd0f0da9c949b1d28c4888f7662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  isFlipped: 0
+--- !u!114 &3545316870893224921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3036689462365418090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c605157db4e2f44b9f7b811d4239283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 5
+  madAttackDamage: 10
+  attackOffset: {x: 0, y: 0, z: 0}
+  attackRange: 3
+  attackMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &3036689463026338534
 GameObject:
   m_ObjectHideFlags: 0
