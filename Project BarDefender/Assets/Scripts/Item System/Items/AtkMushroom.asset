@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf68974b07d86494c861e1d297707337, type: 3}
   m_Name: AtkMushroom
   m_EditorClassIdentifier: 
-  name: Attack Mushroom
+  name: Rage Mushroom
   icon: {fileID: -892042094, guid: 5f6b41bb14308364b84e24cfbdd0e0b7, type: 3}
   isDefaultItem: 0
   rarity: common
-  description: '+attack/-HP '
+  description: '+ATK/-HP '
+  phrase: "This lil guy is a feisty, better nothold on to it for too long\u2026"
   maxHP: -10
   ATK: 1
   _moveSpeed: 0

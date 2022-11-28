@@ -11,6 +11,7 @@ public class Item : ScriptableObject
     public string rarity;   
 
     public string description; 
+    public string phrase;
 
     public int maxHP = 0; 
     public int ATK =0 ;

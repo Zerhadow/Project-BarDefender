@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 32077041}
   - component: {fileID: 32077040}
   m_Layer: 5
-  m_Name: Hemp Thread
+  m_Name: FrogLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf23adf78ddec4598a135d5185b43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: ded723e2298d68a4596c13004fccc430, type: 2}
+  item: {fileID: 11400000, guid: b6c189ffbc031684eb1687eeb997e791, type: 2}
   potion: {fileID: 0}
   counterdisplay: {fileID: 944260871}
   description: {fileID: 1404939025}
@@ -727,7 +727,7 @@ GameObject:
   - component: {fileID: 218174787}
   - component: {fileID: 218174786}
   m_Layer: 5
-  m_Name: BlueBerry
+  m_Name: Barely
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2757,7 +2757,7 @@ GameObject:
   - component: {fileID: 1094014313}
   - component: {fileID: 1094014312}
   m_Layer: 5
-  m_Name: Barley (4)
+  m_Name: Hemp Thread
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2847,7 +2847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf23adf78ddec4598a135d5185b43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
+  item: {fileID: 11400000, guid: ded723e2298d68a4596c13004fccc430, type: 2}
   potion: {fileID: 0}
   counterdisplay: {fileID: 1328022433}
   description: {fileID: 250682138}
@@ -3772,7 +3772,7 @@ GameObject:
   - component: {fileID: 1595130238}
   - component: {fileID: 1595130237}
   m_Layer: 5
-  m_Name: Barley (5)
+  m_Name: Coffee Bean
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3862,7 +3862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf23adf78ddec4598a135d5185b43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
+  item: {fileID: 11400000, guid: d4f06aea25b5e574fa0f61fb02ed5e9f, type: 2}
   potion: {fileID: 0}
   counterdisplay: {fileID: 847101384}
   description: {fileID: 193392209}
@@ -3978,7 +3978,7 @@ GameObject:
   - component: {fileID: 1644694108}
   - component: {fileID: 1644694111}
   m_Layer: 5
-  m_Name: Attack Mushroom
+  m_Name: Rage Mushroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4087,7 +4087,7 @@ GameObject:
   - component: {fileID: 1697721719}
   - component: {fileID: 1697721718}
   m_Layer: 5
-  m_Name: Frog Leg
+  m_Name: BlueBerry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4177,7 +4177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf23adf78ddec4598a135d5185b43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: b6c189ffbc031684eb1687eeb997e791, type: 2}
+  item: {fileID: 11400000, guid: 1ee7c466d2521aa429d5ebabf23e902a, type: 2}
   potion: {fileID: 0}
   counterdisplay: {fileID: 1187792718}
   description: {fileID: 206046593}
