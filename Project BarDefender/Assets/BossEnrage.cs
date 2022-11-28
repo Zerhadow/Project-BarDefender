@@ -6,7 +6,7 @@ public class BossEnrage : StateMachineBehaviour
 {
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int LayerIndex)
     {
-        animator.GetComponent<BossHealth>().isInvulnerable = true;
+        animator.GetComponentInParent<BossHealth>().isInvulnerable = true;
     }
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int LayerIndex)
     {
@@ -15,6 +15,6 @@ public class BossEnrage : StateMachineBehaviour
 
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int LayerIndex)
     {
-        animator.GetComponent<BossHealth>().isInvulnerable = false;
+        animator.GetComponentInParent<BossHealth>().isInvulnerable = false;
     }
 }

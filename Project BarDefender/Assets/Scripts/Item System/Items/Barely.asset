@@ -16,3 +16,15 @@ MonoBehaviour:
   icon: {fileID: -1728144710, guid: 5f6b41bb14308364b84e24cfbdd0e0b7, type: 3}
   isDefaultItem: 0
   rarity: common
+  description: +HP / -ATK
+  phrase: " Looks like rice but\u2026not?"
+  maxHP: 10
+  ATK: -1
+  _moveSpeed: 0
+  _jumpPower: 0
+  fireCooldown: 0
+  _jumpCooldown: 0
+  atkRange: 0
+  _maxJumps: 0
+  _rebound: 0
+  evasion: 0
