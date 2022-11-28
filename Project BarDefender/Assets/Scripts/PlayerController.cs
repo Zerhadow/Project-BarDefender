@@ -479,13 +479,15 @@ public class PlayerController : Units
     }
     
     public override void TakeDmg(int dmg) {
+        
         if(!invincible){
             evaded = evasionCheck(evasion);
-            if(!evaded) {
+            if (!evaded) {
                 float originalHP = currHP;
                 dmg = Mathf.Clamp(dmg, 0, int.MaxValue);
                 currHP -= dmg;
                 HPBar.SetHealth(currHP, originalHP);
+                
 
                 if (currHP <= 0) {
                     Die();
