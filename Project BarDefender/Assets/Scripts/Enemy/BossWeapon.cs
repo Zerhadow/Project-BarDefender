@@ -31,9 +31,7 @@ public class BossWeapon : MonoBehaviour
         Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(AttackPoint.position, attackRange, attackMask);
         foreach (Collider2D player in hitPlayer)
         {
-            // Debug.Log("We hit " + enemy.name);
-            Debug.Log("Hit Player!");
-            //_player.TakeDmg(attackDamage);
+    
             player.GetComponent<PlayerController>().TakeDmg(attackDamage);
             player.GetComponent<Rigidbody2D>().AddForce(new Vector2(-4f, -1f), ForceMode2D.Impulse);
         }

@@ -241,7 +241,6 @@ MonoBehaviour:
   HPBar: {fileID: 0}
   invincible: 0
   invcibilityDuration: 0.001
-  health: 100
   deathEffect: {fileID: 0}
   isInvulnerable: 0
 --- !u!114 &2434871977558898526

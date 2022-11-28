@@ -4,29 +4,29 @@ using UnityEngine;
 
 public class BossHealth : Units
 {
-    public int health = 100; //can change
-
     public GameObject deathEffect;
 
     public bool isInvulnerable = false;
 
-    public void TakeDmg(int damage)
+    public override void TakeDmg(int damage)
     {
         float originalHP = currHP;
         if (isInvulnerable)
             return;
+        Debug.Log("Hurt");
 
-        health -= damage;
+        currHP -= damage;
+        dmg = Mathf.Clamp(dmg, 0, int.MaxValue);
         HPBar.SetHealth(currHP, originalHP);
 
 
-        if (health <= 50) //can change
+        if (currHP <= 50) //can change
         {
-            GetComponent<Animator>().SetBool("IsEnragedd", true);
+            GetComponentInChildren<Animator>().SetBool("IsEnraged", true);
 
         }
 
-        if (health <= 0)
+        if (currHP <= 0)
         {
             Die();
         }

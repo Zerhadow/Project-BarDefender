@@ -483,12 +483,9 @@ public class PlayerController : Units
         if(!invincible){
             evaded = evasionCheck(evasion);
             if (!evaded) {
-                Debug.Log("Player Got Hit");
                 float originalHP = currHP;
                 dmg = Mathf.Clamp(dmg, 0, int.MaxValue);
-                Debug.Log(currHP);
                 currHP -= dmg;
-                Debug.Log(currHP);
                 HPBar.SetHealth(currHP, originalHP);
                 
 
