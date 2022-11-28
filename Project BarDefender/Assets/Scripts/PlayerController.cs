@@ -58,7 +58,7 @@ public class PlayerController : Units
     public Transform atkPt;
     public LayerMask enemyLayers; 
 
-    public static bool isGrounded = false;
+    public bool isGrounded = false;
     private bool _paused = false;
     private bool isFlexing = false;
     private bool isAttacking = false;

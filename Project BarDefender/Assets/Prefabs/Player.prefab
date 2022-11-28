@@ -344,6 +344,7 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 256
+  isGrounded: 0
 --- !u!1 &357289286226909465
 GameObject:
   m_ObjectHideFlags: 0
