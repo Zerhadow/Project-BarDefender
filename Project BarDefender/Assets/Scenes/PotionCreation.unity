@@ -2904,7 +2904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf23adf78ddec4598a135d5185b43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
+  item: {fileID: 11400000, guid: ded723e2298d68a4596c13004fccc430, type: 2}
   potion: {fileID: 0}
   counterdisplay: {fileID: 1328022433}
   description: {fileID: 250682138}
@@ -3949,7 +3949,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf23adf78ddec4598a135d5185b43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: cbd05a79dba92f147bd09cce485be469, type: 2}
+  item: {fileID: 11400000, guid: d4f06aea25b5e574fa0f61fb02ed5e9f, type: 2}
   potion: {fileID: 0}
   counterdisplay: {fileID: 847101384}
   description: {fileID: 193392209}
