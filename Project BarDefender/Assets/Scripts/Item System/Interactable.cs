@@ -45,18 +45,22 @@ public class Interactable : MonoBehaviour
             case "Attack Mushroom": 
                 //call function 
                 // IncreaseATK_DecreaseHP("common"); 
+                Debug.Log("Attack Mushroom Aplied"); 
                 break;
             case "Blueberry": 
                 //call function 
-                //IncreaseATK_DecreaseHP("common"); 
+                //IncreaseATK_DecreaseHP("common");
+                Debug.Log("Blue Berry Aplied"); 
             break;
                 case "Frog Leg": 
                 //call function 
                 //IncreaseATK_DecreaseHP("common"); 
+                Debug.Log("Frog Leg Aplied");
                 break;
                 case "Hemp Thread": 
                 //call function 
                 //IncreaseATK_DecreaseHP("common"); 
+                Debug.Log("Hemp Aplied");
                 break;
             default: 
                 break; 

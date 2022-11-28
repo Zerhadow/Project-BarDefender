@@ -13,7 +13,7 @@ public class ShelfItem : MonoBehaviour, IPointerDownHandler//, IBeginDragHandler
 
     [SerializeField]
     public Item item;
-    public int count;
+    private int count;
     public Potion potion;
     public ShelfCounter counterdisplay;
     public TextMeshProUGUI description; 
@@ -21,11 +21,14 @@ public class ShelfItem : MonoBehaviour, IPointerDownHandler//, IBeginDragHandler
     public Image img;
 
     private void Awake(){
+        count = Inventory.instance.Amount(item);
         counterdisplay.updateShelfCount(count);
         description.text = item.description;
         if(item.icon != null){
             img.sprite = item.icon;
         }
+
+
 
     }
 

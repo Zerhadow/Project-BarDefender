@@ -46,6 +46,16 @@ public class Inventory : MonoBehaviour
     public void Remove(Item item) { 
         items.Remove(item); 
         count--; 
-    }    
+    }
+
+    public int Amount(Item item){
+        int x = 0; 
+        for (var i = 0; i < items.Count; i++) {
+            if(items[i] == item){
+                x++;
+            }
+        }
+        return x;
+    }
 } 
 
