@@ -23,19 +23,17 @@ public class BossWeapon : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        Attack();
-    }
 
     public void Attack()
     {
+
         //StartCoroutine(AttackEnum());
         Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(AttackPoint.position, attackRange, attackMask);
         foreach (Collider2D player in hitPlayer)
         {
             // Debug.Log("We hit " + enemy.name);
             Debug.Log("Hit Player!");
+            //_player.TakeDmg(attackDamage);
             player.GetComponent<PlayerController>().TakeDmg(attackDamage);
             player.GetComponent<Rigidbody2D>().AddForce(new Vector2(-4f, -1f), ForceMode2D.Impulse);
         }
@@ -49,22 +47,5 @@ public class BossWeapon : MonoBehaviour
         //Gizmos.DrawWireSphere(pos, attackRange);
         Gizmos.DrawWireSphere(AttackPoint.position, attackRange);
     }
-    //go to the "attack animation" in aniamation, find the frame that'll trigger the event,
-    // add event, got to function in the inspector, select "Attack" (or the equivlent to it)
 
-    //IEnumerator AttackEnum()
-    //{
-    //    attackPos = transform.position;
-    //    yield return new WaitForEndOfFrame();
-    //    yield return new WaitForSeconds(
-    //        _myAnimator.GetAnimatorTransitionInfo(0).duration);
-    //
-    //    attackPos += transform.right * attackOffset.x;
-    //    yield return new WaitForEndOfFrame();
-    //    yield return new WaitUntil(() =>
-    //        _myAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.95f);
-    //
-    //    attackPos += transform.up * attackOffset.y;
-    //    //isFlexing = false;
-    //}
 }

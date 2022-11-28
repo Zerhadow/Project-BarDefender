@@ -1809,6 +1809,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 357289285633908093, guid: a6f8ac154077a5845aeadb82f9d941c8, type: 3}
+      propertyPath: HPBar
+      value: 
+      objectReference: {fileID: 1882526726}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6f8ac154077a5845aeadb82f9d941c8, type: 3}
 --- !u!1 &1471663107
@@ -2309,6 +2313,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1882526726 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3152437044028985748, guid: 51e98ba7cca035a49a14cee16316627d, type: 3}
+  m_PrefabInstance: {fileID: 880339951}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e2771e7955ace7439b9bb532a8349b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2034146292
 GameObject:
   m_ObjectHideFlags: 0
@@ -2565,7 +2580,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: VineMan_Boss
       objectReference: {fileID: 0}
-    - target: {fileID: 8245715689207126192, guid: 289223196c1adb0468096667334cf74b, type: 3}
+    - target: {fileID: 4605395385160588990, guid: 289223196c1adb0468096667334cf74b, type: 3}
       propertyPath: HPBar
       value: 
       objectReference: {fileID: 398139891}
