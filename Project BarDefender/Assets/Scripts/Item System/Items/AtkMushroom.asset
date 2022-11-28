@@ -17,7 +17,7 @@ MonoBehaviour:
   isDefaultItem: 0
   rarity: common
   description: '+ATK/-HP '
-  phrase: "This lil guy is a feisty, better nothold on to it for too long\u2026"
+  phrase: 'This lil guy is a feisty one. Be carful with it '
   maxHP: -10
   ATK: 1
   _moveSpeed: 0
