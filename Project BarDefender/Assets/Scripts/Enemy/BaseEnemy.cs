@@ -10,7 +10,7 @@ public class BaseEnemy : Units
     public List<GameObject> itemDropList = new List<GameObject>();
     //common drops
     public GameObject itemDropTestObj;
-    public int damage = 4;
+    public int damage = 10;
     
 
     //rare drops
