@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossHealth : Units
 {
@@ -21,7 +22,7 @@ public class BossHealth : Units
         HPBar.SetHealth(currHP, originalHP);
 
 
-        if (currHP <= 50) //can change
+        if (currHP <= maxHP/2) //can change
         {
             GetComponentInChildren<Animator>().SetBool("Transform", true);
 
@@ -31,6 +32,7 @@ public class BossHealth : Units
 
         if (currHP <= 0)
         {
+            SceneManager.LoadScene("Cutscene_3_EndDialog");
             Die();
         }
     }
@@ -39,7 +41,8 @@ public class BossHealth : Units
     {
         //Die in some way
         //This method is meant to be overwritten
-        Destroy(gameObject);
+        SceneManager.LoadScene("Cutscene_3_End Dialog");
+        //Destroy(gameObject);
         Debug.Log(transform.name + " died");
     }
 
