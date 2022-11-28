@@ -3138,6 +3138,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1557881934}
     - target: {fileID: 357289285633908093, guid: a6f8ac154077a5845aeadb82f9d941c8, type: 3}
+      propertyPath: _rebound
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 357289285633908093, guid: a6f8ac154077a5845aeadb82f9d941c8, type: 3}
       propertyPath: _pauseMenuSM
       value: 
       objectReference: {fileID: 504808173}

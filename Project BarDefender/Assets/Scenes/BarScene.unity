@@ -567,10 +567,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Manager
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: waves.Array.data[0].enemy
-      value: 
-      objectReference: {fileID: 5114941099323567990, guid: 4bbd5ff021e48c842920b1a28bf97d3b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 427a237f756ba144f98c8d32a0b273fd, type: 3}
 --- !u!1 &741900332
@@ -2317,7 +2313,7 @@ PrefabInstance:
       objectReference: {fileID: 398139891}
     - target: {fileID: 4605395385160588990, guid: 289223196c1adb0468096667334cf74b, type: 3}
       propertyPath: maxHP
-      value: 600
+      value: 350
       objectReference: {fileID: 0}
     - target: {fileID: 4605395385160588990, guid: 289223196c1adb0468096667334cf74b, type: 3}
       propertyPath: health
