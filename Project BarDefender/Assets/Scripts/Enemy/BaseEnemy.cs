@@ -41,7 +41,7 @@ public class BaseEnemy : Units
         dmg = Mathf.Clamp(dmg, 0, int.MaxValue);
         currHP -= dmg;
         HPBar.SetHealth(currHP, originalHP);
-        if (currHP <= 0) {
+        if (currHP == 0) {
             Die();
             
         }
