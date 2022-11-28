@@ -46,5 +46,9 @@ public class Potion : MonoBehaviour
         return itemsAdded.Pop();
     }
 
+    public void ApplytoPlayer(){
+        // script that will pop all items in potion applying effects to player
+    }
+
 
 }

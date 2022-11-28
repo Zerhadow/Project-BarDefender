@@ -919,20 +919,24 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3808841059067650212, guid: 560bd205246ca7e45877577902d170b9, type: 3}
       propertyPath: items.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3808841059067650212, guid: 560bd205246ca7e45877577902d170b9, type: 3}
       propertyPath: items.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 1b30a7216a0e2a544a97d5c6ef4bc79b, type: 2}
+      objectReference: {fileID: 11400000, guid: d582a0be76847d444ab223224ccc440d, type: 2}
     - target: {fileID: 3808841059067650212, guid: 560bd205246ca7e45877577902d170b9, type: 3}
       propertyPath: items.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 1b30a7216a0e2a544a97d5c6ef4bc79b, type: 2}
+      objectReference: {fileID: 11400000, guid: 1ee7c466d2521aa429d5ebabf23e902a, type: 2}
     - target: {fileID: 3808841059067650212, guid: 560bd205246ca7e45877577902d170b9, type: 3}
       propertyPath: items.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: 1b30a7216a0e2a544a97d5c6ef4bc79b, type: 2}
+      objectReference: {fileID: 11400000, guid: b6c189ffbc031684eb1687eeb997e791, type: 2}
+    - target: {fileID: 3808841059067650212, guid: 560bd205246ca7e45877577902d170b9, type: 3}
+      propertyPath: items.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: ded723e2298d68a4596c13004fccc430, type: 2}
     - target: {fileID: 3808841059067650213, guid: 560bd205246ca7e45877577902d170b9, type: 3}
       propertyPath: m_RootOrder
       value: 9
