@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4171d304483ad646a97127e54ffefda, type: 3}
-  m_Name: Leave_DLG
+  m_Name: Continue_DLG
   m_EditorClassIdentifier: 
   _characterName: Bartender
   _dialogue:
   - Fabulous~
-  - I promise I'll make it worth while...
-  - Just don't keep me waiting too long, love.
-  - These nights get lonely without my favorite customer~
+  - You've been working so hard for me, so it'll be my turn to show off a little.
+  - Just give me what you gather when you come back, and I'll work my magic~
+  - Just don't keep me waiting too long, love!

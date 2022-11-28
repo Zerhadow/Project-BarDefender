@@ -976,8 +976,6 @@ MonoBehaviour:
   _dialogueManager: {fileID: 1688953887}
   _dialogueArray:
   - {fileID: 11400000, guid: fb3bde451d3cf5644979ce010647ba54, type: 2}
-  - {fileID: 11400000, guid: 49fe70e5a310acd459cd76a3d87b317a, type: 2}
-  - {fileID: 11400000, guid: ca9c7fba8dbc7884e91a3942a32cb222, type: 2}
   _loadSceneAfterDialogue: 1
   _nextSceneName: LoadingScreen_4_Potion
 --- !u!114 &1688953887
