@@ -16,8 +16,8 @@ MonoBehaviour:
   icon: {fileID: -1855124612, guid: 5f6b41bb14308364b84e24cfbdd0e0b7, type: 3}
   isDefaultItem: 0
   rarity: common
-  description: "Sweet! It\u2019s my favorite fruit"
-  phrase: +SPE/ -JMP
+  description: +SPE/ -JMP
+  phrase: "Sweet! It\u2019s my favorite fruit  "
   maxHP: 0
   ATK: 0
   _moveSpeed: 5
