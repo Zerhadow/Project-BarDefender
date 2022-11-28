@@ -6,23 +6,35 @@ using UnityEngine.EventSystems;
 public class Potion : MonoBehaviour
 {
 
-    public static Potion instance;
+    public static Potion Instance;
     #region Singleton
 
     public void Awake(){
         itemCount = 0;
 
-         if (instance != null && instance != this) 
+         if (Instance != null && Instance != this) 
         { 
             Destroy(this); 
         } 
         else 
         { 
-            instance = this; 
+            Instance = this;
+            DontDestroyOnLoad(this.gameObject); 
         } 
         
     }
     #endregion
+
+    public int maxHP = 0; 
+    public int ATK =0 ;
+    public float _moveSpeed =0;
+    public float _jumpPower =0;
+    public float fireCooldown =0;
+    public float _jumpCooldown =0;
+    public float atkRange = 0f;
+    public int _maxJumps =0;
+    public float _rebound =0; //how much you bounce enemies
+    public int evasion = 0;
 
     public int itemCount;
     Stack<Item> itemsAdded = new Stack<Item>();

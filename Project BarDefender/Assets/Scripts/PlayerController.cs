@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : Units
 {
@@ -67,8 +68,12 @@ public class PlayerController : Units
     bool evaded = false;
     bool burnout = false;
 
+    Potion potion;
+    Scene sceneLoaded;
+
 
     void Awake() {
+        
         playerControls = new PlayerInputActions();
         dmg = ATK;
 
@@ -85,6 +90,19 @@ public class PlayerController : Units
         // Debug.Log("currHP: " + currHP);        
         HPBar.SetMaxHealth(maxHP);
         //for now only the player has a healthbar so only he will call the set health function
+        sceneLoaded=SceneManager.GetActiveScene();
+        if(sceneLoaded.Equals("BarScene")){
+            maxHP = maxHP + potion.maxHP;
+            ATK = ATK + potion.ATK;
+            _moveSpeed = _moveSpeed + potion._moveSpeed;
+            _jumpPower = _jumpPower + potion._jumpPower;
+            fireCooldown = fireCooldown + potion.fireCooldown;
+            _jumpCooldown = _jumpCooldown + potion._jumpCooldown;
+            atkRange = atkRange + potion.atkRange;
+            _maxJumps = _maxJumps + potion._maxJumps;
+            _rebound = _rebound +potion._rebound; //how much you bounce enemies
+            evasion = potion.evasion;
+        }
     }
 
     private void OnEnable() {

@@ -21,6 +21,7 @@ public class ShelfItem : MonoBehaviour, IPointerDownHandler//, IBeginDragHandler
     public Image img;
 
     private void Awake(){
+        potion = Potion.Instance;
         count = Inventory.instance.Amount(item);
         counterdisplay.updateShelfCount(count);
         description.text = item.description;
