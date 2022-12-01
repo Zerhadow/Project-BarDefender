@@ -1,0 +1,19 @@
+Judges Feedback
+
+Judge 1
+I loved the general vibe and aesthetic. The potion hunting was the least interesting part and took to long, I was way more engaged once I was 
+put in the club with the boss fight - I would lean more on that in your game loop or at least get to it faster. There were SO many collision bugs 
+and I even got trapped in hole. Combat doesn't feel satisfying at all, but I loved all the custom animations. Once I learned I could Flex that's all 
+I wanted to do - I wish it was more central to the gameplay! This game badly needs more impactful hit confirms and audio/visual feedback systems for 
+collecting and damaging. Fix the collisions, then make the combat more interesting, then focus on getting throuhg the loop faster to show the interesting 
+parts of your game! Loved the aesthetic and style.
+
+Judge 2
+Game needs more bread crumbs to direct the player where to go. More than once I fell out of the level and had to quit the game and start over. 
+Needs audio cues when attacking. Needs env interaction cues, like am I supposed to be able to climb a tree? Because I did and then fell out of the level. 
+More interested with Flexing than anything lol. 
+
+Judge 3
+Character controller needs some love (jumping, gravity physics, etc.), but I love the artwork. Gameplay/goal could also be more clear in each level 
+(even a simple "collect ingredients" tagline would work). Don't make me press "Enter" in a WASD + Mouse control scheme when your already using "Space" to continue, 
+and don't have a quit button in a webGL build (it broke and I ended up just downloading it). 
